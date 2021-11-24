@@ -129,6 +129,126 @@ grafo/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/build
 .PHONY : grafo/fast
 
+ArrayUtils.o: ArrayUtils.c.o
+.PHONY : ArrayUtils.o
+
+# target to build an object file
+ArrayUtils.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/ArrayUtils.c.o
+.PHONY : ArrayUtils.c.o
+
+ArrayUtils.i: ArrayUtils.c.i
+.PHONY : ArrayUtils.i
+
+# target to preprocess a source file
+ArrayUtils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/ArrayUtils.c.i
+.PHONY : ArrayUtils.c.i
+
+ArrayUtils.s: ArrayUtils.c.s
+.PHONY : ArrayUtils.s
+
+# target to generate assembly for a file
+ArrayUtils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/ArrayUtils.c.s
+.PHONY : ArrayUtils.c.s
+
+Cidade.o: Cidade.c.o
+.PHONY : Cidade.o
+
+# target to build an object file
+Cidade.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/Cidade.c.o
+.PHONY : Cidade.c.o
+
+Cidade.i: Cidade.c.i
+.PHONY : Cidade.i
+
+# target to preprocess a source file
+Cidade.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/Cidade.c.i
+.PHONY : Cidade.c.i
+
+Cidade.s: Cidade.c.s
+.PHONY : Cidade.s
+
+# target to generate assembly for a file
+Cidade.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/Cidade.c.s
+.PHONY : Cidade.c.s
+
+ControleArquivoGrafo.o: ControleArquivoGrafo.c.o
+.PHONY : ControleArquivoGrafo.o
+
+# target to build an object file
+ControleArquivoGrafo.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/ControleArquivoGrafo.c.o
+.PHONY : ControleArquivoGrafo.c.o
+
+ControleArquivoGrafo.i: ControleArquivoGrafo.c.i
+.PHONY : ControleArquivoGrafo.i
+
+# target to preprocess a source file
+ControleArquivoGrafo.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/ControleArquivoGrafo.c.i
+.PHONY : ControleArquivoGrafo.c.i
+
+ControleArquivoGrafo.s: ControleArquivoGrafo.c.s
+.PHONY : ControleArquivoGrafo.s
+
+# target to generate assembly for a file
+ControleArquivoGrafo.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/ControleArquivoGrafo.c.s
+.PHONY : ControleArquivoGrafo.c.s
+
+RandomUtils.o: RandomUtils.c.o
+.PHONY : RandomUtils.o
+
+# target to build an object file
+RandomUtils.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/RandomUtils.c.o
+.PHONY : RandomUtils.c.o
+
+RandomUtils.i: RandomUtils.c.i
+.PHONY : RandomUtils.i
+
+# target to preprocess a source file
+RandomUtils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/RandomUtils.c.i
+.PHONY : RandomUtils.c.i
+
+RandomUtils.s: RandomUtils.c.s
+.PHONY : RandomUtils.s
+
+# target to generate assembly for a file
+RandomUtils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/RandomUtils.c.s
+.PHONY : RandomUtils.c.s
+
+StringUtils.o: StringUtils.c.o
+.PHONY : StringUtils.o
+
+# target to build an object file
+StringUtils.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/StringUtils.c.o
+.PHONY : StringUtils.c.o
+
+StringUtils.i: StringUtils.c.i
+.PHONY : StringUtils.i
+
+# target to preprocess a source file
+StringUtils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/StringUtils.c.i
+.PHONY : StringUtils.c.i
+
+StringUtils.s: StringUtils.c.s
+.PHONY : StringUtils.s
+
+# target to generate assembly for a file
+StringUtils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/StringUtils.c.s
+.PHONY : StringUtils.c.s
+
 main.o: main.c.o
 .PHONY : main.o
 
@@ -162,6 +282,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... grafo"
+	@echo "... ArrayUtils.o"
+	@echo "... ArrayUtils.i"
+	@echo "... ArrayUtils.s"
+	@echo "... Cidade.o"
+	@echo "... Cidade.i"
+	@echo "... Cidade.s"
+	@echo "... ControleArquivoGrafo.o"
+	@echo "... ControleArquivoGrafo.i"
+	@echo "... ControleArquivoGrafo.s"
+	@echo "... RandomUtils.o"
+	@echo "... RandomUtils.i"
+	@echo "... RandomUtils.s"
+	@echo "... StringUtils.o"
+	@echo "... StringUtils.i"
+	@echo "... StringUtils.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

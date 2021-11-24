@@ -76,6 +76,36 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/basis/Documentos/Grafo/grafo/ArrayUtils.c">
+			<Option target="grafo"/>
+		</Unit>
+		<Unit filename="/home/basis/Documentos/Grafo/grafo/Cidade.c">
+			<Option target="grafo"/>
+		</Unit>
+		<Unit filename="/home/basis/Documentos/Grafo/grafo/ControleArquivoGrafo.c">
+			<Option target="grafo"/>
+		</Unit>
+		<Unit filename="/home/basis/Documentos/Grafo/grafo/RandomUtils.c">
+			<Option target="grafo"/>
+		</Unit>
+		<Unit filename="/home/basis/Documentos/Grafo/grafo/StringUtils.c">
+			<Option target="grafo"/>
+		</Unit>
+		<Unit filename="/home/basis/Documentos/Grafo/grafo/headers/ArrayUtils.h">
+			<Option target="grafo"/>
+		</Unit>
+		<Unit filename="/home/basis/Documentos/Grafo/grafo/headers/Cidade.h">
+			<Option target="grafo"/>
+		</Unit>
+		<Unit filename="/home/basis/Documentos/Grafo/grafo/headers/ControleArquivoGrafo.h">
+			<Option target="grafo"/>
+		</Unit>
+		<Unit filename="/home/basis/Documentos/Grafo/grafo/headers/RandomUtils.h">
+			<Option target="grafo"/>
+		</Unit>
+		<Unit filename="/home/basis/Documentos/Grafo/grafo/headers/StringUtils.h">
+			<Option target="grafo"/>
+		</Unit>
 		<Unit filename="/home/basis/Documentos/Grafo/grafo/main.c">
 			<Option target="grafo"/>
 		</Unit>

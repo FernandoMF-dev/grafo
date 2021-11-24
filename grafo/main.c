@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int main() {
-    printf("Hello, World!\n");
-    return 0;
+#include "headers/ControleArquivoGrafo.h"
+
+int main(int argc, char *argv[]) {
+    criaArquivoEntrada();
 }
