@@ -21,16 +21,16 @@ double geraDistancia(int linha, int coluna) {
     double r;
 
     /*
-     * Para garantir que o grafo ser� conexo garantirei que sempre haver� arestas entre vertices que o codigo diferem de 1
-     * A distancia dessas arestas ser� um numero aleat�rio entre 10 e 110
+     * Para garantir que o grafo será conexo garantirei que sempre haverá arestas entre vertices que o código diferem de 1
+     * A distancia dessas arestas será um numero aleatório entre 10 e 110
      */
     if (coluna - linha == 1) {
         return (getRandomDecimal() + 0.1) * 100;
     }
 
     /*
-     * Para os demais gero um aleat�rio entre 0 e 1. Se for menor que 0.5 n�o haver� aresta entre eles
-     * caso contr�rio haver� aresta e a distancia da aresta ser� dada pelo numero gerado * 200 - 90, ou seja, ser� algo entre 10 e 110.
+     * Para os demais, gero um aleatório entre 0 e 1. Se for menor que 0,5 não haverá aresta entre eles
+     * caso contrário haverá aresta e a distância da aresta será dada pelo número gerado * 200 – 90, ou seja, será algo entre 10 e 110.
      */
     r = getRandomDecimal();
     if (r < 0.5) {
@@ -40,13 +40,13 @@ double geraDistancia(int linha, int coluna) {
 }
 
 /*
- * Vou gerar as distancias.
- * Como o grafo n�o ser� direcional e n�o tenho arestas ligando um vertice a ele mesmo
- * teria uma matriz de adjacencia na qual a diagonal principal � toda de zeros
- * e os elementos acima da diagonal s�o iguais aos abaixo, isso �, o elemento A(l,c) = A(c,l)
+ * Vou gerar as distâncias.
+ * Como o grafo não será direcional e não tenho arestas ligando um vértice a ele mesmo
+ * teria uma matriz de adjacência onde a diagonal principal é toda de zeros
+ * e os elementos acima da diagonal são iguais aos abaixo, isso é, o elemento A(l,c) = A(c,l)
  * Assim vou gerar apenas os elementos que ficam acima da diagonal principal e armazenar num vetor
- * Esse vetor ter� seu tamanho dados por (qtd*qtd-qtd)/2 (resultado de uma somatoria onde a primeira lina tem qtd-1 elementos
- * e vai diminuindo de um em um at� que a �ltima tem zero.
+ * Esse vetor terá o seu tamanho dados por (qtd*qtd-qtd)/2 (resultado de uma somatória onde a primeira lina tem qtd-1 elementos
+ * e vai a diminuir a cada um até que a última tem zero.
  * */
 double *gerarDistancias() {
     int tamVetDist = (QTD_CID * QTD_CID - QTD_CID) / 2;
@@ -64,7 +64,7 @@ double *gerarDistancias() {
 }
 
 /*
- * Nesse la�o imprimo as cidades. Os codigos das cidades ser�o inteiros sequenciais de zero a qtd-1
+ * Nesse laço imprimo as cidades. Os códigos das cidades serão inteiros sequenciais de zero a qtd-1
  * */
 void imprimirCidades(FILE *arq_entrada) {
     Cidade cid;
@@ -78,11 +78,11 @@ void imprimirCidades(FILE *arq_entrada) {
 }
 
 /*
- * Nos la�os abaixo imprimo a matriz de adjacencias completa, inclusive diagonal principal e elementos abaixo dela
- * Para achar no vetor a distancia entre elementos usei a formula que desenvolvi observado que a primeira linha tem qtd-1 elementos no vetor,
- * a segunda linha qtd-2 e assim sucessivamente at� que a �ltima linha tem zero.
- * Assim, vi que para obter o indice do primeiro elemento da linha no vetor bastava resolver uma soma de PA e que a partir dele
- * bastava somar a coluna menos linha -1. Vou tirar uma foto da dedu��o e colocar nesse diret�rio para referencia futura se necess�rio
+ * Nos laços abaixo imprimo a matriz de adjacências completa, inclusive diagonal principal e elementos abaixo dela
+ * Para achar no vetor a distância entre elementos usei a fórmula que desenvolvi observado que a primeira linha tem qtd-1 elementos no vetor,
+ * a segunda linha qtd-2 e assim sucessivamente até que a última linha tem zero.
+ * Assim, vi que para obter o índice do primeiro elemento da linha no vetor bastava resolver uma soma de PA e que a partir dele
+ * bastava somar a coluna menos linha -1. Vou fotografar a dedução e colocar nesse diretório para referência futura se necessário
  */
 void imprimirMatriz(FILE *arq_entrada, double *distancias) {
     for (int l = 0; l < QTD_CID; l++) {
