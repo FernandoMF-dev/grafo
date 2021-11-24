@@ -1,0 +1,3 @@
+/home/basis/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/basis/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/basis/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles/grafo.dir
