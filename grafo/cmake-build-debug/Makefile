@@ -201,6 +201,30 @@ ControleArquivoGrafo.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/ControleArquivoGrafo.c.s
 .PHONY : ControleArquivoGrafo.c.s
 
+Grafo.o: Grafo.c.o
+.PHONY : Grafo.o
+
+# target to build an object file
+Grafo.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/Grafo.c.o
+.PHONY : Grafo.c.o
+
+Grafo.i: Grafo.c.i
+.PHONY : Grafo.i
+
+# target to preprocess a source file
+Grafo.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/Grafo.c.i
+.PHONY : Grafo.c.i
+
+Grafo.s: Grafo.c.s
+.PHONY : Grafo.s
+
+# target to generate assembly for a file
+Grafo.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/Grafo.c.s
+.PHONY : Grafo.c.s
+
 RandomUtils.o: RandomUtils.c.o
 .PHONY : RandomUtils.o
 
@@ -291,6 +315,9 @@ help:
 	@echo "... ControleArquivoGrafo.o"
 	@echo "... ControleArquivoGrafo.i"
 	@echo "... ControleArquivoGrafo.s"
+	@echo "... Grafo.o"
+	@echo "... Grafo.i"
+	@echo "... Grafo.s"
 	@echo "... RandomUtils.o"
 	@echo "... RandomUtils.i"
 	@echo "... RandomUtils.s"
