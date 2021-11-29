@@ -10,14 +10,22 @@
 
 // =-=-=-=-= MÉTODOS PÚBLICOS =-=-=-=-=
 
-Cidade *newCidade(int codigo, char *nome) {
-    Cidade *n = (Cidade *) malloc(sizeof(Cidade));
+Cidade *newCidade() {
+    Cidade *cidade = (Cidade *) malloc(sizeof(Cidade));
 
-    n->codigo = codigo;
-    n->nome = (char *) malloc(MAX_NOME * sizeof(char));
-    strcpy(n->nome, nome);
+    cidade->codigo = -1;
+    cidade->nome = (char *) malloc(MAX_NOME * sizeof(char));
 
-    return n;
+    return cidade;
+}
+
+Cidade *readCidade(int codigo, char *nome) {
+    Cidade *cidade = newCidade();
+
+    cidade->codigo = codigo;
+    strcpy(cidade->nome, nome);
+
+    return cidade;
 }
 
 void printCidade(Cidade *cidade) {

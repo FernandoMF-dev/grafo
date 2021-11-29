@@ -3,7 +3,9 @@
 // =-=-=-=-= CONSTANTES =-=-=-=-=
 
 #define QTD_CID 100
+#define LINE_MAX_LENGTH 255
 #define DIRETORIO_ARQUIVO_ENTRADA "../entrada/entrada.txt"
+#define DELIMITER ";"
 
 // =-=-=-=-= MÉTODOS PRIVADOS | DECLARAÇÃO =-=-=-=-=
 
@@ -11,9 +13,13 @@ double geraDistancia(int linha, int coluna);
 
 double *gerarDistancias();
 
-void imprimirCidades(FILE *arq_entrada);
+void imprimirCidades(FILE *inputFile);
 
-void imprimirMatriz(FILE *arq_entrada, double *distancias);
+void imprimirMatriz(FILE *inputFile, double *distancias);
+
+Cidade *readNextCidadeFromFile(FILE *inputFile);
+
+Vertice *readNextVerticeFromFile(FILE *inputFile, int index);
 
 // =-=-=-=-= MÉTODOS PRIVADOS | IMPLEMENTAÇÃO =-=-=-=-=
 
@@ -66,14 +72,14 @@ double *gerarDistancias() {
 /*
  * Nesse laço imprimo as cidades. Os códigos das cidades serão inteiros sequenciais de zero a qtd-1
  * */
-void imprimirCidades(FILE *arq_entrada) {
+void imprimirCidades(FILE *inputFile) {
     Cidade cid;
 
-    fprintf(arq_entrada, "%d\n", QTD_CID);
+    fprintf(inputFile, "%d\n", QTD_CID);
     for (int i = 0; i < QTD_CID; i++) {
         cid.nome = getRandomWord();
         cid.codigo = i; //geraCodigo(usado, qtd);
-        fprintf(arq_entrada, "%d;%s\n", cid.codigo, cid.nome);
+        fprintf(inputFile, "%d;%s\n", cid.codigo, cid.nome);
     }
 }
 
@@ -84,32 +90,66 @@ void imprimirCidades(FILE *arq_entrada) {
  * Assim, vi que para obter o índice do primeiro elemento da linha no vetor bastava resolver uma soma de PA e que a partir dele
  * bastava somar a coluna menos linha -1. Vou fotografar a dedução e colocar nesse diretório para referência futura se necessário
  */
-void imprimirMatriz(FILE *arq_entrada, double *distancias) {
+void imprimirMatriz(FILE *inputFile, double *distancias) {
     for (int l = 0; l < QTD_CID; l++) {
         for (int c = 0; c < QTD_CID - 1; c++) {
             if (l == c) {
-                fprintf(arq_entrada, "%.2lf;", 0.0);
+                fprintf(inputFile, "%.2lf;", 0.0);
             } else if (l < c) {
-                fprintf(arq_entrada, "%.2lf;", distancias[l * QTD_CID - (l * l + l) / 2 + c - l - 1]);
+                fprintf(inputFile, "%.2lf;", distancias[l * QTD_CID - (l * l + l) / 2 + c - l - 1]);
             } else {
-                fprintf(arq_entrada, "%.2lf;", distancias[c * QTD_CID - (c * c + c) / 2 + l - c - 1]);
+                fprintf(inputFile, "%.2lf;", distancias[c * QTD_CID - (c * c + c) / 2 + l - c - 1]);
             }
         }
 
         if (l == (QTD_CID - 1)) {
-            fprintf(arq_entrada, "%.2lf\n", 0.0);
+            fprintf(inputFile, "%.2lf\n", 0.0);
         } else {
-            fprintf(arq_entrada, "%.2lf\n", distancias[l * QTD_CID - (l * l + l) / 2 + QTD_CID - l]);
+            fprintf(inputFile, "%.2lf\n", distancias[l * QTD_CID - (l * l + l) / 2 + QTD_CID - l]);
         }
     }
+}
+
+Cidade *readNextCidadeFromFile(FILE *inputFile) {
+    Cidade *cidade = newCidade();
+    char *line = (char *) malloc((LINE_MAX_LENGTH + 1) * sizeof(char));
+    char *ptr;
+
+    fscanf(inputFile, " %[^\n]%*c", line);
+    ptr = strtok(line, DELIMITER);
+    cidade->codigo = atoi(ptr);
+
+    ptr = strtok(NULL, DELIMITER);
+    strcpy(cidade->nome, ptr);
+
+    return cidade;
+}
+
+Vertice *readNextVerticeFromFile(FILE *inputFile, int index) {
+    return readVertice(index, readNextCidadeFromFile(inputFile));
 }
 
 // =-=-=-=-= MÉTODOS PÚBLICOS =-=-=-=-=
 
 void criaArquivoEntrada() {
-    FILE *arq_entrada = fopen(DIRETORIO_ARQUIVO_ENTRADA, "w");
+    FILE *inputFile = fopen(DIRETORIO_ARQUIVO_ENTRADA, "w");
     double *distancias = gerarDistancias();
 
-    imprimirCidades(arq_entrada);
-    imprimirMatriz(arq_entrada, distancias);
+    imprimirCidades(inputFile);
+    imprimirMatriz(inputFile, distancias);
+}
+
+Grafo *readGrafoFromFile() {
+    FILE *inputFile = fopen(DIRETORIO_ARQUIVO_ENTRADA, "r");
+    int size;
+    fscanf(inputFile, " %d", &size);
+    Grafo *grafo = newGrafo("Grafo", size);
+
+    int index = 0;
+    for (int i = 0; i < grafo->size; ++i) {
+        grafo->vertices[i] = readNextVerticeFromFile(inputFile, index);
+        index++;
+    }
+
+    return grafo;
 }

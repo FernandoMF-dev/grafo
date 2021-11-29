@@ -11,7 +11,9 @@ typedef struct Cidade {
     int codigo;
 } Cidade;
 
-Cidade *newCidade(int codigo, char *nome);
+Cidade *newCidade();
+
+Cidade *readCidade(int codigo, char *nome);
 
 void printCidade(Cidade *cidade);
 
