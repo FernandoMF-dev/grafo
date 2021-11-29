@@ -6,9 +6,11 @@
 #ifndef GRAFO_CIDADE_H
 #define GRAFO_CIDADE_H
 
-typedef struct Cidade{
+typedef struct Cidade {
     char *nome;
     int codigo;
-}Cidade;
+} Cidade;
+
+Cidade *newCidade(int codigo, char *nome);
 
 #endif //GRAFO_CIDADE_H

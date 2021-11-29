@@ -273,6 +273,30 @@ StringUtils.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/StringUtils.c.s
 .PHONY : StringUtils.c.s
 
+Vertice.o: Vertice.c.o
+.PHONY : Vertice.o
+
+# target to build an object file
+Vertice.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/Vertice.c.o
+.PHONY : Vertice.c.o
+
+Vertice.i: Vertice.c.i
+.PHONY : Vertice.i
+
+# target to preprocess a source file
+Vertice.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/Vertice.c.i
+.PHONY : Vertice.c.i
+
+Vertice.s: Vertice.c.s
+.PHONY : Vertice.s
+
+# target to generate assembly for a file
+Vertice.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/Vertice.c.s
+.PHONY : Vertice.c.s
+
 main.o: main.c.o
 .PHONY : main.o
 
@@ -324,6 +348,9 @@ help:
 	@echo "... StringUtils.o"
 	@echo "... StringUtils.i"
 	@echo "... StringUtils.s"
+	@echo "... Vertice.o"
+	@echo "... Vertice.i"
+	@echo "... Vertice.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

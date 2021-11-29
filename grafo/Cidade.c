@@ -10,7 +10,7 @@
 
 // =-=-=-=-= MÉTODOS PÚBLICOS =-=-=-=-=
 
-Cidade *criaCidade(int codigo, char *nome) {
+Cidade *newCidade(int codigo, char *nome) {
     Cidade *n = (Cidade *) malloc(sizeof(Cidade));
 
     n->codigo = codigo;

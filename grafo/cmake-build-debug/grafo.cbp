@@ -88,13 +88,16 @@
 		<Unit filename="/home/basis/Documentos/Grafo/grafo/Grafo.c">
 			<Option target="grafo"/>
 		</Unit>
-		<Unit filename="/home/basis/Documentos/Grafo/grafo/Grafo.h">
-			<Option target="grafo"/>
-		</Unit>
 		<Unit filename="/home/basis/Documentos/Grafo/grafo/RandomUtils.c">
 			<Option target="grafo"/>
 		</Unit>
 		<Unit filename="/home/basis/Documentos/Grafo/grafo/StringUtils.c">
+			<Option target="grafo"/>
+		</Unit>
+		<Unit filename="/home/basis/Documentos/Grafo/grafo/Vertice.c">
+			<Option target="grafo"/>
+		</Unit>
+		<Unit filename="/home/basis/Documentos/Grafo/grafo/Vertice.h">
 			<Option target="grafo"/>
 		</Unit>
 		<Unit filename="/home/basis/Documentos/Grafo/grafo/headers/ArrayUtils.h">
@@ -104,6 +107,9 @@
 			<Option target="grafo"/>
 		</Unit>
 		<Unit filename="/home/basis/Documentos/Grafo/grafo/headers/ControleArquivoGrafo.h">
+			<Option target="grafo"/>
+		</Unit>
+		<Unit filename="/home/basis/Documentos/Grafo/grafo/headers/Grafo.h">
 			<Option target="grafo"/>
 		</Unit>
 		<Unit filename="/home/basis/Documentos/Grafo/grafo/headers/RandomUtils.h">
