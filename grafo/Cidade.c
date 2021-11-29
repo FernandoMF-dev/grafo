@@ -19,3 +19,7 @@ Cidade *newCidade(int codigo, char *nome) {
 
     return n;
 }
+
+void printCidade(Cidade *cidade) {
+    printf("{'codigo': %d; 'nome': '%s'}", cidade->codigo, cidade->nome);
+}

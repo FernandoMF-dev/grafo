@@ -13,4 +13,6 @@ typedef struct Cidade {
 
 Cidade *newCidade(int codigo, char *nome);
 
+void printCidade(Cidade *cidade);
+
 #endif //GRAFO_CIDADE_H
