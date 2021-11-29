@@ -97,9 +97,6 @@
 		<Unit filename="/home/basis/Documentos/Grafo/grafo/Vertice.c">
 			<Option target="grafo"/>
 		</Unit>
-		<Unit filename="/home/basis/Documentos/Grafo/grafo/Vertice.h">
-			<Option target="grafo"/>
-		</Unit>
 		<Unit filename="/home/basis/Documentos/Grafo/grafo/headers/ArrayUtils.h">
 			<Option target="grafo"/>
 		</Unit>
@@ -116,6 +113,9 @@
 			<Option target="grafo"/>
 		</Unit>
 		<Unit filename="/home/basis/Documentos/Grafo/grafo/headers/StringUtils.h">
+			<Option target="grafo"/>
+		</Unit>
+		<Unit filename="/home/basis/Documentos/Grafo/grafo/headers/Vertice.h">
 			<Option target="grafo"/>
 		</Unit>
 		<Unit filename="/home/basis/Documentos/Grafo/grafo/main.c">

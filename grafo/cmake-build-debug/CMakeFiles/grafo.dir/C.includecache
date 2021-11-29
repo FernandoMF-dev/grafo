@@ -6,17 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/basis/Documentos/Grafo/grafo/ControleArquivoGrafo.c
-headers/ControleArquivoGrafo.h
-/home/basis/Documentos/Grafo/grafo/headers/ControleArquivoGrafo.h
-
-/home/basis/Documentos/Grafo/grafo/headers/ArrayUtils.h
-stdio.h
--
-stdlib.h
--
-string.h
--
+/home/basis/Documentos/Grafo/grafo/Vertice.c
+headers/Vertice.h
+/home/basis/Documentos/Grafo/grafo/headers/Vertice.h
 
 /home/basis/Documentos/Grafo/grafo/headers/Cidade.h
 stdio.h
@@ -28,43 +20,11 @@ time.h
 string.h
 -
 
-/home/basis/Documentos/Grafo/grafo/headers/ControleArquivoGrafo.h
+/home/basis/Documentos/Grafo/grafo/headers/Vertice.h
 stdio.h
 -
 stdlib.h
 -
 Cidade.h
 /home/basis/Documentos/Grafo/grafo/headers/Cidade.h
-StringUtils.h
-/home/basis/Documentos/Grafo/grafo/headers/StringUtils.h
-RandomUtils.h
-/home/basis/Documentos/Grafo/grafo/headers/RandomUtils.h
-
-/home/basis/Documentos/Grafo/grafo/headers/RandomUtils.h
-stdio.h
--
-stdlib.h
--
-time.h
--
-string.h
--
-math.h
--
-
-/home/basis/Documentos/Grafo/grafo/headers/StringUtils.h
-stdio.h
--
-string.h
--
-ArrayUtils.h
-/home/basis/Documentos/Grafo/grafo/headers/ArrayUtils.h
-RandomUtils.h
-/home/basis/Documentos/Grafo/grafo/headers/RandomUtils.h
-
-/home/basis/Documentos/Grafo/grafo/main.c
-stdio.h
--
-headers/ControleArquivoGrafo.h
-/home/basis/Documentos/Grafo/grafo/headers/ControleArquivoGrafo.h
 

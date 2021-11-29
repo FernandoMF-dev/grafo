@@ -8,12 +8,13 @@
 #define GRAFO_GRAFO_H
 
 typedef struct Grafo {
+    char *label;
     Vertice **vertices;
     int size;
     double **edges;
 } Grafo;
 
-Grafo *newGrafo(int size);
+Grafo *newGrafo(char *label, int size);
 
 void printGrafo(Grafo *grafo);
 

@@ -37,6 +37,11 @@ Vertice **buildGrafoVerticesArray(int size) {
 }
 
 void printVertice(Vertice *vertice) {
+    if (vertice == NULL) {
+        printf("[NULL]\n");
+        return;
+    }
+
     printf("%d - ", vertice->index);
     printCidade(vertice->value);
     printf("\n");

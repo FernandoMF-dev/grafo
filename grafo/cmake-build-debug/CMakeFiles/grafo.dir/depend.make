@@ -14,6 +14,11 @@ CMakeFiles/grafo.dir/ControleArquivoGrafo.c.o: \
  ../headers/ControleArquivoGrafo.h \
  ../headers/RandomUtils.h \
  ../headers/StringUtils.h
+CMakeFiles/grafo.dir/Grafo.c.o: \
+ ../Grafo.c \
+ ../headers/Cidade.h \
+ ../headers/Grafo.h \
+ ../headers/Vertice.h
 CMakeFiles/grafo.dir/RandomUtils.c.o: \
  ../RandomUtils.c \
  ../headers/RandomUtils.h
@@ -22,10 +27,16 @@ CMakeFiles/grafo.dir/StringUtils.c.o: \
  ../headers/ArrayUtils.h \
  ../headers/RandomUtils.h \
  ../headers/StringUtils.h
+CMakeFiles/grafo.dir/Vertice.c.o: \
+ ../Vertice.c \
+ ../headers/Cidade.h \
+ ../headers/Vertice.h
 CMakeFiles/grafo.dir/main.c.o: \
  ../headers/ArrayUtils.h \
  ../headers/Cidade.h \
  ../headers/ControleArquivoGrafo.h \
+ ../headers/Grafo.h \
  ../headers/RandomUtils.h \
  ../headers/StringUtils.h \
+ ../headers/Vertice.h \
  ../main.c

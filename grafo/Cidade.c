@@ -21,5 +21,10 @@ Cidade *newCidade(int codigo, char *nome) {
 }
 
 void printCidade(Cidade *cidade) {
+    if (cidade == NULL) {
+        printf("[NULL]");
+        return;
+    }
+
     printf("{'codigo': %d; 'nome': '%s'}", cidade->codigo, cidade->nome);
 }
