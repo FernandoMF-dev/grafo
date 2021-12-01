@@ -21,6 +21,8 @@ Cidade *readNextCidadeFromFile(FILE *inputFile);
 
 Vertice *readNextVerticeFromFile(FILE *inputFile, int index);
 
+double *readNextVerticeEdgesFromFile(FILE *inputFile, int size);
+
 // =-=-=-=-= MÉTODOS PRIVADOS | IMPLEMENTAÇÃO =-=-=-=-=
 
 double geraDistancia(int linha, int coluna) {
@@ -129,6 +131,23 @@ Vertice *readNextVerticeFromFile(FILE *inputFile, int index) {
     return readVertice(index, readNextCidadeFromFile(inputFile));
 }
 
+double *readNextVerticeEdgesFromFile(FILE *inputFile, int size) {
+    double *edges = (double *) malloc(size * sizeof(double));
+    char *line = (char *) malloc((LINE_MAX_LENGTH + 1) * sizeof(char));
+    char *ptr;
+    int counter = 0;
+
+    fscanf(inputFile, " %[^\n]%*c", line);
+    ptr = strtok(line, DELIMITER);
+    do {
+        edges[counter] = atof(ptr);
+        ptr = strtok(NULL, DELIMITER);
+        counter++;
+    } while (counter < size);
+
+    return edges;
+}
+
 // =-=-=-=-= MÉTODOS PÚBLICOS =-=-=-=-=
 
 void criaArquivoEntrada() {
@@ -137,12 +156,16 @@ void criaArquivoEntrada() {
 
     imprimirCidades(inputFile);
     imprimirMatriz(inputFile, distancias);
+
+    fclose(inputFile);
 }
 
 Grafo *readGrafoFromFile() {
     FILE *inputFile = fopen(DIRETORIO_ARQUIVO_ENTRADA, "r");
     int size;
+
     fscanf(inputFile, " %d", &size);
+
     Grafo *grafo = newGrafo("Grafo", size);
 
     int index = 0;
@@ -151,5 +174,10 @@ Grafo *readGrafoFromFile() {
         index++;
     }
 
+    for (int i = 0; i < grafo->size; ++i) {
+        grafo->edges[i] = readNextVerticeEdgesFromFile(inputFile, grafo->size);
+    }
+
+    fclose(inputFile);
     return grafo;
 }

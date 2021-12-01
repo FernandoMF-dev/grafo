@@ -12,8 +12,10 @@ CMakeFiles/grafo.dir/ControleArquivoGrafo.c.o: \
  ../headers/ArrayUtils.h \
  ../headers/Cidade.h \
  ../headers/ControleArquivoGrafo.h \
+ ../headers/Grafo.h \
  ../headers/RandomUtils.h \
- ../headers/StringUtils.h
+ ../headers/StringUtils.h \
+ ../headers/Vertice.h
 CMakeFiles/grafo.dir/Grafo.c.o: \
  ../Grafo.c \
  ../headers/Cidade.h \

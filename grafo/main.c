@@ -6,7 +6,7 @@
 int main(int argc, char *argv[]) {
     criaArquivoEntrada();
 
-    Grafo *grafo = newGrafo("Grafo", 5);
+    Grafo *grafo = readGrafoFromFile();
 
     printGrafo(grafo);
 }
