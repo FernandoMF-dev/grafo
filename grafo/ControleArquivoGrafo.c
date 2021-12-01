@@ -141,7 +141,7 @@ void readNextVerticeEdgesFromFile(FILE *inputFile, Grafo *grafo, int index) {
     fscanf(inputFile, " %[^\n]%*c", line);
     ptr = strtok(line, DELIMITER);
     do {
-        grafo->edges[index][counter] = atof(ptr);
+        grafo->edges[index][counter] = (float) atof(ptr);
         ptr = strtok(NULL, DELIMITER);
         counter++;
     } while (counter < grafo->size);

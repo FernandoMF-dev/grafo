@@ -9,11 +9,11 @@ int arrayContainsChar(char needle, char *haystack);
 
 int arrayContainsInteger(int needle, const int *haystack, int haystackSize);
 
-double **newMatrixDouble(int size);
+float **newMatrixFloat(int size);
 
 int *newIntegerArray(int size);
 
-int getMinNonZeroWithBlackListArrayDouble(const double *array, int arraySize,
-                                          const int *blackList, int blackListSize);
+int getMinNonZeroWithBlackListArrayFloat(const float *array, int arraySize,
+                                         const int *blackList, int blackListSize);
 
 #endif //GRAFO_ARRAYUTILS_H

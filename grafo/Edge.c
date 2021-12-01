@@ -28,7 +28,7 @@ Edge **newEdgeArray(int size) {
     return edgeArray;
 }
 
-Edge *readEdge(int origin, int destiny, double weight) {
+Edge *readEdge(int origin, int destiny, float weight) {
     Edge *edge = newEdge();
 
     edge->origin = origin;
@@ -39,5 +39,5 @@ Edge *readEdge(int origin, int destiny, double weight) {
 }
 
 void printEdge(Edge edge) {
-    printf("%d -[%.2lf]-> %d\n", edge.origin, edge.weight, edge.destiny);
+    printf("%d -[%.2f]-> %d\n", edge.origin, edge.weight, edge.destiny);
 }

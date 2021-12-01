@@ -13,7 +13,7 @@ typedef struct Grafo {
     char *label;
     Vertice **vertices;
     int size;
-    double **edges;
+    float **edges;
 } Grafo;
 
 Grafo *newGrafo(char *label, int size);

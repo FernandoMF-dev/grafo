@@ -7,14 +7,14 @@
 typedef struct Edge {
     int origin;
     int destiny;
-    double weight;
+    float weight;
 } Edge;
 
 Edge *newEdge();
 
 Edge **newEdgeArray(int size);
 
-Edge *readEdge(int origin, int destiny, double weight);
+Edge *readEdge(int origin, int destiny, float weight);
 
 void printEdge(Edge edge);
 

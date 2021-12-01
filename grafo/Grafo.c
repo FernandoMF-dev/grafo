@@ -10,19 +10,19 @@ Edge *findMinimalEdgeGrafo(Grafo *grafo, const int *verticeArray, int verticeArr
 
 Edge *findMinimalEdgeGrafo(Grafo *grafo, const int *verticeArray, int verticeArraySize) {
     Edge *minEdge = readEdge(-1, -1, 0.0);
-    double doubleWeight;
+    float floatWeight;
     int index;
 
     for (int i = 0; i < verticeArraySize; ++i) {
-        index = getMinNonZeroWithBlackListArrayDouble(grafo->edges[verticeArray[i]], grafo->size,
-                                                      verticeArray, verticeArraySize);
+        index = getMinNonZeroWithBlackListArrayFloat(grafo->edges[verticeArray[i]], grafo->size,
+                                                     verticeArray, verticeArraySize);
 
         if (index != -1) {
-            doubleWeight = grafo->edges[i][index];
-            if (minEdge->weight == 0.0 || minEdge->weight > doubleWeight) {
+            floatWeight = grafo->edges[i][index];
+            if (minEdge->weight == 0.0 || minEdge->weight > floatWeight) {
                 minEdge->origin = i;
                 minEdge->destiny = index;
-                minEdge->weight = doubleWeight;
+                minEdge->weight = floatWeight;
             }
         }
     }
@@ -38,7 +38,7 @@ Grafo *newGrafo(char *label, int size) {
     grafo->label = label;
     grafo->size = size;
     grafo->vertices = buildGrafoVerticesArray(size);
-    grafo->edges = newMatrixDouble(size);
+    grafo->edges = newMatrixFloat(size);
 
     return grafo;
 }
@@ -60,8 +60,8 @@ void printEdgesGrafo(Grafo *grafo) {
     for (int i = 0; i < grafo->size; ++i) {
         for (int j = 0; j < grafo->size; ++j) {
             if (grafo->edges[i][j] != 0.0) {
-//                printf("%d -[%.2lf]-> %d\n", grafo->vertices[i]->index, grafo->edges[i][j], grafo->vertices[j]->index);
-                printf("%s -[%.2lf]-> %s\n", grafo->vertices[i]->value->nome, grafo->edges[i][j],
+//                printf("%d -[%.2f]-> %d\n", grafo->vertices[i]->index, grafo->edges[i][j], grafo->vertices[j]->index);
+                printf("%s -[%.2f]-> %s\n", grafo->vertices[i]->value->nome, grafo->edges[i][j],
                        grafo->vertices[j]->value->nome);
             }
         }

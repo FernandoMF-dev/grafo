@@ -30,11 +30,11 @@ int arrayContainsInteger(int needle, const int *haystack, int haystackSize) {
     return 0;
 }
 
-double **newMatrixDouble(int size) {
-    double **matrix = (double **) malloc(size * sizeof(double *));
+float **newMatrixFloat(int size) {
+    float **matrix = (float **) malloc(size * sizeof(float *));
 
     for (int i = 0; i < size; ++i) {
-        matrix[i] = (double *) malloc(size * sizeof(double));
+        matrix[i] = (float *) malloc(size * sizeof(float));
         for (int j = 0; j < size; ++j) {
             matrix[i][j] = 0.0;
         }
@@ -53,8 +53,8 @@ int *newIntegerArray(int size) {
     return integerArray;
 }
 
-int getMinNonZeroWithBlackListArrayDouble(const double *array, int arraySize, const int *blackList, int blackListSize) {
-    double minValue = 0.0;
+int getMinNonZeroWithBlackListArrayFloat(const float *array, int arraySize, const int *blackList, int blackListSize) {
+    float minValue = 0.0;
     int minIndex = -1;
 
     for (int i = 0; i < arraySize; ++i) {
