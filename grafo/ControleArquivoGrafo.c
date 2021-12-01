@@ -2,7 +2,7 @@
 
 // =-=-=-=-= CONSTANTES =-=-=-=-=
 
-#define QTD_CID 100
+#define QTD_CID 5
 #define LINE_MAX_LENGTH 255
 #define DIRETORIO_ARQUIVO_ENTRADA "../entrada/entrada.txt"
 #define DELIMITER ";"
@@ -75,14 +75,16 @@ double *gerarDistancias() {
  * Nesse laço imprimo as cidades. Os códigos das cidades serão inteiros sequenciais de zero a qtd-1
  * */
 void imprimirCidades(FILE *inputFile) {
-    Cidade cid;
+    Cidade *cidade = newCidade();
 
     fprintf(inputFile, "%d\n", QTD_CID);
     for (int i = 0; i < QTD_CID; i++) {
-        cid.nome = getRandomWord();
-        cid.codigo = i; //geraCodigo(usado, qtd);
-        fprintf(inputFile, "%d;%s\n", cid.codigo, cid.nome);
+        cidade->nome = getRandomWord();
+        cidade->codigo = i; //geraCodigo(usado, qtd);
+        fprintf(inputFile, "%d;%s\n", cidade->codigo, cidade->nome);
     }
+
+    free(cidade);
 }
 
 /*
@@ -157,6 +159,7 @@ void criaArquivoEntrada() {
     imprimirCidades(inputFile);
     imprimirMatriz(inputFile, distancias);
 
+    free(distancias);
     fclose(inputFile);
 }
 

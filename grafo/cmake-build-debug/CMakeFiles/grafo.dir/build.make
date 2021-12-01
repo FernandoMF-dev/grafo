@@ -170,18 +170,18 @@ CMakeFiles/grafo.dir/Vertice.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/grafo.dir/Vertice.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/basis/Documentos/Grafo/grafo/Vertice.c -o CMakeFiles/grafo.dir/Vertice.c.s
 
-CMakeFiles/grafo.dir/EdgeGrafo.c.o: CMakeFiles/grafo.dir/flags.make
-CMakeFiles/grafo.dir/EdgeGrafo.c.o: ../EdgeGrafo.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/basis/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/grafo.dir/EdgeGrafo.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/grafo.dir/EdgeGrafo.c.o -c /home/basis/Documentos/Grafo/grafo/EdgeGrafo.c
+CMakeFiles/grafo.dir/Edge.c.o: CMakeFiles/grafo.dir/flags.make
+CMakeFiles/grafo.dir/Edge.c.o: ../Edge.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/basis/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/grafo.dir/Edge.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/grafo.dir/Edge.c.o -c /home/basis/Documentos/Grafo/grafo/Edge.c
 
-CMakeFiles/grafo.dir/EdgeGrafo.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/grafo.dir/EdgeGrafo.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/basis/Documentos/Grafo/grafo/EdgeGrafo.c > CMakeFiles/grafo.dir/EdgeGrafo.c.i
+CMakeFiles/grafo.dir/Edge.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/grafo.dir/Edge.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/basis/Documentos/Grafo/grafo/Edge.c > CMakeFiles/grafo.dir/Edge.c.i
 
-CMakeFiles/grafo.dir/EdgeGrafo.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/grafo.dir/EdgeGrafo.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/basis/Documentos/Grafo/grafo/EdgeGrafo.c -o CMakeFiles/grafo.dir/EdgeGrafo.c.s
+CMakeFiles/grafo.dir/Edge.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/grafo.dir/Edge.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/basis/Documentos/Grafo/grafo/Edge.c -o CMakeFiles/grafo.dir/Edge.c.s
 
 # Object files for target grafo
 grafo_OBJECTS = \
@@ -193,7 +193,7 @@ grafo_OBJECTS = \
 "CMakeFiles/grafo.dir/RandomUtils.c.o" \
 "CMakeFiles/grafo.dir/Grafo.c.o" \
 "CMakeFiles/grafo.dir/Vertice.c.o" \
-"CMakeFiles/grafo.dir/EdgeGrafo.c.o"
+"CMakeFiles/grafo.dir/Edge.c.o"
 
 # External object files for target grafo
 grafo_EXTERNAL_OBJECTS =
@@ -206,7 +206,7 @@ grafo: CMakeFiles/grafo.dir/ArrayUtils.c.o
 grafo: CMakeFiles/grafo.dir/RandomUtils.c.o
 grafo: CMakeFiles/grafo.dir/Grafo.c.o
 grafo: CMakeFiles/grafo.dir/Vertice.c.o
-grafo: CMakeFiles/grafo.dir/EdgeGrafo.c.o
+grafo: CMakeFiles/grafo.dir/Edge.c.o
 grafo: CMakeFiles/grafo.dir/build.make
 grafo: CMakeFiles/grafo.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/basis/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking C executable grafo"

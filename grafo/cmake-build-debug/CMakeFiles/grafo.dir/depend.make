@@ -12,16 +12,19 @@ CMakeFiles/grafo.dir/ControleArquivoGrafo.c.o: \
  ../headers/ArrayUtils.h \
  ../headers/Cidade.h \
  ../headers/ControleArquivoGrafo.h \
+ ../headers/Edge.h \
  ../headers/Grafo.h \
  ../headers/RandomUtils.h \
  ../headers/StringUtils.h \
  ../headers/Vertice.h
-CMakeFiles/grafo.dir/EdgeGrafo.c.o: \
- ../EdgeGrafo.c \
- ../headers/EdgeGrafo.h
+CMakeFiles/grafo.dir/Edge.c.o: \
+ ../Edge.c \
+ ../headers/Edge.h
 CMakeFiles/grafo.dir/Grafo.c.o: \
  ../Grafo.c \
+ ../headers/ArrayUtils.h \
  ../headers/Cidade.h \
+ ../headers/Edge.h \
  ../headers/Grafo.h \
  ../headers/Vertice.h
 CMakeFiles/grafo.dir/RandomUtils.c.o: \
@@ -40,6 +43,7 @@ CMakeFiles/grafo.dir/main.c.o: \
  ../headers/ArrayUtils.h \
  ../headers/Cidade.h \
  ../headers/ControleArquivoGrafo.h \
+ ../headers/Edge.h \
  ../headers/Grafo.h \
  ../headers/RandomUtils.h \
  ../headers/StringUtils.h \

@@ -6,9 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/basis/Documentos/Grafo/grafo/EdgeGrafo.c
-headers/EdgeGrafo.h
-/home/basis/Documentos/Grafo/grafo/headers/EdgeGrafo.h
+/home/basis/Documentos/Grafo/grafo/ArrayUtils.c
+headers/ArrayUtils.h
+/home/basis/Documentos/Grafo/grafo/headers/ArrayUtils.h
 
-/home/basis/Documentos/Grafo/grafo/headers/EdgeGrafo.h
+/home/basis/Documentos/Grafo/grafo/headers/ArrayUtils.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
 

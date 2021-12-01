@@ -201,29 +201,29 @@ ControleArquivoGrafo.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/ControleArquivoGrafo.c.s
 .PHONY : ControleArquivoGrafo.c.s
 
-EdgeGrafo.o: EdgeGrafo.c.o
-.PHONY : EdgeGrafo.o
+Edge.o: Edge.c.o
+.PHONY : Edge.o
 
 # target to build an object file
-EdgeGrafo.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/EdgeGrafo.c.o
-.PHONY : EdgeGrafo.c.o
+Edge.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/Edge.c.o
+.PHONY : Edge.c.o
 
-EdgeGrafo.i: EdgeGrafo.c.i
-.PHONY : EdgeGrafo.i
+Edge.i: Edge.c.i
+.PHONY : Edge.i
 
 # target to preprocess a source file
-EdgeGrafo.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/EdgeGrafo.c.i
-.PHONY : EdgeGrafo.c.i
+Edge.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/Edge.c.i
+.PHONY : Edge.c.i
 
-EdgeGrafo.s: EdgeGrafo.c.s
-.PHONY : EdgeGrafo.s
+Edge.s: Edge.c.s
+.PHONY : Edge.s
 
 # target to generate assembly for a file
-EdgeGrafo.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/EdgeGrafo.c.s
-.PHONY : EdgeGrafo.c.s
+Edge.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/Edge.c.s
+.PHONY : Edge.c.s
 
 Grafo.o: Grafo.c.o
 .PHONY : Grafo.o
@@ -363,9 +363,9 @@ help:
 	@echo "... ControleArquivoGrafo.o"
 	@echo "... ControleArquivoGrafo.i"
 	@echo "... ControleArquivoGrafo.s"
-	@echo "... EdgeGrafo.o"
-	@echo "... EdgeGrafo.i"
-	@echo "... EdgeGrafo.s"
+	@echo "... Edge.o"
+	@echo "... Edge.i"
+	@echo "... Edge.s"
 	@echo "... Grafo.o"
 	@echo "... Grafo.i"
 	@echo "... Grafo.s"

@@ -4,9 +4,13 @@
 #include "headers/Grafo.h"
 
 int main(int argc, char *argv[]) {
-    criaArquivoEntrada();
+//    criaArquivoEntrada();
 
     Grafo *grafo = readGrafoFromFile();
+    Grafo *min = getMinimumSpanningTree(grafo);
 
-    printGrafo(grafo);
+    printGrafo(min);
+
+    free(grafo);
+    free(min);
 }
