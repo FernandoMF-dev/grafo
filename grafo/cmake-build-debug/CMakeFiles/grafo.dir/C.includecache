@@ -6,35 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/basis/Documentos/Grafo/grafo/Grafo.c
-headers/Grafo.h
-/home/basis/Documentos/Grafo/grafo/headers/Grafo.h
+/home/basis/Documentos/Grafo/grafo/EdgeGrafo.c
+headers/EdgeGrafo.h
+/home/basis/Documentos/Grafo/grafo/headers/EdgeGrafo.h
 
-/home/basis/Documentos/Grafo/grafo/headers/Cidade.h
-stdio.h
--
-stdlib.h
--
-time.h
--
-string.h
--
-
-/home/basis/Documentos/Grafo/grafo/headers/Grafo.h
-stdio.h
--
-stdlib.h
--
-Cidade.h
-/home/basis/Documentos/Grafo/grafo/headers/Cidade.h
-Vertice.h
-/home/basis/Documentos/Grafo/grafo/headers/Vertice.h
-
-/home/basis/Documentos/Grafo/grafo/headers/Vertice.h
-stdio.h
--
-stdlib.h
--
-Cidade.h
-/home/basis/Documentos/Grafo/grafo/headers/Cidade.h
+/home/basis/Documentos/Grafo/grafo/headers/EdgeGrafo.h
 
