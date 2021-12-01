@@ -21,7 +21,7 @@ Cidade *readNextCidadeFromFile(FILE *inputFile);
 
 Vertice *readNextVerticeFromFile(FILE *inputFile, int index);
 
-double *readNextVerticeEdgesFromFile(FILE *inputFile, int size);
+void readNextVerticeEdgesFromFile(FILE *inputFile, Grafo *grafo, int index);
 
 // =-=-=-=-= MÉTODOS PRIVADOS | IMPLEMENTAÇÃO =-=-=-=-=
 
@@ -131,8 +131,7 @@ Vertice *readNextVerticeFromFile(FILE *inputFile, int index) {
     return readVertice(index, readNextCidadeFromFile(inputFile));
 }
 
-double *readNextVerticeEdgesFromFile(FILE *inputFile, int size) {
-    double *edges = (double *) malloc(size * sizeof(double));
+void readNextVerticeEdgesFromFile(FILE *inputFile, Grafo *grafo, int index) {
     char *line = (char *) malloc((LINE_MAX_LENGTH + 1) * sizeof(char));
     char *ptr;
     int counter = 0;
@@ -140,12 +139,13 @@ double *readNextVerticeEdgesFromFile(FILE *inputFile, int size) {
     fscanf(inputFile, " %[^\n]%*c", line);
     ptr = strtok(line, DELIMITER);
     do {
-        edges[counter] = atof(ptr);
+        grafo->edges[index][counter] = atof(ptr);
         ptr = strtok(NULL, DELIMITER);
         counter++;
-    } while (counter < size);
+    } while (counter < grafo->size);
 
-    return edges;
+    free(line);
+    free(ptr);
 }
 
 // =-=-=-=-= MÉTODOS PÚBLICOS =-=-=-=-=
@@ -174,8 +174,10 @@ Grafo *readGrafoFromFile() {
         index++;
     }
 
+    index = 0;
     for (int i = 0; i < grafo->size; ++i) {
-        grafo->edges[i] = readNextVerticeEdgesFromFile(inputFile, grafo->size);
+        readNextVerticeEdgesFromFile(inputFile, grafo, index);
+        index++;
     }
 
     fclose(inputFile);
