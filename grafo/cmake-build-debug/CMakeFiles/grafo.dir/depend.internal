@@ -14,12 +14,17 @@ CMakeFiles/grafo.dir/ControleArquivoGrafo.c.o
  /home/basis/Documentos/Grafo/grafo/headers/ControleArquivoGrafo.h
  /home/basis/Documentos/Grafo/grafo/headers/Edge.h
  /home/basis/Documentos/Grafo/grafo/headers/Grafo.h
- /home/basis/Documentos/Grafo/grafo/headers/RandomUtils.h
- /home/basis/Documentos/Grafo/grafo/headers/StringUtils.h
  /home/basis/Documentos/Grafo/grafo/headers/Vertice.h
 CMakeFiles/grafo.dir/Edge.c.o
  /home/basis/Documentos/Grafo/grafo/Edge.c
  /home/basis/Documentos/Grafo/grafo/headers/Edge.h
+CMakeFiles/grafo.dir/GeradorArquivo.c.o
+ /home/basis/Documentos/Grafo/grafo/GeradorArquivo.c
+ /home/basis/Documentos/Grafo/grafo/headers/ArrayUtils.h
+ /home/basis/Documentos/Grafo/grafo/headers/Cidade.h
+ /home/basis/Documentos/Grafo/grafo/headers/GeradorArquivo.h
+ /home/basis/Documentos/Grafo/grafo/headers/RandomUtils.h
+ /home/basis/Documentos/Grafo/grafo/headers/StringUtils.h
 CMakeFiles/grafo.dir/Grafo.c.o
  /home/basis/Documentos/Grafo/grafo/Grafo.c
  /home/basis/Documentos/Grafo/grafo/headers/ArrayUtils.h
@@ -44,6 +49,7 @@ CMakeFiles/grafo.dir/main.c.o
  /home/basis/Documentos/Grafo/grafo/headers/Cidade.h
  /home/basis/Documentos/Grafo/grafo/headers/ControleArquivoGrafo.h
  /home/basis/Documentos/Grafo/grafo/headers/Edge.h
+ /home/basis/Documentos/Grafo/grafo/headers/GeradorArquivo.h
  /home/basis/Documentos/Grafo/grafo/headers/Grafo.h
  /home/basis/Documentos/Grafo/grafo/headers/RandomUtils.h
  /home/basis/Documentos/Grafo/grafo/headers/StringUtils.h

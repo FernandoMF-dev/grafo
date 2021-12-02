@@ -88,7 +88,7 @@ void insertEdgeGrafo(Grafo *grafo, Edge *edge) {
     grafo->edges[edge->origin][edge->destiny] = edge->weight;
 }
 
-void insertTwoWaysEdgeGrafo(Grafo *grafo, Edge *edge) {
+void insertTwoWayEdgeGrafo(Grafo *grafo, Edge *edge) {
     int origin = edge->origin;
     int destiny = edge->destiny;
 
@@ -110,7 +110,7 @@ Grafo *getMinimumSpanningTree(Grafo *origin) {
 
     for (int i = 0; i < minimumTree->size; ++i) {
         Edge *edge = findMinimalEdgeGrafo(origin, visitedIndex, visitedIndexSize);
-        insertTwoWaysEdgeGrafo(minimumTree, edge);
+        insertTwoWayEdgeGrafo(minimumTree, edge);
         visitedIndex[i + 1] = edge->destiny;
         visitedIndexSize++;
         free(edge);
@@ -118,4 +118,20 @@ Grafo *getMinimumSpanningTree(Grafo *origin) {
 
     free(visitedIndex);
     return minimumTree;
+}
+
+float getTotalEdgeWeight(Grafo *grafo) {
+    float totalWeight = (float) 0.0;
+
+    for (int i = 0; i < grafo->size; ++i) {
+        for (int j = 0; j < grafo->size; ++j) {
+            totalWeight += grafo->edges[i][j];
+        }
+    }
+
+    return totalWeight;
+}
+
+float getTotalTwoWayEdgeWeight(Grafo *grafo) {
+    return getTotalEdgeWeight(grafo) / 2;
 }

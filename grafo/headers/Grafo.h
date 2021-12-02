@@ -26,8 +26,12 @@ void printEdgesGrafo(Grafo *grafo);
 
 void insertEdgeGrafo(Grafo *grafo, Edge *edge);
 
-void insertTwoWaysEdgeGrafo(Grafo *grafo, Edge *edge);
+void insertTwoWayEdgeGrafo(Grafo *grafo, Edge *edge);
 
 Grafo *getMinimumSpanningTree(Grafo *origin);
+
+float getTotalEdgeWeight(Grafo *grafo);
+
+float getTotalTwoWayEdgeWeight(Grafo *grafo);
 
 #endif //GRAFO_GRAFO_H

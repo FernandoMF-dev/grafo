@@ -91,9 +91,6 @@
 		<Unit filename="/home/basis/Documentos/Grafo/grafo/GeradorArquivo.c">
 			<Option target="grafo"/>
 		</Unit>
-		<Unit filename="/home/basis/Documentos/Grafo/grafo/GeradorArquivo.h">
-			<Option target="grafo"/>
-		</Unit>
 		<Unit filename="/home/basis/Documentos/Grafo/grafo/Grafo.c">
 			<Option target="grafo"/>
 		</Unit>
@@ -116,6 +113,9 @@
 			<Option target="grafo"/>
 		</Unit>
 		<Unit filename="/home/basis/Documentos/Grafo/grafo/headers/Edge.h">
+			<Option target="grafo"/>
+		</Unit>
+		<Unit filename="/home/basis/Documentos/Grafo/grafo/headers/GeradorArquivo.h">
 			<Option target="grafo"/>
 		</Unit>
 		<Unit filename="/home/basis/Documentos/Grafo/grafo/headers/Grafo.h">

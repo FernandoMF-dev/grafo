@@ -11,6 +11,7 @@ int main(int argc, char *argv[]) {
     Grafo *min = getMinimumSpanningTree(grafo);
 
     printGrafo(min);
+    printf("\n\n\t%.2f | %.2f", getTotalTwoWayEdgeWeight(grafo), getTotalTwoWayEdgeWeight(min));
 
     free(grafo);
     free(min);

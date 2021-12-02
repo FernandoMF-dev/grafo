@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/basis/Documentos/Grafo/grafo/Grafo.c
-headers/Grafo.h
-/home/basis/Documentos/Grafo/grafo/headers/Grafo.h
-
 /home/basis/Documentos/Grafo/grafo/headers/ArrayUtils.h
 stdio.h
 -
@@ -28,11 +24,33 @@ time.h
 string.h
 -
 
+/home/basis/Documentos/Grafo/grafo/headers/ControleArquivoGrafo.h
+stdio.h
+-
+stdlib.h
+-
+Cidade.h
+/home/basis/Documentos/Grafo/grafo/headers/Cidade.h
+Grafo.h
+/home/basis/Documentos/Grafo/grafo/headers/Grafo.h
+
 /home/basis/Documentos/Grafo/grafo/headers/Edge.h
 stdio.h
 -
 stdlib.h
 -
+
+/home/basis/Documentos/Grafo/grafo/headers/GeradorArquivo.h
+stdio.h
+-
+stdlib.h
+-
+Cidade.h
+/home/basis/Documentos/Grafo/grafo/headers/Cidade.h
+StringUtils.h
+/home/basis/Documentos/Grafo/grafo/headers/StringUtils.h
+RandomUtils.h
+/home/basis/Documentos/Grafo/grafo/headers/RandomUtils.h
 
 /home/basis/Documentos/Grafo/grafo/headers/Grafo.h
 stdio.h
@@ -48,6 +66,28 @@ Vertice.h
 Edge.h
 /home/basis/Documentos/Grafo/grafo/headers/Edge.h
 
+/home/basis/Documentos/Grafo/grafo/headers/RandomUtils.h
+stdio.h
+-
+stdlib.h
+-
+time.h
+-
+string.h
+-
+math.h
+-
+
+/home/basis/Documentos/Grafo/grafo/headers/StringUtils.h
+stdio.h
+-
+string.h
+-
+ArrayUtils.h
+/home/basis/Documentos/Grafo/grafo/headers/ArrayUtils.h
+RandomUtils.h
+/home/basis/Documentos/Grafo/grafo/headers/RandomUtils.h
+
 /home/basis/Documentos/Grafo/grafo/headers/Vertice.h
 stdio.h
 -
@@ -55,4 +95,14 @@ stdlib.h
 -
 Cidade.h
 /home/basis/Documentos/Grafo/grafo/headers/Cidade.h
+
+/home/basis/Documentos/Grafo/grafo/main.c
+stdio.h
+-
+headers/GeradorArquivo.h
+/home/basis/Documentos/Grafo/grafo/headers/GeradorArquivo.h
+headers/ControleArquivoGrafo.h
+/home/basis/Documentos/Grafo/grafo/headers/ControleArquivoGrafo.h
+headers/Grafo.h
+/home/basis/Documentos/Grafo/grafo/headers/Grafo.h
 

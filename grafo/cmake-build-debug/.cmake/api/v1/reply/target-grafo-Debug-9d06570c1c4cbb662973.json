@@ -238,7 +238,7 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "GeradorArquivo.h",
+			"path" : "headers/GeradorArquivo.h",
 			"sourceGroupIndex" : 1
 		}
 	],
