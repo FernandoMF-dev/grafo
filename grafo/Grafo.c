@@ -4,31 +4,36 @@
 
 // =-=-=-=-= MÉTODOS PRIVADOS | DECLARAÇÃO =-=-=-=-=
 
-Edge *findMinimalEdgeGrafo(Grafo *grafo, const int *verticeArray, int verticeArraySize);
+Edge *findMinimalEdgeGrafo(Grafo *grafo, const int *visitedIndexArray, int visitedIndexSize);
 
 void copyVerticesGrafo(Grafo *target, Grafo *origin);
 
 // =-=-=-=-= MÉTODOS PRIVADOS | IMPLEMENTAÇÃO =-=-=-=-=
 
-Edge *findMinimalEdgeGrafo(Grafo *grafo, const int *verticeArray, int verticeArraySize) {
+Edge *findMinimalEdgeGrafo(Grafo *grafo, const int *visitedIndexArray, int visitedIndexSize) {
     Edge *minEdge = readEdge(-1, -1, (float) 0.0);
-    float floatWeight;
-    int index;
+    Edge *aux = newEdge();
 
-    for (int i = 0; i < verticeArraySize; i++) {
-        index = getMinNonZeroWithBlackListArrayFloat(grafo->edges[verticeArray[i]], grafo->size,
-                                                     verticeArray, verticeArraySize);
+    float *grafoEdgesArray;
 
-        if (index != -1) {
-            floatWeight = grafo->edges[i][index];
-            if (minEdge->weight == 0.0 || minEdge->weight > floatWeight) {
-                minEdge->origin = i;
-                minEdge->destiny = index;
-                minEdge->weight = floatWeight;
+    for (int i = 0; i < visitedIndexSize; ++i) {
+        aux->origin = visitedIndexArray[i];
+        grafoEdgesArray = grafo->edges[aux->origin];
+        aux->destiny = getMinNonZeroWithBlackListArrayFloat(grafoEdgesArray, grafo->size,
+                                                            visitedIndexArray, visitedIndexSize);
+
+        if (aux->destiny != -1) {
+            aux->weight = grafoEdgesArray[aux->destiny];
+
+            if (minEdge->weight == 0 || minEdge->weight > aux->weight) {
+                minEdge->origin = aux->origin;
+                minEdge->destiny = aux->destiny;
+                minEdge->weight = aux->weight;
             }
         }
     }
 
+    free(aux);
     return minEdge;
 }
 
@@ -84,22 +89,34 @@ void insertEdgeGrafo(Grafo *grafo, Edge *edge) {
     grafo->edges[edge->origin][edge->destiny] = edge->weight;
 }
 
+void insertTwoWaysEdgeGrafo(Grafo *grafo, Edge *edge) {
+    int origin = edge->origin;
+    int destiny = edge->destiny;
+
+    insertEdgeGrafo(grafo, edge);
+    edge->origin = destiny;
+    edge->destiny = origin;
+
+    insertEdgeGrafo(grafo, edge);
+    edge->origin = origin;
+    edge->destiny = destiny;
+}
+
 Grafo *getMinimumSpanningTree(Grafo *origin) {
-    Grafo *grafo = newGrafo(origin->label, origin->size);
-    int *visitedIndex = newIntegerArray(grafo->size + 1);
-    int counter = 1;
+    Grafo *minimumTree = newGrafo(origin->label, origin->size);
+    int *visitedIndex = newIntegerArray(minimumTree->size);
+    int visitedIndexSize = 1;
 
-    copyVerticesGrafo(grafo, origin);
+    copyVerticesGrafo(minimumTree, origin);
 
-    insertEdgeGrafo(grafo, findMinimalEdgeGrafo(origin, newIntegerArray(1), 1));
-    while (counter <= grafo->size) {
-        Edge *visited = findMinimalEdgeGrafo(origin, visitedIndex, counter);
-        insertEdgeGrafo(grafo, visited);
-        visitedIndex[counter] = visited->destiny;
-        counter++;
-        free(visited);
+    for (int i = 0; i < minimumTree->size; ++i) {
+        Edge *edge = findMinimalEdgeGrafo(origin, visitedIndex, visitedIndexSize);
+        insertTwoWaysEdgeGrafo(minimumTree, edge);
+        visitedIndex[i + 1] = edge->destiny;
+        visitedIndexSize++;
+        free(edge);
     }
 
     free(visitedIndex);
-    return grafo;
+    return minimumTree;
 }
