@@ -9,4 +9,6 @@
 
 Grafo *readGrafoFromFile();
 
+void writeGrafoEdgesOnFile(Grafo *grafo);
+
 #endif //GRAFO_CONTROLEARQUIVOGRAFO_H

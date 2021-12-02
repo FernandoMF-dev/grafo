@@ -4,6 +4,8 @@
 
 #define LINE_MAX_LENGTH 255
 #define DIRETORIO_ARQUIVO_ENTRADA "../entrada/entrada.txt"
+#define DIRETORIO_ARQUIVO_SAIDA "../saida/"
+#define FILE_NAME_MAX_LENGTH 31
 #define DELIMITER ";"
 
 // =-=-=-=-= MÉTODOS PRIVADOS | DECLARAÇÃO =-=-=-=-=
@@ -52,6 +54,10 @@ void readNextVerticeEdgesFromFile(FILE *inputFile, Grafo *grafo, int index) {
     free(ptr);
 }
 
+void writeNextVerticeOnFile(FILE *outputFile, Vertice *vertice) {
+    fprintf(outputFile, "%d%s%s%s", vertice->value->codigo, DELIMITER, vertice->value->nome, DELIMITER);
+}
+
 // =-=-=-=-= MÉTODOS PÚBLICOS =-=-=-=-=
 
 Grafo *readGrafoFromFile() {
@@ -76,4 +82,25 @@ Grafo *readGrafoFromFile() {
 
     fclose(inputFile);
     return grafo;
+}
+
+void writeGrafoEdgesOnFile(Grafo *grafo) {
+    int nomeArquivoSaidaLength = strlen(DIRETORIO_ARQUIVO_SAIDA) + FILE_NAME_MAX_LENGTH + 1;
+    char *nomeArquivoSaida = (char *) malloc(nomeArquivoSaidaLength * sizeof(char));
+    sprintf(nomeArquivoSaida, "%s%s", DIRETORIO_ARQUIVO_SAIDA, grafo->label);
+
+    FILE *outputFile = fopen(nomeArquivoSaida, "w");
+
+    for (int i = 0; i < grafo->size; ++i) {
+        for (int j = 0; j < grafo->size; ++j) {
+            if (grafo->edges[i][j] != 0.0) {
+                writeNextVerticeOnFile(outputFile, grafo->vertices[i]);
+                writeNextVerticeOnFile(outputFile, grafo->vertices[j]);
+                fprintf(outputFile, "%.2f\n", grafo->edges[i][j]);
+            }
+        }
+    }
+    fprintf(outputFile, "%.2f", getTotalTwoWayEdgeWeight(grafo));
+
+    fclose(outputFile);
 }
