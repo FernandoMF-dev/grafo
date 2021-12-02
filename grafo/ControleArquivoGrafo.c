@@ -172,13 +172,13 @@ Grafo *readGrafoFromFile() {
     Grafo *grafo = newGrafo("Grafo", size);
 
     int index = 0;
-    for (int i = 0; i < grafo->size; ++i) {
+    for (int i = 0; i < grafo->size; i++) {
         grafo->vertices[i] = readNextVerticeFromFile(inputFile, index);
         index++;
     }
 
     index = 0;
-    for (int i = 0; i < grafo->size; ++i) {
+    for (int i = 0; i < grafo->size; i++) {
         readNextVerticeEdgesFromFile(inputFile, grafo, index);
         index++;
     }

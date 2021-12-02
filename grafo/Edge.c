@@ -21,7 +21,7 @@ Edge *newEdge() {
 Edge **newEdgeArray(int size) {
     Edge **edgeArray = (Edge **) malloc(size * sizeof(Edge *));
 
-    for (int i = 0; i < size; ++i) {
+    for (int i = 0; i < size; i++) {
         edgeArray[i] = NULL;
     }
 

@@ -29,7 +29,7 @@ Vertice *readVertice(int index, Cidade *value) {
 Vertice **buildGrafoVerticesArray(int size) {
     Vertice **verticeArray = (Vertice **) malloc(size * sizeof(Vertice *));
 
-    for (int i = 0; i < size; ++i) {
+    for (int i = 0; i < size; i++) {
         verticeArray[i] = NULL;
     }
 

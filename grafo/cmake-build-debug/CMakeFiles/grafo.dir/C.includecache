@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/basis/Documentos/Grafo/grafo/Edge.c
-headers/Edge.h
-/home/basis/Documentos/Grafo/grafo/headers/Edge.h
-
 /home/basis/Documentos/Grafo/grafo/Grafo.c
 headers/Grafo.h
 /home/basis/Documentos/Grafo/grafo/headers/Grafo.h
