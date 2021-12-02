@@ -88,6 +88,12 @@
 		<Unit filename="/home/basis/Documentos/Grafo/grafo/Edge.c">
 			<Option target="grafo"/>
 		</Unit>
+		<Unit filename="/home/basis/Documentos/Grafo/grafo/GeradorArquivo.c">
+			<Option target="grafo"/>
+		</Unit>
+		<Unit filename="/home/basis/Documentos/Grafo/grafo/GeradorArquivo.h">
+			<Option target="grafo"/>
+		</Unit>
 		<Unit filename="/home/basis/Documentos/Grafo/grafo/Grafo.c">
 			<Option target="grafo"/>
 		</Unit>

@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/grafo.dir/Cidade.c.o"
   "CMakeFiles/grafo.dir/ControleArquivoGrafo.c.o"
   "CMakeFiles/grafo.dir/Edge.c.o"
+  "CMakeFiles/grafo.dir/GeradorArquivo.c.o"
   "CMakeFiles/grafo.dir/Grafo.c.o"
   "CMakeFiles/grafo.dir/RandomUtils.c.o"
   "CMakeFiles/grafo.dir/StringUtils.c.o"

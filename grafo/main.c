@@ -1,10 +1,11 @@
 #include <stdio.h>
 
+#include "headers/GeradorArquivo.h"
 #include "headers/ControleArquivoGrafo.h"
 #include "headers/Grafo.h"
 
 int main(int argc, char *argv[]) {
-//    criaArquivoEntrada();
+    criaArquivoEntrada();
 
     Grafo *grafo = readGrafoFromFile();
     Grafo *min = getMinimumSpanningTree(grafo);

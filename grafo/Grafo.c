@@ -73,7 +73,6 @@ void printEdgesGrafo(Grafo *grafo) {
     for (int i = 0; i < grafo->size; i++) {
         for (int j = 0; j < grafo->size; ++j) {
             if (grafo->edges[i][j] != 0.0) {
-//                printf("%d -[%.2f]-> %d\n", grafo->vertices[i]->index, grafo->edges[i][j], grafo->vertices[j]->index);
                 printf("%s -[%.2f]-> %s\n", grafo->vertices[i]->value->nome, grafo->edges[i][j],
                        grafo->vertices[j]->value->nome);
             }

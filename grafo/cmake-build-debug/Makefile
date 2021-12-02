@@ -225,6 +225,30 @@ Edge.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/Edge.c.s
 .PHONY : Edge.c.s
 
+GeradorArquivo.o: GeradorArquivo.c.o
+.PHONY : GeradorArquivo.o
+
+# target to build an object file
+GeradorArquivo.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/GeradorArquivo.c.o
+.PHONY : GeradorArquivo.c.o
+
+GeradorArquivo.i: GeradorArquivo.c.i
+.PHONY : GeradorArquivo.i
+
+# target to preprocess a source file
+GeradorArquivo.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/GeradorArquivo.c.i
+.PHONY : GeradorArquivo.c.i
+
+GeradorArquivo.s: GeradorArquivo.c.s
+.PHONY : GeradorArquivo.s
+
+# target to generate assembly for a file
+GeradorArquivo.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/GeradorArquivo.c.s
+.PHONY : GeradorArquivo.c.s
+
 Grafo.o: Grafo.c.o
 .PHONY : Grafo.o
 
@@ -366,6 +390,9 @@ help:
 	@echo "... Edge.o"
 	@echo "... Edge.i"
 	@echo "... Edge.s"
+	@echo "... GeradorArquivo.o"
+	@echo "... GeradorArquivo.i"
+	@echo "... GeradorArquivo.s"
 	@echo "... Grafo.o"
 	@echo "... Grafo.i"
 	@echo "... Grafo.s"
