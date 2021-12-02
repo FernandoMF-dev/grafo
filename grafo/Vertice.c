@@ -1,11 +1,5 @@
 #include "headers/Vertice.h"
 
-// =-=-=-=-= CONSTANTES =-=-=-=-=
-
-// =-=-=-=-= MÉTODOS PRIVADOS | DECLARAÇÃO =-=-=-=-=
-
-// =-=-=-=-= MÉTODOS PRIVADOS | IMPLEMENTAÇÃO =-=-=-=-=
-
 // =-=-=-=-= MÉTODOS PÚBLICOS =-=-=-=-=
 
 Vertice *newVertice() {

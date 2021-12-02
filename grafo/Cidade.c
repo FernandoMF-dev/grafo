@@ -4,10 +4,6 @@
 
 #define MAX_NOME 15
 
-// =-=-=-=-= MÉTODOS PRIVADOS | DECLARAÇÃO =-=-=-=-=
-
-// =-=-=-=-= MÉTODOS PRIVADOS | IMPLEMENTAÇÃO =-=-=-=-=
-
 // =-=-=-=-= MÉTODOS PÚBLICOS =-=-=-=-=
 
 Cidade *newCidade() {

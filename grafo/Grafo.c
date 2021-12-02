@@ -1,7 +1,5 @@
 #include "headers/Grafo.h"
 
-// =-=-=-=-= CONSTANTES =-=-=-=-=
-
 // =-=-=-=-= MÉTODOS PRIVADOS | DECLARAÇÃO =-=-=-=-=
 
 Edge *findMinimalEdgeGrafo(Grafo *grafo, const int *visitedIndexArray, int visitedIndexSize);

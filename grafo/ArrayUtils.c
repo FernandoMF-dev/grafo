@@ -1,11 +1,5 @@
 #include "headers/ArrayUtils.h"
 
-// =-=-=-=-= CONSTANTES =-=-=-=-=
-
-// =-=-=-=-= MÉTODOS PRIVADOS | DECLARAÇÃO =-=-=-=-=
-
-// =-=-=-=-= MÉTODOS PRIVADOS | IMPLEMENTAÇÃO =-=-=-=-=
-
 // =-=-=-=-= MÉTODOS PÚBLICOS =-=-=-=-=
 
 int arrayContainsChar(char needle, char *haystack) {

@@ -1,11 +1,5 @@
 #include "headers/RandomUtils.h"
 
-// =-=-=-=-= CONSTANTES =-=-=-=-=
-
-// =-=-=-=-= MÉTODOS PRIVADOS | DECLARAÇÃO =-=-=-=-=
-
-// =-=-=-=-= MÉTODOS PRIVADOS | IMPLEMENTAÇÃO =-=-=-=-=
-
 // =-=-=-=-= MÉTODOS PÚBLICOS =-=-=-=-=
 
 int getRandomInt(int ceil) {

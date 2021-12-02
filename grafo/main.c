@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 #include "headers/GeradorArquivo.h"
 #include "headers/ControleArquivoGrafo.h"
 #include "headers/Grafo.h"
