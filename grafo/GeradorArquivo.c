@@ -2,7 +2,7 @@
 
 // =-=-=-=-= CONSTANTES =-=-=-=-=
 
-#define QTD_CID 5
+#define QTD_CID 10
 #define DIRETORIO_ARQUIVO_ENTRADA "../entrada/entrada.txt"
 #define DELIMITER ";"
 

@@ -103,17 +103,18 @@ Grafo *getMinimumSpanningTree(Grafo *origin) {
     Grafo *minimumTree = newGrafo(origin->label, origin->size);
     int *visitedIndex = newIntegerArray(minimumTree->size);
     int visitedIndexSize = 1;
+    Edge *edge;
 
     copyVerticesGrafo(minimumTree, origin);
 
     for (int i = 0; i < minimumTree->size; ++i) {
-        Edge *edge = findMinimalEdgeGrafo(origin, visitedIndex, visitedIndexSize);
+        edge = findMinimalEdgeGrafo(origin, visitedIndex, visitedIndexSize);
         insertTwoWayEdgeGrafo(minimumTree, edge);
         visitedIndex[i + 1] = edge->destiny;
         visitedIndexSize++;
-        free(edge);
     }
 
+    free(edge);
     free(visitedIndex);
     return minimumTree;
 }
