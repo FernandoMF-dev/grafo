@@ -4,29 +4,20 @@ set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
 
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "C"
-  )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_C
-  "/home/basis/Documentos/Grafo/grafo/ArrayUtils.c" "/home/basis/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles/grafo.dir/ArrayUtils.c.o"
-  "/home/basis/Documentos/Grafo/grafo/Cidade.c" "/home/basis/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles/grafo.dir/Cidade.c.o"
-  "/home/basis/Documentos/Grafo/grafo/ControleArquivoGrafo.c" "/home/basis/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles/grafo.dir/ControleArquivoGrafo.c.o"
-  "/home/basis/Documentos/Grafo/grafo/Edge.c" "/home/basis/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles/grafo.dir/Edge.c.o"
-  "/home/basis/Documentos/Grafo/grafo/GeradorArquivo.c" "/home/basis/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles/grafo.dir/GeradorArquivo.c.o"
-  "/home/basis/Documentos/Grafo/grafo/Grafo.c" "/home/basis/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles/grafo.dir/Grafo.c.o"
-  "/home/basis/Documentos/Grafo/grafo/RandomUtils.c" "/home/basis/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles/grafo.dir/RandomUtils.c.o"
-  "/home/basis/Documentos/Grafo/grafo/StringUtils.c" "/home/basis/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles/grafo.dir/StringUtils.c.o"
-  "/home/basis/Documentos/Grafo/grafo/Vertice.c" "/home/basis/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles/grafo.dir/Vertice.c.o"
-  "/home/basis/Documentos/Grafo/grafo/main.c" "/home/basis/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles/grafo.dir/main.c.o"
-  )
-set(CMAKE_C_COMPILER_ID "GNU")
-
-# The include file search paths:
-set(CMAKE_C_TARGET_INCLUDE_PATH
   )
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/fernando_mf/Documentos/Grafo/grafo/ArrayUtils.c" "CMakeFiles/grafo.dir/ArrayUtils.c.o" "gcc" "CMakeFiles/grafo.dir/ArrayUtils.c.o.d"
+  "/home/fernando_mf/Documentos/Grafo/grafo/Cidade.c" "CMakeFiles/grafo.dir/Cidade.c.o" "gcc" "CMakeFiles/grafo.dir/Cidade.c.o.d"
+  "/home/fernando_mf/Documentos/Grafo/grafo/ControleArquivoGrafo.c" "CMakeFiles/grafo.dir/ControleArquivoGrafo.c.o" "gcc" "CMakeFiles/grafo.dir/ControleArquivoGrafo.c.o.d"
+  "/home/fernando_mf/Documentos/Grafo/grafo/Edge.c" "CMakeFiles/grafo.dir/Edge.c.o" "gcc" "CMakeFiles/grafo.dir/Edge.c.o.d"
+  "/home/fernando_mf/Documentos/Grafo/grafo/GeradorArquivo.c" "CMakeFiles/grafo.dir/GeradorArquivo.c.o" "gcc" "CMakeFiles/grafo.dir/GeradorArquivo.c.o.d"
+  "/home/fernando_mf/Documentos/Grafo/grafo/Grafo.c" "CMakeFiles/grafo.dir/Grafo.c.o" "gcc" "CMakeFiles/grafo.dir/Grafo.c.o.d"
+  "/home/fernando_mf/Documentos/Grafo/grafo/RandomUtils.c" "CMakeFiles/grafo.dir/RandomUtils.c.o" "gcc" "CMakeFiles/grafo.dir/RandomUtils.c.o.d"
+  "/home/fernando_mf/Documentos/Grafo/grafo/StringUtils.c" "CMakeFiles/grafo.dir/StringUtils.c.o" "gcc" "CMakeFiles/grafo.dir/StringUtils.c.o.d"
+  "/home/fernando_mf/Documentos/Grafo/grafo/Vertice.c" "CMakeFiles/grafo.dir/Vertice.c.o" "gcc" "CMakeFiles/grafo.dir/Vertice.c.o.d"
+  "/home/fernando_mf/Documentos/Grafo/grafo/main.c" "CMakeFiles/grafo.dir/main.c.o" "gcc" "CMakeFiles/grafo.dir/main.c.o.d"
   )
 
 # Targets to which this target links.
