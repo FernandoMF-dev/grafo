@@ -6,6 +6,9 @@
 
 // =-=-=-=-= MÉTODOS PÚBLICOS =-=-=-=-=
 
+/*
+ * Inicializa e retorna uma nova instância de 'Cidade'.
+ * */
 Cidade *newCidade() {
     Cidade *cidade = (Cidade *) malloc(sizeof(Cidade));
 
@@ -15,6 +18,9 @@ Cidade *newCidade() {
     return cidade;
 }
 
+/*
+ * Retorna uma nova instância de 'Cidade' preenchido com os valores passados por parâmetro.
+ * */
 Cidade *readCidade(int codigo, char *nome) {
     Cidade *cidade = newCidade();
 
@@ -24,6 +30,9 @@ Cidade *readCidade(int codigo, char *nome) {
     return cidade;
 }
 
+/*
+ * Imprimi uma struct 'Cidade'
+ * */
 void printCidade(Cidade *cidade) {
     if (cidade == NULL) {
         printf("[NULL]");

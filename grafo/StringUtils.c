@@ -2,8 +2,6 @@
 
 // =-=-=-=-= CONSTANTES =-=-=-=-=
 
-#define TAM_NOME 11
-
 char VOGAIS[10] = "aeiouAEIOU";
 
 // =-=-=-=-= MÉTODOS PRIVADOS | DECLARAÇÃO =-=-=-=-=
@@ -16,26 +14,43 @@ char gerarVogal();
 
 // =-=-=-=-= MÉTODOS PRIVADOS | IMPLEMENTAÇÃO =-=-=-=-=
 
+/*
+ * Retorna um 'char' com uma letra maiúscula aleatória
+ * */
 char gerarLetraMaiuscula() {
-    return (char) (getRandomInt(26) + 65);
+    return (char) (getRandomInteger(26) + 65);
 }
 
+/*
+ * Retorna um 'char' com uma letra minúscula aleatória.
+ * */
 char gerarLetraMinuscula() {
-    return (char) (getRandomInt(26) + 97);
+    return (char) (getRandomInteger(26) + 97);
 }
 
+/*
+ * Retorna um 'char' com uma vogal aleatória.
+ *
+ * A vogal pode ser tanto maiuscula quanto minuscula.
+ * */
 char gerarVogal() {
-    return VOGAIS[getRandomInt((int) strlen(VOGAIS))];
+    return VOGAIS[getRandomInteger((int) strlen(VOGAIS))];
 }
 
 // =-=-=-=-= MÉTODOS PÚBLICOS =-=-=-=-=
 
-char *getRandomWord() {
+/*
+ * Retorna uma 'string' de tamanho [lenght].
+ *
+ * O primeiro caractere será uma letra maiúscula;
+ * A string não haverá duas consoantes consecutivas.
+ * */
+char *getRandomWord(int lenght) {
     int i;
-    char *palavra = (char *) malloc(TAM_NOME * sizeof(char));
+    char *palavra = (char *) malloc((lenght + 1) * sizeof(char));
 
     palavra[0] = gerarLetraMaiuscula();
-    for (i = 1; i < TAM_NOME; i++) {
+    for (i = 1; i < (lenght + 1); i++) {
         if (arrayContainsChar(palavra[i - 1], VOGAIS)) {
             palavra[i] = gerarLetraMinuscula();
         } else {

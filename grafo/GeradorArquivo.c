@@ -2,7 +2,9 @@
 
 // =-=-=-=-= CONSTANTES =-=-=-=-=
 
-#define QTD_CID 10
+#define QUANTIDADE_CIDADES 25
+#define TAMANHO_NOME_CIDADE 10
+
 #define DIRETORIO_ARQUIVO_ENTRADA "../entrada/entrada.txt"
 #define DELIMITER ";"
 
@@ -51,12 +53,12 @@ double gerarDistancia(int linha, int coluna) {
  * e vai a diminuir a cada um até que a última tem zero.
  * */
 double *gerarDistanciasCidade() {
-    int tamVetDist = (QTD_CID * QTD_CID - QTD_CID) / 2;
+    int tamVetDist = (QUANTIDADE_CIDADES * QUANTIDADE_CIDADES - QUANTIDADE_CIDADES) / 2;
     double *distancias = (double *) malloc(tamVetDist * sizeof(double));
     int i = 0;
 
-    for (int l = 0; l < QTD_CID; l++) {
-        for (int c = l + 1; c < QTD_CID; c++) {
+    for (int l = 0; l < QUANTIDADE_CIDADES; l++) {
+        for (int c = l + 1; c < QUANTIDADE_CIDADES; c++) {
             distancias[i] = gerarDistancia(l, c);
             i++;
         }
@@ -71,9 +73,9 @@ double *gerarDistanciasCidade() {
 void imprimirCidades(FILE *inputFile) {
     Cidade *cidade = newCidade();
 
-    fprintf(inputFile, "%d\n", QTD_CID);
-    for (int i = 0; i < QTD_CID; i++) {
-        cidade->nome = getRandomWord();
+    fprintf(inputFile, "%d\n", QUANTIDADE_CIDADES);
+    for (int i = 0; i < QUANTIDADE_CIDADES; i++) {
+        cidade->nome = getRandomWord(TAMANHO_NOME_CIDADE);
         cidade->codigo = i; //geraCodigo(usado, qtd);
         fprintf(inputFile, "%d;%s\n", cidade->codigo, cidade->nome);
     }
@@ -89,27 +91,33 @@ void imprimirCidades(FILE *inputFile) {
  * bastava somar a coluna menos linha -1. Vou fotografar a dedução e colocar nesse diretório para referência futura se necessário
  */
 void imprimirMatriz(FILE *inputFile, double *distancias) {
-    for (int l = 0; l < QTD_CID; l++) {
-        for (int c = 0; c < QTD_CID - 1; c++) {
+    for (int l = 0; l < QUANTIDADE_CIDADES; l++) {
+        for (int c = 0; c < QUANTIDADE_CIDADES - 1; c++) {
             if (l == c) {
                 fprintf(inputFile, "%.2lf%s", 0.0, DELIMITER);
             } else if (l < c) {
-                fprintf(inputFile, "%.2lf%s", distancias[l * QTD_CID - (l * l + l) / 2 + c - l - 1], DELIMITER);
+                fprintf(inputFile, "%.2lf%s", distancias[l * QUANTIDADE_CIDADES - (l * l + l) / 2 + c - l - 1],
+                        DELIMITER);
             } else {
-                fprintf(inputFile, "%.2lf%s", distancias[c * QTD_CID - (c * c + c) / 2 + l - c - 1], DELIMITER);
+                fprintf(inputFile, "%.2lf%s", distancias[c * QUANTIDADE_CIDADES - (c * c + c) / 2 + l - c - 1],
+                        DELIMITER);
             }
         }
 
-        if (l == (QTD_CID - 1)) {
+        if (l == (QUANTIDADE_CIDADES - 1)) {
             fprintf(inputFile, "%.2lf\n", 0.0);
         } else {
-            fprintf(inputFile, "%.2lf\n", distancias[l * QTD_CID - (l * l + l) / 2 + QTD_CID - l]);
+            fprintf(inputFile, "%.2lf\n",
+                    distancias[l * QUANTIDADE_CIDADES - (l * l + l) / 2 + QUANTIDADE_CIDADES - l]);
         }
     }
 }
 
 // =-=-=-=-= MÉTODOS PÚBLICOS =-=-=-=-=
 
+/*
+ * Cria um arquivo com vertices e arestas aleatórios para um grafo
+ * */
 void criaArquivoEntrada() {
     FILE *inputFile = fopen(DIRETORIO_ARQUIVO_ENTRADA, "w");
     double *distancias = gerarDistanciasCidade();

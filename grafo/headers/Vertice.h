@@ -15,7 +15,7 @@ Vertice *newVertice();
 
 Vertice *readVertice(int index, Cidade *value);
 
-Vertice **buildGrafoVerticesArray(int size);
+Vertice **newVerticeArray(int size);
 
 void printVertice(Vertice *vertice);
 

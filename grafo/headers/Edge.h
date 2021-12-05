@@ -12,8 +12,6 @@ typedef struct Edge {
 
 Edge *newEdge();
 
-Edge **newEdgeArray(int size);
-
 Edge *readEdge(int origin, int destiny, float weight);
 
 void printEdge(Edge edge);

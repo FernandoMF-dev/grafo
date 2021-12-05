@@ -14,10 +14,15 @@ Cidade *readNextCidadeFromFile(FILE *inputFile);
 
 Vertice *readNextVerticeFromFile(FILE *inputFile, int index);
 
-void readNextVerticeEdgesFromFile(FILE *inputFile, Grafo *grafo, int index);
+void readNextEdgesFromFile(FILE *inputFile, Grafo *grafo, int index);
 
 // =-=-=-=-= MÉTODOS PRIVADOS | IMPLEMENTAÇÃO =-=-=-=-=
 
+/*
+ * Lê a próxima linha de [inputFile] e preencha dados de 'Cidade'.
+ *
+ * Retorna nova 'Cidade'.
+ * */
 Cidade *readNextCidadeFromFile(FILE *inputFile) {
     Cidade *cidade = newCidade();
     char *line = (char *) malloc((LINE_MAX_LENGTH + 1) * sizeof(char));
@@ -33,11 +38,17 @@ Cidade *readNextCidadeFromFile(FILE *inputFile) {
     return cidade;
 }
 
+/*
+ * Retorna um 'Vertice' de índice [index] e com valor lido de [inputFile].
+ * */
 Vertice *readNextVerticeFromFile(FILE *inputFile, int index) {
     return readVertice(index, readNextCidadeFromFile(inputFile));
 }
 
-void readNextVerticeEdgesFromFile(FILE *inputFile, Grafo *grafo, int index) {
+/*
+ * Lê as arestas de um vértice de índice [index] de [inputFile] e insere em [grafo].
+ * */
+void readNextEdgesFromFile(FILE *inputFile, Grafo *grafo, int index) {
     char *line = (char *) malloc((LINE_MAX_LENGTH + 1) * sizeof(char));
     char *ptr;
     int counter = 0;
@@ -54,12 +65,18 @@ void readNextVerticeEdgesFromFile(FILE *inputFile, Grafo *grafo, int index) {
     free(ptr);
 }
 
+/*
+ * Imprime um 'Vertice' no arquivo [outputFile].
+ * */
 void writeNextVerticeOnFile(FILE *outputFile, Vertice *vertice) {
     fprintf(outputFile, "%d%s%s%s", vertice->value->codigo, DELIMITER, vertice->value->nome, DELIMITER);
 }
 
 // =-=-=-=-= MÉTODOS PÚBLICOS =-=-=-=-=
 
+/*
+ * Lê e retorna um 'Grafo' de um arquivo.
+ * */
 Grafo *readGrafoFromFile() {
     FILE *inputFile = fopen(DIRETORIO_ARQUIVO_ENTRADA, "r");
     int size;
@@ -76,7 +93,7 @@ Grafo *readGrafoFromFile() {
 
     index = 0;
     for (int i = 0; i < grafo->size; i++) {
-        readNextVerticeEdgesFromFile(inputFile, grafo, index);
+        readNextEdgesFromFile(inputFile, grafo, index);
         index++;
     }
 
@@ -84,6 +101,9 @@ Grafo *readGrafoFromFile() {
     return grafo;
 }
 
+/*
+ * Imprime as aréstas de um 'Grafo' num arquivo.
+ * */
 void writeGrafoEdgesOnFile(Grafo *grafo) {
     int nomeArquivoSaidaLength = strlen(DIRETORIO_ARQUIVO_SAIDA) + FILE_NAME_MAX_LENGTH + 1;
     char *nomeArquivoSaida = (char *) malloc(nomeArquivoSaidaLength * sizeof(char));

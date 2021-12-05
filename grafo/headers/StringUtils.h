@@ -7,6 +7,6 @@
 #ifndef GRAFO_STRINGUTILS_H
 #define GRAFO_STRINGUTILS_H
 
-char *getRandomWord();
+char *getRandomWord(int lenght);
 
 #endif //GRAFO_STRINGUTILS_H

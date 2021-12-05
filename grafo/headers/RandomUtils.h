@@ -7,7 +7,7 @@
 #ifndef GRAFO_RANDOMUTILS_H
 #define GRAFO_RANDOMUTILS_H
 
-int getRandomInt(int ceil);
+int getRandomInteger(int ceil);
 
 double getRandomDecimal();
 
