@@ -7,8 +7,8 @@
 #define GRAFO_CIDADE_H
 
 typedef struct Cidade {
-    char *nome;
-    int codigo;
+	char *nome;
+	int codigo;
 } Cidade;
 
 Cidade *newCidade();

@@ -5,15 +5,15 @@
 #define NOME_GRAFO_SAIDA "viasAsfaltadas"
 
 int main(int argc, char *argv[]) {
-    criaArquivoEntrada();
+	criaArquivoEntrada();
 
-    Grafo *grafo = readGrafoFromFile();
-    Grafo *min = getMinimumSpanningTree(grafo);
+	Grafo *grafo = readGrafoFromFile();
+	Grafo *min = getMinimumSpanningTree(grafo);
 
-    min->label = NOME_GRAFO_SAIDA;
+	min->label = NOME_GRAFO_SAIDA;
 
-    writeGrafoEdgesOnFile(min);
+	writeGrafoEdgesOnFile(min);
 
-    free(grafo);
-    free(min);
+	free(grafo);
+	free(min);
 }

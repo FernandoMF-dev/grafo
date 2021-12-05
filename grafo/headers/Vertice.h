@@ -7,8 +7,8 @@
 #define GRAFO_VERTICE_H
 
 typedef struct Vertice {
-    int index;
-    Cidade *value;
+	int index;
+	Cidade *value;
 } Vertice;
 
 Vertice *newVertice();

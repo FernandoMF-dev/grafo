@@ -10,10 +10,10 @@
 #define GRAFO_GRAFO_H
 
 typedef struct Grafo {
-    char *label;
-    Vertice **vertices;
-    int size;
-    float **edges;
+	char *label;
+	Vertice **vertices;
+	int size;
+	float **edges;
 } Grafo;
 
 Grafo *newGrafo(char *label, int size);

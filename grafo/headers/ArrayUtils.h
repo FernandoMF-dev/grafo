@@ -14,6 +14,6 @@ float **newMatrixFloat(int size);
 int *newIntegerArray(int size);
 
 int getMinNonZeroWithBlackListArrayFloat(const float *array, int arraySize,
-                                         const int *blackList, int blackListSize);
+										 const int *blackList, int blackListSize);
 
 #endif //GRAFO_ARRAYUTILS_H

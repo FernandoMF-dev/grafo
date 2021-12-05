@@ -5,9 +5,9 @@
 #define GRAFO_EDGE_H
 
 typedef struct Edge {
-    int origin;
-    int destiny;
-    float weight;
+	int origin;
+	int destiny;
+	float weight;
 } Edge;
 
 Edge *newEdge();

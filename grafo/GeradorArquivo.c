@@ -22,25 +22,25 @@ void imprimirMatriz(FILE *inputFile, double *distancias);
 // =-=-=-=-= MÉTODOS PRIVADOS | IMPLEMENTAÇÃO =-=-=-=-=
 
 double gerarDistancia(int linha, int coluna) {
-    double r;
+	double r;
 
-    /*
-     * Para garantir que o grafo será conexo garantirei que sempre haverá arestas entre vertices que o código diferem de 1
-     * A distancia dessas arestas será um numero aleatório entre 10 e 110
-     */
-    if (coluna - linha == 1) {
-        return (getRandomDecimal() + 0.1) * 100;
-    }
+	/*
+	 * Para garantir que o grafo será conexo garantirei que sempre haverá arestas entre vertices que o código diferem de 1
+	 * A distancia dessas arestas será um numero aleatório entre 10 e 110
+	 */
+	if (coluna - linha == 1) {
+		return (getRandomDecimal() + 0.1) * 100;
+	}
 
-    /*
-     * Para os demais, gero um aleatório entre 0 e 1. Se for menor que 0,5 não haverá aresta entre eles
-     * caso contrário haverá aresta e a distância da aresta será dada pelo número gerado * 200 – 90, ou seja, será algo entre 10 e 110.
-     */
-    r = getRandomDecimal();
-    if (r < 0.5) {
-        return 0.0;
-    }
-    return r * 200 - 90;
+	/*
+	 * Para os demais, gero um aleatório entre 0 e 1. Se for menor que 0,5 não haverá aresta entre eles
+	 * caso contrário haverá aresta e a distância da aresta será dada pelo número gerado * 200 – 90, ou seja, será algo entre 10 e 110.
+	 */
+	r = getRandomDecimal();
+	if (r < 0.5) {
+		return 0.0;
+	}
+	return r * 200 - 90;
 }
 
 /*
@@ -53,34 +53,34 @@ double gerarDistancia(int linha, int coluna) {
  * e vai a diminuir a cada um até que a última tem zero.
  * */
 double *gerarDistanciasCidade() {
-    int tamVetDist = (QUANTIDADE_CIDADES * QUANTIDADE_CIDADES - QUANTIDADE_CIDADES) / 2;
-    double *distancias = (double *) malloc(tamVetDist * sizeof(double));
-    int i = 0;
+	int tamVetDist = (QUANTIDADE_CIDADES * QUANTIDADE_CIDADES - QUANTIDADE_CIDADES) / 2;
+	double *distancias = (double *) malloc(tamVetDist * sizeof(double));
+	int i = 0;
 
-    for (int l = 0; l < QUANTIDADE_CIDADES; l++) {
-        for (int c = l + 1; c < QUANTIDADE_CIDADES; c++) {
-            distancias[i] = gerarDistancia(l, c);
-            i++;
-        }
-    }
+	for (int l = 0; l < QUANTIDADE_CIDADES; l++) {
+		for (int c = l + 1; c < QUANTIDADE_CIDADES; c++) {
+			distancias[i] = gerarDistancia(l, c);
+			i++;
+		}
+	}
 
-    return distancias;
+	return distancias;
 }
 
 /*
  * Nesse laço imprimo as cidades. Os códigos das cidades serão inteiros sequenciais de zero a qtd-1
  * */
 void imprimirCidades(FILE *inputFile) {
-    Cidade *cidade = newCidade();
+	Cidade *cidade = newCidade();
 
-    fprintf(inputFile, "%d\n", QUANTIDADE_CIDADES);
-    for (int i = 0; i < QUANTIDADE_CIDADES; i++) {
-        cidade->nome = getRandomWord(TAMANHO_NOME_CIDADE);
-        cidade->codigo = i; //geraCodigo(usado, qtd);
-        fprintf(inputFile, "%d;%s\n", cidade->codigo, cidade->nome);
-    }
+	fprintf(inputFile, "%d\n", QUANTIDADE_CIDADES);
+	for (int i = 0; i < QUANTIDADE_CIDADES; i++) {
+		cidade->nome = getRandomWord(TAMANHO_NOME_CIDADE);
+		cidade->codigo = i; //geraCodigo(usado, qtd);
+		fprintf(inputFile, "%d;%s\n", cidade->codigo, cidade->nome);
+	}
 
-    free(cidade);
+	free(cidade);
 }
 
 /*
@@ -91,26 +91,26 @@ void imprimirCidades(FILE *inputFile) {
  * bastava somar a coluna menos linha -1. Vou fotografar a dedução e colocar nesse diretório para referência futura se necessário
  */
 void imprimirMatriz(FILE *inputFile, double *distancias) {
-    for (int l = 0; l < QUANTIDADE_CIDADES; l++) {
-        for (int c = 0; c < QUANTIDADE_CIDADES - 1; c++) {
-            if (l == c) {
-                fprintf(inputFile, "%.2lf%s", 0.0, DELIMITER);
-            } else if (l < c) {
-                fprintf(inputFile, "%.2lf%s", distancias[l * QUANTIDADE_CIDADES - (l * l + l) / 2 + c - l - 1],
-                        DELIMITER);
-            } else {
-                fprintf(inputFile, "%.2lf%s", distancias[c * QUANTIDADE_CIDADES - (c * c + c) / 2 + l - c - 1],
-                        DELIMITER);
-            }
-        }
+	for (int l = 0; l < QUANTIDADE_CIDADES; l++) {
+		for (int c = 0; c < QUANTIDADE_CIDADES - 1; c++) {
+			if (l == c) {
+				fprintf(inputFile, "%.2lf%s", 0.0, DELIMITER);
+			} else if (l < c) {
+				fprintf(inputFile, "%.2lf%s", distancias[l * QUANTIDADE_CIDADES - (l * l + l) / 2 + c - l - 1],
+						DELIMITER);
+			} else {
+				fprintf(inputFile, "%.2lf%s", distancias[c * QUANTIDADE_CIDADES - (c * c + c) / 2 + l - c - 1],
+						DELIMITER);
+			}
+		}
 
-        if (l == (QUANTIDADE_CIDADES - 1)) {
-            fprintf(inputFile, "%.2lf\n", 0.0);
-        } else {
-            fprintf(inputFile, "%.2lf\n",
-                    distancias[l * QUANTIDADE_CIDADES - (l * l + l) / 2 + QUANTIDADE_CIDADES - l]);
-        }
-    }
+		if (l == (QUANTIDADE_CIDADES - 1)) {
+			fprintf(inputFile, "%.2lf\n", 0.0);
+		} else {
+			fprintf(inputFile, "%.2lf\n",
+					distancias[l * QUANTIDADE_CIDADES - (l * l + l) / 2 + QUANTIDADE_CIDADES - l]);
+		}
+	}
 }
 
 // =-=-=-=-= MÉTODOS PÚBLICOS =-=-=-=-=
@@ -119,12 +119,12 @@ void imprimirMatriz(FILE *inputFile, double *distancias) {
  * Cria um arquivo com vertices e arestas aleatórios para um grafo
  * */
 void criaArquivoEntrada() {
-    FILE *inputFile = fopen(DIRETORIO_ARQUIVO_ENTRADA, "w");
-    double *distancias = gerarDistanciasCidade();
+	FILE *inputFile = fopen(DIRETORIO_ARQUIVO_ENTRADA, "w");
+	double *distancias = gerarDistanciasCidade();
 
-    imprimirCidades(inputFile);
-    imprimirMatriz(inputFile, distancias);
+	imprimirCidades(inputFile);
+	imprimirMatriz(inputFile, distancias);
 
-    free(distancias);
-    fclose(inputFile);
+	free(distancias);
+	fclose(inputFile);
 }
