@@ -114,13 +114,9 @@ CMakeFiles/grafo.dir/Cidade.c.o: ../Cidade.c \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/time.h \
-  /usr/include/x86_64-linux-gnu/bits/time.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/string.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/string.h \
   /usr/include/strings.h
 
 CMakeFiles/grafo.dir/ControleArquivoGrafo.c.o: ../ControleArquivoGrafo.c \
@@ -178,13 +174,9 @@ CMakeFiles/grafo.dir/ControleArquivoGrafo.c.o: ../ControleArquivoGrafo.c \
   /usr/include/alloca.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   ../headers/Cidade.h \
-  /usr/include/time.h \
-  /usr/include/x86_64-linux-gnu/bits/time.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/string.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/string.h \
   /usr/include/strings.h \
   ../headers/Grafo.h \
   ../headers/ArrayUtils.h \
@@ -301,25 +293,13 @@ CMakeFiles/grafo.dir/GeradorArquivo.c.o: ../GeradorArquivo.c \
   /usr/include/alloca.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   ../headers/Cidade.h \
-  /usr/include/time.h \
-  /usr/include/x86_64-linux-gnu/bits/time.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/string.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/string.h \
   /usr/include/strings.h \
   ../headers/StringUtils.h \
   ../headers/ArrayUtils.h \
-  ../headers/RandomUtils.h \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h
+  ../headers/RandomUtils.h
 
 CMakeFiles/grafo.dir/Grafo.c.o: ../Grafo.c \
   /usr/include/stdc-predef.h \
@@ -381,10 +361,6 @@ CMakeFiles/grafo.dir/Grafo.c.o: ../Grafo.c \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/strings.h \
   ../headers/Cidade.h \
-  /usr/include/time.h \
-  /usr/include/x86_64-linux-gnu/bits/time.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
   ../headers/Vertice.h \
   ../headers/Edge.h
 
@@ -441,23 +417,7 @@ CMakeFiles/grafo.dir/RandomUtils.c.o: ../RandomUtils.c \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/time.h \
-  /usr/include/x86_64-linux-gnu/bits/time.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
 
 CMakeFiles/grafo.dir/StringUtils.c.o: ../StringUtils.c \
   /usr/include/stdc-predef.h \
@@ -518,19 +478,7 @@ CMakeFiles/grafo.dir/StringUtils.c.o: ../StringUtils.c \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  ../headers/RandomUtils.h \
-  /usr/include/time.h \
-  /usr/include/x86_64-linux-gnu/bits/time.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h
+  ../headers/RandomUtils.h
 
 CMakeFiles/grafo.dir/Vertice.c.o: ../Vertice.c \
   /usr/include/stdc-predef.h \
@@ -587,13 +535,9 @@ CMakeFiles/grafo.dir/Vertice.c.o: ../Vertice.c \
   /usr/include/alloca.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   ../headers/Cidade.h \
-  /usr/include/time.h \
-  /usr/include/x86_64-linux-gnu/bits/time.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/string.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/string.h \
   /usr/include/strings.h
 
 CMakeFiles/grafo.dir/main.c.o: ../main.c \
@@ -651,25 +595,13 @@ CMakeFiles/grafo.dir/main.c.o: ../main.c \
   /usr/include/alloca.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   ../headers/Cidade.h \
-  /usr/include/time.h \
-  /usr/include/x86_64-linux-gnu/bits/time.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/string.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/string.h \
   /usr/include/strings.h \
   ../headers/StringUtils.h \
   ../headers/ArrayUtils.h \
   ../headers/RandomUtils.h \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   ../headers/ControleArquivoGrafo.h \
   ../headers/Grafo.h \
   ../headers/Vertice.h \
@@ -681,29 +613,15 @@ CMakeFiles/grafo.dir/main.c.o: ../main.c \
 
 ../Grafo.c:
 
-/usr/include/x86_64-linux-gnu/bits/fp-fast.h:
-
-/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
-
-/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
-
-/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
-
 ../headers/RandomUtils.h:
 
 ../headers/StringUtils.h:
 
+../Edge.c:
+
 ../headers/Vertice.h:
 
 ../headers/Grafo.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
-
-../Edge.c:
-
-/usr/include/x86_64-linux-gnu/bits/time.h:
-
-/usr/include/time.h:
 
 ../headers/Cidade.h:
 
@@ -741,8 +659,6 @@ CMakeFiles/grafo.dir/main.c.o: ../main.c \
 
 /usr/include/x86_64-linux-gnu/sys/select.h:
 
-/usr/include/math.h:
-
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
 /usr/include/x86_64-linux-gnu/bits/time64.h:
@@ -752,8 +668,6 @@ CMakeFiles/grafo.dir/main.c.o: ../main.c \
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
-
-/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
 
 /usr/include/x86_64-linux-gnu/bits/types.h:
 
@@ -795,8 +709,6 @@ CMakeFiles/grafo.dir/main.c.o: ../main.c \
 
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
-
 /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h:
 
 ../StringUtils.c:
@@ -833,8 +745,6 @@ CMakeFiles/grafo.dir/main.c.o: ../main.c \
 
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
-/usr/include/x86_64-linux-gnu/bits/math-vector.h:
-
 /usr/include/endian.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
@@ -842,8 +752,6 @@ CMakeFiles/grafo.dir/main.c.o: ../main.c \
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
 
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
