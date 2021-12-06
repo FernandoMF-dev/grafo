@@ -84,15 +84,16 @@ Grafo *readGrafoFromFile() {
 	fscanf(inputFile, " %d", &size);
 
 	Grafo *grafo = newGrafo("Grafo", size);
-
 	int index = 0;
-	for (int i = 0; i < grafo->size; i++) {
+	int i;
+
+	for (i = 0; i < grafo->size; ++i) {
 		grafo->vertices[i] = readNextVerticeFromFile(inputFile, index);
 		index++;
 	}
 
 	index = 0;
-	for (int i = 0; i < grafo->size; i++) {
+	for (i = 0; i < grafo->size; ++i) {
 		readNextEdgesFromFile(inputFile, grafo, index);
 		index++;
 	}
@@ -110,13 +111,14 @@ void writeGrafoEdgesOnFile(Grafo *grafo) {
 	sprintf(nomeArquivoSaida, "%s%s", DIRETORIO_ARQUIVO_SAIDA, grafo->label);
 
 	FILE *outputFile = fopen(nomeArquivoSaida, "w");
+	int row, column;
 
-	for (int i = 0; i < grafo->size; ++i) {
-		for (int j = 0; j < grafo->size; ++j) {
-			if (grafo->edges[i][j] != 0.0) {
-				writeNextVerticeOnFile(outputFile, grafo->vertices[i]);
-				writeNextVerticeOnFile(outputFile, grafo->vertices[j]);
-				fprintf(outputFile, "%.2f\n", grafo->edges[i][j]);
+	for (row = 0; row < grafo->size; ++row) {
+		for (column = 0; column < grafo->size; ++column) {
+			if (grafo->edges[row][column] != 0.0) {
+				writeNextVerticeOnFile(outputFile, grafo->vertices[row]);
+				writeNextVerticeOnFile(outputFile, grafo->vertices[column]);
+				fprintf(outputFile, "%.2f\n", grafo->edges[row][column]);
 			}
 		}
 	}

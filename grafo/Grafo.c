@@ -16,10 +16,10 @@ void copyVerticesGrafo(Grafo *target, Grafo *origin);
 Edge *findMinimalEdgeGrafo(Grafo *grafo, const int *sourceIndexArray, int sourceIndexSize) {
 	Edge *minEdge = readEdge(-1, -1, (float) 0.0);
 	Edge *aux = newEdge();
-
 	float *grafoEdgesArray;
+	int i;
 
-	for (int i = 0; i < sourceIndexSize; ++i) {
+	for (i = 0; i < sourceIndexSize; ++i) {
 		aux->origin = sourceIndexArray[i];
 		grafoEdgesArray = grafo->edges[aux->origin];
 		aux->destiny = getMinNonZeroWithBlackListArrayFloat(grafoEdgesArray, grafo->size,
@@ -44,7 +44,8 @@ Edge *findMinimalEdgeGrafo(Grafo *grafo, const int *sourceIndexArray, int source
  * Copia os 'Vertice's do 'Grafo' [origin] e cola em [target]
  * */
 void copyVerticesGrafo(Grafo *target, Grafo *origin) {
-	for (int i = 0; i < target->size; i++) {
+	int i;
+	for (i = 0; i < target->size; ++i) {
 		target->vertices[i] = origin->vertices[i];
 	}
 }
@@ -79,7 +80,9 @@ void printGrafo(Grafo *grafo) {
  * Imprime os vertices de um 'Grafo'.
  * */
 void printVerticesGrafo(Grafo *grafo) {
-	for (int i = 0; i < grafo->size; i++) {
+	int i;
+
+	for (i = 0; i < grafo->size; ++i) {
 		printVertice(grafo->vertices[i]);
 	}
 }
@@ -88,11 +91,13 @@ void printVerticesGrafo(Grafo *grafo) {
  * Imprime as arestas de um 'Grafo'.
  * */
 void printEdgesGrafo(Grafo *grafo) {
-	for (int i = 0; i < grafo->size; i++) {
-		for (int j = 0; j < grafo->size; ++j) {
-			if (grafo->edges[i][j] != 0.0) {
-				printf("%s -[%.2f]-> %s\n", grafo->vertices[i]->value->nome, grafo->edges[i][j],
-					   grafo->vertices[j]->value->nome);
+	int row, column;
+
+	for (row = 0; row < grafo->size; ++row) {
+		for (column = 0; column < grafo->size; ++column) {
+			if (grafo->edges[row][column] != 0.0) {
+				printf("%s -[%.2f]-> %s\n", grafo->vertices[row]->value->nome, grafo->edges[row][column],
+					   grafo->vertices[column]->value->nome);
 			}
 		}
 	}
@@ -132,16 +137,17 @@ void insertTwoWayEdgeGrafo(Grafo *grafo, Edge *edge) {
  * */
 Grafo *getMinimumSpanningTree(Grafo *origin) {
 	Grafo *minimumTree = newGrafo(origin->label, origin->size);
+	Edge *edge;
 	int *visitedIndex = newIntegerArray(minimumTree->size);
 	int visitedIndexSize = 1;
-	Edge *edge;
+	int row;
 
 	copyVerticesGrafo(minimumTree, origin);
 
-	for (int i = 0; i < minimumTree->size; ++i) {
+	for (row = 0; row < minimumTree->size; ++row) {
 		edge = findMinimalEdgeGrafo(origin, visitedIndex, visitedIndexSize);
 		insertTwoWayEdgeGrafo(minimumTree, edge);
-		visitedIndex[i + 1] = edge->destiny;
+		visitedIndex[row + 1] = edge->destiny;
 		visitedIndexSize++;
 	}
 
@@ -155,10 +161,11 @@ Grafo *getMinimumSpanningTree(Grafo *origin) {
  * */
 float getTotalEdgeWeight(Grafo *grafo) {
 	float totalWeight = (float) 0.0;
+	int row, column;
 
-	for (int i = 0; i < grafo->size; ++i) {
-		for (int j = 0; j < grafo->size; ++j) {
-			totalWeight += grafo->edges[i][j];
+	for (row = 0; row < grafo->size; ++row) {
+		for (column = 0; column < grafo->size; ++column) {
+			totalWeight += grafo->edges[row][column];
 		}
 	}
 

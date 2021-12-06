@@ -50,7 +50,7 @@ char *getRandomWord(int lenght) {
 	char *palavra = (char *) malloc((lenght + 1) * sizeof(char));
 
 	palavra[0] = gerarLetraMaiuscula();
-	for (i = 1; i < (lenght + 1); i++) {
+	for (i = 1; i < (lenght + 1); ++i) {
 		if (arrayContainsChar(palavra[i - 1], VOGAIS)) {
 			palavra[i] = gerarLetraMinuscula();
 		} else {

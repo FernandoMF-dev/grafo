@@ -10,8 +10,9 @@
  * */
 int arrayContainsChar(char needle, char *haystack) {
 	int lenght = (int) strlen(haystack);
+	int i;
 
-	for (int i = 0; i < lenght; i++) {
+	for (i = 0; i < lenght; ++i) {
 		if (needle == haystack[i]) {
 			return 1;
 		}
@@ -27,7 +28,8 @@ int arrayContainsChar(char needle, char *haystack) {
  * Se não existir, retorna 0.
  * */
 int arrayContainsInteger(int needle, const int *haystack, int haystackSize) {
-	for (int i = 0; i < haystackSize; i++) {
+	int i;
+	for (i = 0; i < haystackSize; ++i) {
 		if (needle == haystack[i]) {
 			return 1;
 		}
@@ -43,11 +45,12 @@ int arrayContainsInteger(int needle, const int *haystack, int haystackSize) {
  * */
 float **newMatrixFloat(int size) {
 	float **matrix = (float **) malloc(size * sizeof(float *));
+	int row, column;
 
-	for (int i = 0; i < size; i++) {
-		matrix[i] = (float *) malloc(size * sizeof(float));
-		for (int j = 0; j < size; ++j) {
-			matrix[i][j] = (float) 0.0;
+	for (row = 0; row < size; ++row) {
+		matrix[row] = (float *) malloc(size * sizeof(float));
+		for (column = 0; column < size; ++column) {
+			matrix[row][column] = (float) 0.0;
 		}
 	}
 
@@ -61,8 +64,9 @@ float **newMatrixFloat(int size) {
  * */
 int *newIntegerArray(int size) {
 	int *integerArray = (int *) malloc(size * sizeof(int));
+	int i;
 
-	for (int i = 0; i < size; i++) {
+	for (i = 0; i < size; ++i) {
 		integerArray[i] = 0;
 	}
 
@@ -79,8 +83,9 @@ int *newIntegerArray(int size) {
 int getMinNonZeroWithBlackListArrayFloat(const float *array, int arraySize, const int *blackList, int blackListSize) {
 	float minValue = (float) 0.0;
 	int minIndex = -1;
+	int i;
 
-	for (int i = 0; i < arraySize; i++) {
+	for (i = 0; i < arraySize; ++i) {
 		if (!arrayContainsInteger(i, blackList, blackListSize)) {
 			if (minValue == 0.0 || (array[i] != 0.0 && array[i] < minValue)) {
 				minValue = array[i];

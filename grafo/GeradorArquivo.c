@@ -56,10 +56,11 @@ double *gerarDistanciasCidade() {
 	int tamVetDist = (QUANTIDADE_CIDADES * QUANTIDADE_CIDADES - QUANTIDADE_CIDADES) / 2;
 	double *distancias = (double *) malloc(tamVetDist * sizeof(double));
 	int i = 0;
+	int row, column;
 
-	for (int l = 0; l < QUANTIDADE_CIDADES; l++) {
-		for (int c = l + 1; c < QUANTIDADE_CIDADES; c++) {
-			distancias[i] = gerarDistancia(l, c);
+	for (row = 0; row < QUANTIDADE_CIDADES; ++row) {
+		for (column = row + 1; column < QUANTIDADE_CIDADES; ++column) {
+			distancias[i] = gerarDistancia(row, column);
 			i++;
 		}
 	}
@@ -72,9 +73,10 @@ double *gerarDistanciasCidade() {
  * */
 void imprimirCidades(FILE *inputFile) {
 	Cidade *cidade = newCidade();
+	int i;
 
 	fprintf(inputFile, "%d\n", QUANTIDADE_CIDADES);
-	for (int i = 0; i < QUANTIDADE_CIDADES; i++) {
+	for (i = 0; i < QUANTIDADE_CIDADES; ++i) {
 		cidade->nome = getRandomWord(TAMANHO_NOME_CIDADE);
 		cidade->codigo = i; //geraCodigo(usado, qtd);
 		fprintf(inputFile, "%d;%s\n", cidade->codigo, cidade->nome);
@@ -91,24 +93,28 @@ void imprimirCidades(FILE *inputFile) {
  * bastava somar a coluna menos linha -1. Vou fotografar a dedução e colocar nesse diretório para referência futura se necessário
  */
 void imprimirMatriz(FILE *inputFile, double *distancias) {
-	for (int l = 0; l < QUANTIDADE_CIDADES; l++) {
-		for (int c = 0; c < QUANTIDADE_CIDADES - 1; c++) {
-			if (l == c) {
+	int row, column;
+
+	for (row = 0; row < QUANTIDADE_CIDADES; ++row) {
+		for (column = 0; column < QUANTIDADE_CIDADES - 1; ++column) {
+			if (row == column) {
 				fprintf(inputFile, "%.2lf%s", 0.0, DELIMITER);
-			} else if (l < c) {
-				fprintf(inputFile, "%.2lf%s", distancias[l * QUANTIDADE_CIDADES - (l * l + l) / 2 + c - l - 1],
+			} else if (row < column) {
+				fprintf(inputFile, "%.2lf%s",
+						distancias[row * QUANTIDADE_CIDADES - (row * row + row) / 2 + column - row - 1],
 						DELIMITER);
 			} else {
-				fprintf(inputFile, "%.2lf%s", distancias[c * QUANTIDADE_CIDADES - (c * c + c) / 2 + l - c - 1],
+				fprintf(inputFile, "%.2lf%s",
+						distancias[column * QUANTIDADE_CIDADES - (column * column + column) / 2 + row - column - 1],
 						DELIMITER);
 			}
 		}
 
-		if (l == (QUANTIDADE_CIDADES - 1)) {
+		if (row == (QUANTIDADE_CIDADES - 1)) {
 			fprintf(inputFile, "%.2lf\n", 0.0);
 		} else {
 			fprintf(inputFile, "%.2lf\n",
-					distancias[l * QUANTIDADE_CIDADES - (l * l + l) / 2 + QUANTIDADE_CIDADES - l]);
+					distancias[row * QUANTIDADE_CIDADES - (row * row + row) / 2 + QUANTIDADE_CIDADES - row]);
 		}
 	}
 }
