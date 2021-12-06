@@ -1,5 +1,9 @@
 #include "headers/Edge.h"
 
+// =-=-=-=-= CONSTANTES =-=-=-=-=
+
+#define ERRO_FALHA_ALOCACAO "\n\tERRO: Erro durante alocação de memória!\n"
+
 // =-=-=-=-= MÉTODOS PÚBLICOS =-=-=-=-=
 
 /*
@@ -7,6 +11,11 @@
  * */
 Edge *newEdge() {
 	Edge *edge = (Edge *) malloc(sizeof(Edge));
+
+	if (edge == NULL) {
+		printf(ERRO_FALHA_ALOCACAO);
+		return NULL;
+	}
 
 	edge->origin = -1;
 	edge->destiny = -1;
@@ -20,6 +29,10 @@ Edge *newEdge() {
  * */
 Edge *readEdge(int origin, int destiny, float weight) {
 	Edge *edge = newEdge();
+
+	if (edge == NULL) {
+		return NULL;
+	}
 
 	edge->origin = origin;
 	edge->destiny = destiny;

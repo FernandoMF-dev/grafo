@@ -4,6 +4,8 @@
 
 char VOGAIS[10] = "aeiouAEIOU";
 
+#define ERRO_FALHA_ALOCACAO "\n\tERRO: Erro durante alocação de memória!\n"
+
 // =-=-=-=-= MÉTODOS PRIVADOS | DECLARAÇÃO =-=-=-=-=
 
 char gerarLetraMaiuscula();
@@ -48,6 +50,11 @@ char gerarVogal() {
 char *getRandomWord(int lenght) {
 	int i;
 	char *palavra = (char *) malloc((lenght + 1) * sizeof(char));
+
+	if (palavra == NULL) {
+		printf(ERRO_FALHA_ALOCACAO);
+		return NULL;
+	}
 
 	palavra[0] = gerarLetraMaiuscula();
 	for (i = 1; i < (lenght + 1); ++i) {

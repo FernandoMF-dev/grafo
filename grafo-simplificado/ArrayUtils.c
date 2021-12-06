@@ -1,5 +1,9 @@
 #include "headers/ArrayUtils.h"
 
+// =-=-=-=-= CONSTANTES =-=-=-=-=
+
+#define ERRO_FALHA_ALOCACAO "\n\tERRO: Erro durante alocação de memória!\n"
+
 // =-=-=-=-= MÉTODOS PÚBLICOS =-=-=-=-=
 
 /*
@@ -47,8 +51,19 @@ float **newMatrixFloat(int size) {
 	float **matrix = (float **) malloc(size * sizeof(float *));
 	int row, column;
 
+	if (matrix == NULL) {
+		printf(ERRO_FALHA_ALOCACAO);
+		return NULL;
+	}
+
 	for (row = 0; row < size; ++row) {
 		matrix[row] = (float *) malloc(size * sizeof(float));
+
+		if (matrix[row] == NULL) {
+			printf(ERRO_FALHA_ALOCACAO);
+			return NULL;
+		}
+
 		for (column = 0; column < size; ++column) {
 			matrix[row][column] = (float) 0.0;
 		}
@@ -65,6 +80,11 @@ float **newMatrixFloat(int size) {
 int *newIntegerArray(int size) {
 	int *integerArray = (int *) malloc(size * sizeof(int));
 	int i;
+
+	if (integerArray == NULL) {
+		printf(ERRO_FALHA_ALOCACAO);
+		return NULL;
+	}
 
 	for (i = 0; i < size; ++i) {
 		integerArray[i] = 0;

@@ -1,5 +1,9 @@
 #include "headers/Vertice.h"
 
+// =-=-=-=-= CONSTANTES =-=-=-=-=
+
+#define ERRO_FALHA_ALOCACAO "\n\tERRO: Erro durante alocação de memória!\n"
+
 // =-=-=-=-= MÉTODOS PÚBLICOS =-=-=-=-=
 
 /*
@@ -7,6 +11,11 @@
  * */
 Vertice *newVertice() {
 	Vertice *vertice = (Vertice *) malloc(sizeof(Vertice));
+
+	if (vertice == NULL) {
+		printf(ERRO_FALHA_ALOCACAO);
+		return NULL;
+	}
 
 	vertice->index = -1;
 	vertice->value = NULL;
@@ -19,6 +28,11 @@ Vertice *newVertice() {
  * */
 Vertice *readVertice(int index, Cidade *value) {
 	Vertice *vertice = newVertice();
+
+	if (vertice == NULL) {
+		printf(ERRO_FALHA_ALOCACAO);
+		return NULL;
+	}
 
 	vertice->index = index;
 	vertice->value = value;
@@ -34,6 +48,12 @@ Vertice *readVertice(int index, Cidade *value) {
 Vertice **newVerticeArray(int size) {
 	Vertice **verticeArray = (Vertice **) malloc(size * sizeof(Vertice *));
 	int i;
+
+	if (verticeArray == NULL) {
+		printf(ERRO_FALHA_ALOCACAO);
+		return NULL;
+	}
+
 
 	for (i = 0; i < size; ++i) {
 		verticeArray[i] = NULL;

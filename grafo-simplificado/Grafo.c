@@ -1,5 +1,11 @@
 #include "headers/Grafo.h"
 
+// =-=-=-=-= CONSTANTES =-=-=-=-=
+
+#define INFO_CRIAR_ARVORE_GERADORA_MINIMA "\n\tINFO: Gerando Árvore Geradora Mínima\n"
+#define SUCCESS_CRIAR_ARVORE_GERADORA_MINIMA "\n\tSUCCESS: Árvore Geradora Mínima gerada com sucesso\n"
+#define ERRO_FALHA_ALOCACAO "\n\tERRO: Erro durante alocação de memória!\n"
+
 // =-=-=-=-= MÉTODOS PRIVADOS | DECLARAÇÃO =-=-=-=-=
 
 Edge *findMinimalEdgeGrafo(Grafo *grafo, const int *sourceIndexArray, int sourceIndexSize);
@@ -18,6 +24,10 @@ Edge *findMinimalEdgeGrafo(Grafo *grafo, const int *sourceIndexArray, int source
 	Edge *aux = newEdge();
 	float *grafoEdgesArray;
 	int i;
+
+	if (minEdge == NULL) {
+		return NULL;
+	}
 
 	for (i = 0; i < sourceIndexSize; ++i) {
 		aux->origin = sourceIndexArray[i];
@@ -58,11 +68,19 @@ void copyVerticesGrafo(Grafo *target, Grafo *origin) {
 Grafo *newGrafo(char *label, int size) {
 	Grafo *grafo = (Grafo *) malloc(sizeof(Grafo));
 
+	if (grafo == NULL) {
+		printf(ERRO_FALHA_ALOCACAO);
+		return NULL;
+	}
+
 	grafo->label = label;
 	grafo->size = size;
 	grafo->vertices = newVerticeArray(size);
 	grafo->edges = newMatrixFloat(size);
 
+	if (grafo->vertices == NULL || grafo->edges == NULL) {
+		return NULL;
+	}
 	return grafo;
 }
 
@@ -136,8 +154,15 @@ void insertTwoWayEdgeGrafo(Grafo *grafo, Edge *edge) {
  * Não modifica [origin]
  * */
 Grafo *getMinimumSpanningTree(Grafo *origin) {
+	printf(INFO_CRIAR_ARVORE_GERADORA_MINIMA);
+
 	Grafo *minimumTree = newGrafo(origin->label, origin->size);
-	Edge *edge;
+
+
+	if (minimumTree == NULL) {
+		return NULL;
+	}
+
 	int *visitedIndex = newIntegerArray(minimumTree->size);
 	int visitedIndexSize = 1;
 	int row;
@@ -145,13 +170,19 @@ Grafo *getMinimumSpanningTree(Grafo *origin) {
 	copyVerticesGrafo(minimumTree, origin);
 
 	for (row = 0; row < minimumTree->size; ++row) {
-		edge = findMinimalEdgeGrafo(origin, visitedIndex, visitedIndexSize);
+		Edge *edge = findMinimalEdgeGrafo(origin, visitedIndex, visitedIndexSize);
+
+		if (edge == NULL) {
+			return NULL;
+		}
+
 		insertTwoWayEdgeGrafo(minimumTree, edge);
 		visitedIndex[row + 1] = edge->destiny;
 		visitedIndexSize++;
+		free(edge);
 	}
+	printf(SUCCESS_CRIAR_ARVORE_GERADORA_MINIMA);
 
-	free(edge);
 	free(visitedIndex);
 	return minimumTree;
 }
