@@ -4,6 +4,8 @@
 
 #define MAX_NOME 15
 
+#define ERRO_FALHA_ALOCACAO "\n\tERRO: Erro durante alocação de memória!\n"
+
 // =-=-=-=-= MÉTODOS PÚBLICOS =-=-=-=-=
 
 /*
@@ -12,8 +14,18 @@
 Cidade *newCidade() {
 	Cidade *cidade = (Cidade *) malloc(sizeof(Cidade));
 
+	if (cidade == NULL) {
+		printf(ERRO_FALHA_ALOCACAO);
+		return NULL;
+	}
+
 	cidade->codigo = -1;
 	cidade->nome = (char *) malloc(MAX_NOME * sizeof(char));
+
+	if (cidade->nome == NULL) {
+		printf(ERRO_FALHA_ALOCACAO);
+		return NULL;
+	}
 
 	return cidade;
 }
@@ -23,6 +35,11 @@ Cidade *newCidade() {
  * */
 Cidade *readCidade(int codigo, char *nome) {
 	Cidade *cidade = newCidade();
+
+	if (cidade == NULL) {
+		printf(ERRO_FALHA_ALOCACAO);
+		return NULL;
+	}
 
 	cidade->codigo = codigo;
 	strcpy(cidade->nome, nome);

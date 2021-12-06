@@ -8,6 +8,11 @@
 #define DIRETORIO_ARQUIVO_ENTRADA "../entrada/entrada.txt"
 #define DELIMITER ";"
 
+#define INFO_CRIAR_ARQUIVO "\n\tINFO: Criando arquivo de entrada\n"
+#define INFO_PREENCHER_ARQUIVO "\n\tINFO: Preenchendo arquivo de entrada\n"
+#define SUCCESS_PREENCHER_ARQUIVO "\n\tSUCCESS: Arquivo de entrada criado com sucesso\n"
+#define ERRO_CRIAR_ARQUIVO "\n\tERRO: Falha na criação de arquivo\n"
+
 // =-=-=-=-= MÉTODOS PRIVADOS | DECLARAÇÃO =-=-=-=-=
 
 
@@ -72,17 +77,14 @@ double *gerarDistanciasCidade() {
  * Nesse laço imprimo as cidades. Os códigos das cidades serão inteiros sequenciais de zero a qtd-1
  * */
 void imprimirCidades(FILE *inputFile) {
-	Cidade *cidade = newCidade();
-	int i;
-
 	fprintf(inputFile, "%d\n", QUANTIDADE_CIDADES);
-	for (i = 0; i < QUANTIDADE_CIDADES; ++i) {
-		cidade->nome = getRandomWord(TAMANHO_NOME_CIDADE);
-		cidade->codigo = i; //geraCodigo(usado, qtd);
-		fprintf(inputFile, "%d;%s\n", cidade->codigo, cidade->nome);
-	}
 
-	free(cidade);
+	int i;
+	for (i = 0; i < QUANTIDADE_CIDADES; ++i) {
+		Cidade *cidade = readCidade(i, getRandomWord(TAMANHO_NOME_CIDADE));
+		fprintf(inputFile, "%d;%s\n", cidade->codigo, cidade->nome);
+		free(cidade);
+	}
 }
 
 /*
@@ -125,11 +127,19 @@ void imprimirMatriz(FILE *inputFile, double *distancias) {
  * Cria um arquivo com vertices e arestas aleatórios para um grafo
  * */
 void criaArquivoEntrada() {
+	printf(INFO_CRIAR_ARQUIVO);
 	FILE *inputFile = fopen(DIRETORIO_ARQUIVO_ENTRADA, "w");
 	double *distancias = gerarDistanciasCidade();
 
+	if (inputFile == NULL) {
+		printf(ERRO_CRIAR_ARQUIVO);
+		return;
+	}
+
+	printf(INFO_PREENCHER_ARQUIVO);
 	imprimirCidades(inputFile);
 	imprimirMatriz(inputFile, distancias);
+	printf(SUCCESS_PREENCHER_ARQUIVO);
 
 	free(distancias);
 	fclose(inputFile);
