@@ -36,6 +36,9 @@ void readAllEdgesFromFile(FILE *inputFile, Grafo *grafo);
 
 // =-=-=-=-= MÉTODOS PRIVADOS | IMPLEMENTAÇÃO =-=-=-=-=
 
+/*
+ * Retorna o comprimento máximo de uma linha do arquivo responsável por guardar as arestas do grafo
+ * */
 int getLineLenghtEdges(int edgeAmount) {
 	return ((EDGE_MAX_STRING_LENGTH + (int) strlen(DELIMITER)) * edgeAmount) + 1;
 }

@@ -3,6 +3,7 @@
 // =-=-=-=-= CONSTANTES =-=-=-=-=
 
 #define INFO_CRIAR_ARVORE_GERADORA_MINIMA "\n\tINFO: Gerando Árvore Geradora Mínima\n"
+#define DEBUG_CRIAR_ARVORE_GERADORA_MINIMA "\n\tDEBUG: Gerando Árvore Geradora Mínima: %.2f%%\n"
 #define SUCCESS_CRIAR_ARVORE_GERADORA_MINIMA "\n\tSUCCESS: Árvore Geradora Mínima gerada com sucesso\n"
 #define ERRO_FALHA_ALOCACAO "\n\tERRO: Erro durante alocação de memória!\n"
 
@@ -158,11 +159,11 @@ Grafo *getMinimumSpanningTree(Grafo *origin) {
 
 	Grafo *minimumTree = newGrafo(origin->label, origin->size);
 
-
 	if (minimumTree == NULL) {
 		return NULL;
 	}
 
+	float progress = (float) 0.1;
 	int *visitedIndex = newIntegerArray(minimumTree->size);
 	int visitedIndexSize = 1;
 	int row;
@@ -174,6 +175,11 @@ Grafo *getMinimumSpanningTree(Grafo *origin) {
 
 		if (edge == NULL) {
 			return NULL;
+		}
+
+		if ((float) visitedIndexSize / (float) minimumTree->size >= progress) {
+			printf(DEBUG_CRIAR_ARVORE_GERADORA_MINIMA, (progress * 100));
+			progress += (float) 0.1;
 		}
 
 		insertTwoWayEdgeGrafo(minimumTree, edge);
