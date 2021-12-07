@@ -297,6 +297,30 @@ RandomUtils.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/RandomUtils.c.s
 .PHONY : RandomUtils.c.s
 
+Stack.o: Stack.c.o
+.PHONY : Stack.o
+
+# target to build an object file
+Stack.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/Stack.c.o
+.PHONY : Stack.c.o
+
+Stack.i: Stack.c.i
+.PHONY : Stack.i
+
+# target to preprocess a source file
+Stack.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/Stack.c.i
+.PHONY : Stack.c.i
+
+Stack.s: Stack.c.s
+.PHONY : Stack.s
+
+# target to generate assembly for a file
+Stack.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/Stack.c.s
+.PHONY : Stack.c.s
+
 StringUtils.o: StringUtils.c.o
 .PHONY : StringUtils.o
 
@@ -399,6 +423,9 @@ help:
 	@echo "... RandomUtils.o"
 	@echo "... RandomUtils.i"
 	@echo "... RandomUtils.s"
+	@echo "... Stack.o"
+	@echo "... Stack.i"
+	@echo "... Stack.s"
 	@echo "... StringUtils.o"
 	@echo "... StringUtils.i"
 	@echo "... StringUtils.s"

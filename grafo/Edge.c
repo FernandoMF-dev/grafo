@@ -44,6 +44,6 @@ Edge *readEdge(int origin, int destiny, float weight) {
 /*
  * Imprimi uma struct 'Edge'
  * */
-void printEdge(Edge edge) {
-	printf("%d -[%.2f]-> %d\n", edge.origin, edge.weight, edge.destiny);
+void printEdge(Edge *edge) {
+	printf("%d -[%.2f]-> %d\n", edge->origin, edge->weight, edge->destiny);
 }

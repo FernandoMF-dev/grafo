@@ -14,6 +14,6 @@ Edge *newEdge();
 
 Edge *readEdge(int origin, int destiny, float weight);
 
-void printEdge(Edge edge);
+void printEdge(Edge *edge);
 
 #endif //GRAFO_EDGE_H
