@@ -2,7 +2,7 @@
 
 // =-=-=-=-= CONSTANTES =-=-=-=-=
 
-char VOGAIS[10] = "aeiouAEIOU";
+char VOGAIS[5] = "aeiou";
 
 #define ERRO_FALHA_ALOCACAO "\n\tERRO: Erro durante alocação de memória!\n"
 
@@ -33,7 +33,7 @@ char gerarLetraMinuscula() {
 /*
  * Retorna um 'char' com uma vogal aleatória.
  *
- * A vogal pode ser tanto maiuscula quanto minuscula.
+ * A vogal pode sempre será minúscula.
  * */
 char gerarVogal() {
 	return VOGAIS[getRandomInteger((int) strlen(VOGAIS))];

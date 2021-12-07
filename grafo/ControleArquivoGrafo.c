@@ -2,14 +2,17 @@
 
 // =-=-=-=-= CONSTANTES =-=-=-=-=
 
-#define LINE_MAX_LENGTH 255
 #define DIRETORIO_ARQUIVO_ENTRADA "../entrada/entrada.txt"
 #define DIRETORIO_ARQUIVO_SAIDA "../saida/"
 #define FILE_NAME_MAX_LENGTH 15
+#define CIDADE_MAX_STRING_LENGTH 64
+#define EDGE_MAX_STRING_LENGTH 8
 #define DELIMITER ";"
 
 #define INFO_ABRIR_ARQUIVO_ENTRADA "\n\tINFO: Abrindo arquivo de entrada\n"
 #define INFO_LER_GRAFO_ARQUIVO "\n\tINFO: Lendo nova instância de 'Grafo' de arquivo\n"
+#define INFO_LER_VERTICE_ARQUIVO "\n\tINFO: Lendo vértices de arquivo\n"
+#define INFO_LER_ARESTA_ARQUIVO "\n\tINFO: Lendo arestas de arquivo\n"
 #define INFO_CRIAR_ARQUIVO_SAIDA "\n\tINFO: Criando arquivo de saida\n"
 #define INFO_IMPRIMIR_GRAFO_ARQUIVO "\n\tINFO: Imprimindo 'Grafo' em arquivo\n"
 #define SUCCESS_LER_GRAFO_ARQUIVO "\n\tSUCCESS: Nova instância de 'Grafo' iniciado com sucesso\n"
@@ -18,6 +21,8 @@
 #define ERRO_CRIAR_ARQUIVO "\n\tERRO: Falha na criação de arquivo\n"
 
 // =-=-=-=-= MÉTODOS PRIVADOS | DECLARAÇÃO =-=-=-=-=
+
+int getLineLenghtEdges(int edgeAmount);
 
 Cidade *readNextCidadeFromFile(FILE *inputFile);
 
@@ -31,6 +36,10 @@ void readAllEdgesFromFile(FILE *inputFile, Grafo *grafo);
 
 // =-=-=-=-= MÉTODOS PRIVADOS | IMPLEMENTAÇÃO =-=-=-=-=
 
+int getLineLenghtEdges(int edgeAmount) {
+	return ((EDGE_MAX_STRING_LENGTH + (int) strlen(DELIMITER)) * edgeAmount) + 1;
+}
+
 /*
  * Lê a próxima linha de [inputFile] e preencha dados de 'Cidade'.
  *
@@ -38,7 +47,7 @@ void readAllEdgesFromFile(FILE *inputFile, Grafo *grafo);
  * */
 Cidade *readNextCidadeFromFile(FILE *inputFile) {
 	Cidade *cidade = newCidade();
-	char *line = (char *) malloc((LINE_MAX_LENGTH + 1) * sizeof(char));
+	char *line = (char *) malloc(CIDADE_MAX_STRING_LENGTH * sizeof(char));
 	char *ptr;
 
 	if (cidade == NULL) {
@@ -74,6 +83,8 @@ Vertice *readNextVerticeFromFile(FILE *inputFile, int index) {
  * Lê os 'Vertice's lidos do arquivo [inputFile] e os insere em [grafo].
  * */
 int readAllVerticesFromFile(FILE *inputFile, Grafo *grafo) {
+	printf(INFO_LER_VERTICE_ARQUIVO);
+
 	int index = 0;
 	int i;
 
@@ -95,7 +106,7 @@ int readAllVerticesFromFile(FILE *inputFile, Grafo *grafo) {
  * Lê as arestas de um vértice de índice [index] de [inputFile] e insere em [grafo].
  * */
 void readNextEdgesFromFile(FILE *inputFile, Grafo *grafo, int index) {
-	char *line = (char *) malloc((LINE_MAX_LENGTH + 1) * sizeof(char));
+	char *line = (char *) malloc(getLineLenghtEdges(grafo->size) * sizeof(char));
 	char *ptr;
 	int counter = 0;
 
@@ -115,6 +126,8 @@ void readNextEdgesFromFile(FILE *inputFile, Grafo *grafo, int index) {
  * Lê as arestas lidss do arquivo [inputFile] e os insere em [grafo].
  * */
 void readAllEdgesFromFile(FILE *inputFile, Grafo *grafo) {
+	printf(INFO_LER_ARESTA_ARQUIVO);
+
 	int index = 0;
 	int i;
 
