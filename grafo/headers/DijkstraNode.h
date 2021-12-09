@@ -12,20 +12,20 @@ typedef struct DijkstraNode {
 	float routeLenght;
 } DijkstraNode;
 
-DijkstraNode *newDijktraNode();
+DijkstraNode *newDijkstraNode();
 
-DijkstraNode **prepareDijktraNodeArray(int size);
+DijkstraNode **prepareDijkstraNodeArray(int size);
 
-void setOriginPathDijktra(DijkstraNode **dijktra, int origin);
+void setOriginPathDijkstra(DijkstraNode **dijkstra, int origin);
 
-int isVisitedDijktra(DijkstraNode **dijktra, int index);
+int isVisitedDijkstra(DijkstraNode **dijkstra, int index);
 
-void setNextDijktra(DijkstraNode **dijktra, int index, int previous, float edgeWeight);
+void setNextDijkstra(DijkstraNode **dijkstra, int target, int previous, float edgeWeight);
 
-int findNextNodeToVisitDijktra(DijkstraNode **dijktra, int dijktraSize);
+int findNextNodeToVisitDijkstra(DijkstraNode **dijkstra, int dijkstraSize);
 
-void updatePreviousVertice(DijkstraNode **dijktra, int index, int previous, float edgeWeight);
+void updatePreviousVerticeDijkstra(DijkstraNode **dijkstra, int target, int previous, float edgeWeight);
 
-void rotulateNodeDijktra(DijkstraNode **dijktra, int index);
+void rotulateNodeDijkstra(DijkstraNode **dijkstra, int index);
 
 #endif //GRAFO_DIJKSTRANODE_H

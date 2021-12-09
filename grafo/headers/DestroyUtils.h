@@ -6,6 +6,6 @@
 #ifndef GRAFO_DESTROYUTILS_H
 #define GRAFO_DESTROYUTILS_H
 
-void destroyDijktraNodeArray(DijkstraNode **dijktraNodeArray, int size);
+void destroyDijkstraNodeArray(DijkstraNode **dijkstraNodeArray, int size);
 
 #endif //GRAFO_DESTROYUTILS_H

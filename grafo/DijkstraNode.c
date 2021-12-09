@@ -14,7 +14,7 @@
 
 // =-=-=-=-= MÉTODOS PÚBLICOS =-=-=-=-=
 
-DijkstraNode *newDijktraNode() {
+DijkstraNode *newDijkstraNode() {
 	DijkstraNode *node = (DijkstraNode *) malloc(sizeof(DijkstraNode));
 
 	if (node == NULL) {
@@ -30,7 +30,7 @@ DijkstraNode *newDijktraNode() {
 	return node;
 }
 
-DijkstraNode **prepareDijktraNodeArray(int size) {
+DijkstraNode **prepareDijkstraNodeArray(int size) {
 	DijkstraNode **nodeArray = (DijkstraNode **) malloc(size * sizeof(DijkstraNode *));
 	DijkstraNode *node;
 
@@ -41,7 +41,7 @@ DijkstraNode **prepareDijktraNodeArray(int size) {
 
 	int i;
 	for (i = 0; i < size; ++i) {
-		node = newDijktraNode();
+		node = newDijkstraNode();
 
 		if (node == NULL) {
 			return NULL;
@@ -54,37 +54,37 @@ DijkstraNode **prepareDijktraNodeArray(int size) {
 	return nodeArray;
 }
 
-void setOriginPathDijktra(DijkstraNode **dijktra, int origin) {
-	dijktra[origin]->status = STATUS_NEXT;
-	dijktra[origin]->routeLenght = 0;
+void setOriginPathDijkstra(DijkstraNode **dijkstra, int origin) {
+	dijkstra[origin]->status = STATUS_NEXT;
+	dijkstra[origin]->routeLenght = 0;
 }
 
-int isVisitedDijktra(DijkstraNode **dijktra, int index) {
-	return dijktra[index]->status == STATUS_VISITED;
+int isVisitedDijkstra(DijkstraNode **dijkstra, int index) {
+	return dijkstra[index]->status == STATUS_VISITED;
 }
 
-void setNextDijktra(DijkstraNode **dijktra, int index, int previous, float edgeWeight) {
-	if (dijktra[index]->status == STATUS_VISITED) {
+void setNextDijkstra(DijkstraNode **dijkstra, int target, int previous, float edgeWeight) {
+	if (edgeWeight == 0 || dijkstra[target]->status == STATUS_VISITED) {
 		return;
 	}
 
-	DijkstraNode *node = dijktra[index];
+	DijkstraNode *node = dijkstra[target];
 
-	if (node->status == STATUS_NEXT && dijktra[previous]->routeLenght + edgeWeight >= node->routeLenght) {
+	if (node->status == STATUS_NEXT && dijkstra[previous]->routeLenght + edgeWeight >= node->routeLenght) {
 		return;
 	}
 
 	node->status = STATUS_NEXT;
-	node->routeLenght = dijktra[previous]->routeLenght + edgeWeight;
+	node->routeLenght = dijkstra[previous]->routeLenght + edgeWeight;
 	node->previousVertice = previous;
 }
 
-int findNextNodeToVisitDijktra(DijkstraNode **dijktra, int dijktraSize) {
-	DijkstraNode *next = dijktra[0];
+int findNextNodeToVisitDijkstra(DijkstraNode **dijkstra, int dijkstraSize) {
+	DijkstraNode *next = dijkstra[0];
 	DijkstraNode *aux;
 
-	for (int i = 1; i < dijktraSize; ++i) {
-		aux = dijktra[i];
+	for (int i = 1; i < dijkstraSize; ++i) {
+		aux = dijkstra[i];
 
 		if (next->status == STATUS_VISITED || (aux->status == STATUS_NEXT && aux->routeLenght < next->routeLenght)) {
 			next = aux;
@@ -94,12 +94,12 @@ int findNextNodeToVisitDijktra(DijkstraNode **dijktra, int dijktraSize) {
 	return next->verticeIndex;
 }
 
-void updatePreviousVertice(DijkstraNode **dijktra, int index, int previous, float edgeWeight) {
-	DijkstraNode *vertice = dijktra[index];
-	DijkstraNode *previousVertice = dijktra[previous];
+void updatePreviousVerticeDijkstra(DijkstraNode **dijkstra, int target, int previous, float edgeWeight) {
+	DijkstraNode *vertice = dijkstra[target];
+	DijkstraNode *previousVertice = dijkstra[previous];
 
 	if (edgeWeight == 0
-		|| index == previous
+		|| target == previous
 		|| vertice->status != STATUS_VISITED
 		|| previousVertice->routeLenght == (float) INT_MAX) {
 		return;
@@ -111,6 +111,6 @@ void updatePreviousVertice(DijkstraNode **dijktra, int index, int previous, floa
 	}
 }
 
-void rotulateNodeDijktra(DijkstraNode **dijktra, int index) {
-	dijktra[index]->status = STATUS_VISITED;
+void rotulateNodeDijkstra(DijkstraNode **dijkstra, int index) {
+	dijkstra[index]->status = STATUS_VISITED;
 }

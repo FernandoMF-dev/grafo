@@ -2,14 +2,14 @@
 
 // =-=-=-=-= MÉTODOS PÚBLICOS =-=-=-=-=
 
-void destroyDijktraNodeArray(DijkstraNode **dijktraNodeArray, int size) {
-	if (dijktraNodeArray == NULL) {
+void destroyDijkstraNodeArray(DijkstraNode **dijkstraNodeArray, int size) {
+	if (dijkstraNodeArray == NULL) {
 		return;
 	}
 
 	int i;
 	for (i = 0; i < size; ++i) {
-		free(dijktraNodeArray[size]);
+		free(dijkstraNodeArray[size]);
 	}
-	free(dijktraNodeArray);
+	free(dijkstraNodeArray);
 }
