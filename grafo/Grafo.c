@@ -77,7 +77,7 @@ Grafo *newGrafo(char *label, int size) {
 	grafo->label = label;
 	grafo->size = size;
 	grafo->vertices = newVerticeArray(size);
-	grafo->edges = newMatrixFloat(size);
+	grafo->edges = newRegularMatrixFloat(size);
 
 	if (grafo->vertices == NULL || grafo->edges == NULL) {
 		return NULL;

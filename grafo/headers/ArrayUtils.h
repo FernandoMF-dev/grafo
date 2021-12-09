@@ -9,7 +9,11 @@ int arrayContainsChar(char needle, char *haystack);
 
 int arrayContainsInteger(int needle, const int *haystack, int haystackSize);
 
-float **newMatrixFloat(int size);
+float **newRegularMatrixFloat(int size);
+
+float **newMatrixFloat(int rows, int colmuns);
+
+int **newIntegerMatrix(int rows, int colmuns);
 
 int *newIntegerArray(int size);
 
