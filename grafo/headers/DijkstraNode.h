@@ -16,4 +16,8 @@ DijktraNode *newDijktraNode(int verticeIndex);
 
 DijktraNode **prepareDijktraNodeArray(int size);
 
+void setOriginPathDijktra(DijktraNode **dijktra, int origin);
+
+int wasVisitedDijktra(DijktraNode **dijktra, int index);
+
 #endif //GRAFO_DIJKSTRANODE_H

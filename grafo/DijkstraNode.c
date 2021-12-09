@@ -28,3 +28,12 @@ DijktraNode **prepareDijktraNodeArray(int size) {
 
 	return nodeArray;
 }
+
+void setOriginPathDijktra(DijktraNode **dijktra, int origin) {
+	dijktra[origin]->status = STATUS_NEXT;
+	dijktra[origin]->routeLenght = 0;
+}
+
+int wasVisitedDijktra(DijktraNode **dijktra, int index) {
+	return dijktra[index]->status == STATUS_VISITED;
+}

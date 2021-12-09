@@ -199,6 +199,12 @@ Stack *getMinimumPathGrafo(Grafo *grafo, int originIndex, int destinyIndex) {
 	Stack *path = newStack("Caminho Mínimo");
 	DijktraNode **dijkstra = prepareDijktraNodeArray(grafo->size);
 
+	setOriginPathDijktra(dijkstra, originIndex);
+
+	do {
+		break;
+	} while (!wasVisitedDijktra(dijkstra, destinyIndex));
+
 	destroyDijktraNodeArray(dijkstra, grafo->size);
 	return path;
 }
