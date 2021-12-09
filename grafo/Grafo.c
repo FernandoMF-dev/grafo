@@ -198,12 +198,22 @@ Grafo *getMinimumSpanningTreeGrafo(Grafo *origin) {
 Stack *getMinimumPathGrafo(Grafo *grafo, int originIndex, int destinyIndex) {
 	Stack *path = newStack("Caminho Mínimo");
 	DijktraNode **dijkstra = prepareDijktraNodeArray(grafo->size);
+	int index;
 
 	setOriginPathDijktra(dijkstra, originIndex);
 
 	do {
-		break;
-	} while (!wasVisitedDijktra(dijkstra, destinyIndex));
+		index = findNextNodeToVisitDijktra(dijkstra, grafo->size);
+		for (int i = 0; i < grafo->size; ++i) {
+			updatePreviousVertice(dijkstra, index, i, grafo->edges[i][index]);
+		}
+		for (int i = 0; i < grafo->size; ++i) {
+			if (grafo->edges[index][i] > 0) {
+				setNextDijktra(dijkstra, i);
+			}
+		}
+		rotulateNodeDijktra(dijkstra, index);
+	} while (!isVisitedDijktra(dijkstra, destinyIndex));
 
 	destroyDijktraNodeArray(dijkstra, grafo->size);
 	return path;

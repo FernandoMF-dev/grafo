@@ -18,7 +18,7 @@ DijktraNode *newDijktraNode(int verticeIndex) {
 	node->status = STATUS_UNVISITED;
 	node->verticeIndex = verticeIndex;
 	node->previousVertice = -1;
-	node->routeLenght = INT_MAX;
+	node->routeLenght = (float) INT_MAX;
 
 	return node;
 }
@@ -38,8 +38,12 @@ void setOriginPathDijktra(DijktraNode **dijktra, int origin) {
 	dijktra[origin]->routeLenght = 0;
 }
 
-int wasVisitedDijktra(DijktraNode **dijktra, int index) {
+int isVisitedDijktra(DijktraNode **dijktra, int index) {
 	return dijktra[index]->status == STATUS_VISITED;
+}
+
+void setNextDijktra(DijktraNode **dijktra, int index) {
+	dijktra[index]->status = STATUS_NEXT;
 }
 
 int findNextNodeToVisitDijktra(DijktraNode **dijktra, int dijktraSize) {
@@ -55,6 +59,23 @@ int findNextNodeToVisitDijktra(DijktraNode **dijktra, int dijktraSize) {
 	}
 
 	return next->verticeIndex;
+}
+
+void updatePreviousVertice(DijktraNode **dijktra, int index, int previous, float edgeWeight) {
+	DijktraNode *vertice = dijktra[index];
+	DijktraNode *previousVertice = dijktra[previous];
+
+	if (edgeWeight == 0
+		|| index == previous
+		|| vertice->status != STATUS_VISITED
+		|| previousVertice->routeLenght == (float) INT_MAX) {
+		return;
+	}
+
+	if (previousVertice->routeLenght + edgeWeight < vertice->routeLenght) {
+		vertice->routeLenght = previousVertice->routeLenght + edgeWeight;
+		vertice->previousVertice = previousVertice->verticeIndex;
+	}
 }
 
 void rotulateNodeDijktra(DijktraNode **dijktra, int index) {

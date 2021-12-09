@@ -9,7 +9,7 @@ typedef struct DijktraNode {
 	int status;
 	int verticeIndex;
 	int previousVertice;
-	int routeLenght;
+	float routeLenght;
 } DijktraNode;
 
 DijktraNode *newDijktraNode(int verticeIndex);
@@ -18,9 +18,13 @@ DijktraNode **prepareDijktraNodeArray(int size);
 
 void setOriginPathDijktra(DijktraNode **dijktra, int origin);
 
-int wasVisitedDijktra(DijktraNode **dijktra, int index);
+int isVisitedDijktra(DijktraNode **dijktra, int index);
+
+void setNextDijktra(DijktraNode **dijktra, int index);
 
 int findNextNodeToVisitDijktra(DijktraNode **dijktra, int dijktraSize);
+
+void updatePreviousVertice(DijktraNode **dijktra, int index, int previous, float edgeWeight);
 
 void rotulateNodeDijktra(DijktraNode **dijktra, int index);
 
