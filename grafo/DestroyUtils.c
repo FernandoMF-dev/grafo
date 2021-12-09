@@ -2,7 +2,7 @@
 
 // =-=-=-=-= MÉTODOS PÚBLICOS =-=-=-=-=
 
-void destroyDijktraNodeArray(DijktraNode **dijktraNodeArray, int size) {
+void destroyDijktraNodeArray(DijkstraNode **dijktraNodeArray, int size) {
 	if (dijktraNodeArray == NULL) {
 		return;
 	}

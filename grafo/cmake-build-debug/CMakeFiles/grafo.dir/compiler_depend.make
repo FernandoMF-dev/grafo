@@ -831,7 +831,8 @@ CMakeFiles/grafo.dir/main.c.o: ../main.c \
   ../headers/Vertice.h \
   ../headers/Edge.h \
   ../headers/Stack.h \
-  ../headers/Grafo.h
+  ../headers/Grafo.h \
+  ../headers/Stack.h
 
 
 ../RandomUtils.c:

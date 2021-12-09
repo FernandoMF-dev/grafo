@@ -63,7 +63,7 @@ void printStack(Stack *stack) {
 	printf("\n%s", stack->label);
 	while (aux != NULL) {
 		printf("\n");
-		printEdge(aux->value);
+		printDetailEdge(aux->value);
 		aux = aux->next;
 	}
 	printf("\n");

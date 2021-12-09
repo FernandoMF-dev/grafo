@@ -5,27 +5,27 @@
 #ifndef GRAFO_DIJKSTRANODE_H
 #define GRAFO_DIJKSTRANODE_H
 
-typedef struct DijktraNode {
+typedef struct DijkstraNode {
 	int status;
 	int verticeIndex;
 	int previousVertice;
 	float routeLenght;
-} DijktraNode;
+} DijkstraNode;
 
-DijktraNode *newDijktraNode(int verticeIndex);
+DijkstraNode *newDijktraNode();
 
-DijktraNode **prepareDijktraNodeArray(int size);
+DijkstraNode **prepareDijktraNodeArray(int size);
 
-void setOriginPathDijktra(DijktraNode **dijktra, int origin);
+void setOriginPathDijktra(DijkstraNode **dijktra, int origin);
 
-int isVisitedDijktra(DijktraNode **dijktra, int index);
+int isVisitedDijktra(DijkstraNode **dijktra, int index);
 
-void setNextDijktra(DijktraNode **dijktra, int index);
+void setNextDijktra(DijkstraNode **dijktra, int index, int previous, float edgeWeight);
 
-int findNextNodeToVisitDijktra(DijktraNode **dijktra, int dijktraSize);
+int findNextNodeToVisitDijktra(DijkstraNode **dijktra, int dijktraSize);
 
-void updatePreviousVertice(DijktraNode **dijktra, int index, int previous, float edgeWeight);
+void updatePreviousVertice(DijkstraNode **dijktra, int index, int previous, float edgeWeight);
 
-void rotulateNodeDijktra(DijktraNode **dijktra, int index);
+void rotulateNodeDijktra(DijkstraNode **dijktra, int index);
 
 #endif //GRAFO_DIJKSTRANODE_H

@@ -3,27 +3,21 @@
 #include "headers/GeradorArquivo.h"
 #include "headers/ControleArquivoGrafo.h"
 #include "headers/Grafo.h"
-
-#define NOME_GRAFO_SAIDA "viasAsfaltadas"
+#include "headers/Stack.h"
 
 int main(int argc, char *argv[]) {
-	setlocale(LC_ALL, "Portuguese");
-
-	criaArquivoEntrada();
+//	criaArquivoEntrada();
 
 	Grafo *grafo = readGrafoFromFile();
 	if (grafo == NULL) {
 		return 0;
 	}
 
-	Grafo *min = getMinimumSpanningTreeGrafo(grafo);
-	if (min == NULL) {
-		return 0;
-	}
-
-	min->label = NOME_GRAFO_SAIDA;
-	writeGrafoEdgesOnFile(min);
+	Stack *minimunPath = getMinimumPathGrafo(grafo, 4, 1);
+	printStack(minimunPath);
 
 	free(grafo);
-	free(min);
+	free(minimunPath);
+
+	return 0;
 }

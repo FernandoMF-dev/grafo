@@ -13,7 +13,7 @@ Edge *findMinimalEdgeGrafo(Grafo *grafo, const int *sourceIndexArray, int source
 
 void copyVerticesGrafo(Grafo *target, Grafo *origin);
 
-Stack *getStackEdgeFromMinimalPathDijktra(DijktraNode **dijkstra, Grafo *grafo, int destinyIndex);
+Stack *getStackEdgeFromMinimalPathDijktra(DijkstraNode **dijkstra, Grafo *grafo, int destinyIndex);
 
 // =-=-=-=-= MÉTODOS PRIVADOS | IMPLEMENTAÇÃO =-=-=-=-=
 
@@ -63,13 +63,13 @@ void copyVerticesGrafo(Grafo *target, Grafo *origin) {
 	}
 }
 
-Stack *getStackEdgeFromMinimalPathDijktra(DijktraNode **dijkstra, Grafo *grafo, int destinyIndex) {
+Stack *getStackEdgeFromMinimalPathDijktra(DijkstraNode **dijkstra, Grafo *grafo, int destinyIndex) {
 	if (grafo == NULL || dijkstra == NULL) {
 		return NULL;
 	}
 
 	Stack *path = newStack("Caminho Mínimo");
-	DijktraNode *dijktraNode = dijkstra[destinyIndex];
+	DijkstraNode *dijktraNode = dijkstra[destinyIndex];
 
 	while (dijktraNode->previousVertice >= 0) {
 		Edge *edge = readDetailEdge(grafo->vertices[dijktraNode->previousVertice],
@@ -217,22 +217,29 @@ Grafo *getMinimumSpanningTreeGrafo(Grafo *origin) {
 }
 
 Stack *getMinimumPathGrafo(Grafo *grafo, int originIndex, int destinyIndex) {
-	DijktraNode **dijkstra = prepareDijktraNodeArray(grafo->size);
+	DijkstraNode **dijkstra = prepareDijktraNodeArray(grafo->size);
 	int index;
 	int i;
+
+	if (dijkstra == NULL) {
+		return NULL;
+	}
 
 	setOriginPathDijktra(dijkstra, originIndex);
 
 	do {
 		index = findNextNodeToVisitDijktra(dijkstra, grafo->size);
+
 		for (i = 0; i < grafo->size; ++i) {
 			updatePreviousVertice(dijkstra, index, i, grafo->edges[i][index]);
 		}
+
 		for (i = 0; i < grafo->size; ++i) {
 			if (grafo->edges[index][i] > 0) {
-				setNextDijktra(dijkstra, i);
+				setNextDijktra(dijkstra, i, index, grafo->edges[index][i]);
 			}
 		}
+
 		rotulateNodeDijktra(dijkstra, index);
 	} while (!isVisitedDijktra(dijkstra, destinyIndex));
 
