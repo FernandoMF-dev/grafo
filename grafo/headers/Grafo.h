@@ -2,7 +2,6 @@
 #include <stdlib.h>
 
 #include "ArrayUtils.h"
-#include "DestroyUtils.h"
 #include "Cidade.h"
 #include "Vertice.h"
 #include "Edge.h"

@@ -6,7 +6,7 @@
 #include "headers/Stack.h"
 
 int main(int argc, char *argv[]) {
-//	criaArquivoEntrada();
+	criaArquivoEntrada();
 
 	Grafo *grafo = readGrafoFromFile();
 	if (grafo == NULL) {

@@ -85,9 +85,6 @@
 		<Unit filename="/home/basis/Documentos/Grafo/grafo/ControleArquivoGrafo.c">
 			<Option target="grafo"/>
 		</Unit>
-		<Unit filename="/home/basis/Documentos/Grafo/grafo/DestroyUtils.c">
-			<Option target="grafo"/>
-		</Unit>
 		<Unit filename="/home/basis/Documentos/Grafo/grafo/DijkstraNode.c">
 			<Option target="grafo"/>
 		</Unit>
@@ -119,9 +116,6 @@
 			<Option target="grafo"/>
 		</Unit>
 		<Unit filename="/home/basis/Documentos/Grafo/grafo/headers/ControleArquivoGrafo.h">
-			<Option target="grafo"/>
-		</Unit>
-		<Unit filename="/home/basis/Documentos/Grafo/grafo/headers/DestroyUtils.h">
 			<Option target="grafo"/>
 		</Unit>
 		<Unit filename="/home/basis/Documentos/Grafo/grafo/headers/DijkstraNode.h">

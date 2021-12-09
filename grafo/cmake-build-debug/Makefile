@@ -201,30 +201,6 @@ ControleArquivoGrafo.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/ControleArquivoGrafo.c.s
 .PHONY : ControleArquivoGrafo.c.s
 
-DestroyUtils.o: DestroyUtils.c.o
-.PHONY : DestroyUtils.o
-
-# target to build an object file
-DestroyUtils.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/DestroyUtils.c.o
-.PHONY : DestroyUtils.c.o
-
-DestroyUtils.i: DestroyUtils.c.i
-.PHONY : DestroyUtils.i
-
-# target to preprocess a source file
-DestroyUtils.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/DestroyUtils.c.i
-.PHONY : DestroyUtils.c.i
-
-DestroyUtils.s: DestroyUtils.c.s
-.PHONY : DestroyUtils.s
-
-# target to generate assembly for a file
-DestroyUtils.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/DestroyUtils.c.s
-.PHONY : DestroyUtils.c.s
-
 DijkstraNode.o: DijkstraNode.c.o
 .PHONY : DijkstraNode.o
 
@@ -459,9 +435,6 @@ help:
 	@echo "... ControleArquivoGrafo.o"
 	@echo "... ControleArquivoGrafo.i"
 	@echo "... ControleArquivoGrafo.s"
-	@echo "... DestroyUtils.o"
-	@echo "... DestroyUtils.i"
-	@echo "... DestroyUtils.s"
 	@echo "... DijkstraNode.o"
 	@echo "... DijkstraNode.i"
 	@echo "... DijkstraNode.s"

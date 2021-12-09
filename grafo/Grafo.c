@@ -242,7 +242,7 @@ Stack *getMinimumPathGrafo(Grafo *grafo, int originIndex, int destinyIndex) {
 	} while (!isVisitedDijkstra(dijkstra, destinyIndex));
 
 	Stack *path = getStackEdgeFromMinimalPathDijktra(dijkstra, grafo, destinyIndex);
-	destroyDijkstraNodeArray(dijkstra, grafo->size);
+	free(dijkstra);
 	return path;
 }
 
