@@ -13,8 +13,6 @@ float **newRegularMatrixFloat(int size);
 
 float **newMatrixFloat(int rows, int columns);
 
-int **newIntegerMatrix(int rows, int columns);
-
 int *newIntegerArray(int size);
 
 int getMinNonZeroWithBlackListArrayFloat(const float *array, int arraySize,

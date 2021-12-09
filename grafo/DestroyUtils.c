@@ -2,14 +2,14 @@
 
 // =-=-=-=-= MÉTODOS PÚBLICOS =-=-=-=-=
 
-void destroyIntegerMatrix(int **matrix, int rows) {
-	if (matrix == NULL) {
+void destroyDijktraNodeArray(DijktraNode **dijktraNodeArray, int size) {
+	if (dijktraNodeArray == NULL) {
 		return;
 	}
 
 	int i;
-	for (i = 0; i < rows; ++i) {
-		free(matrix[rows]);
+	for (i = 0; i < size; ++i) {
+		free(dijktraNodeArray[size]);
 	}
-	free(matrix);
+	free(dijktraNodeArray);
 }

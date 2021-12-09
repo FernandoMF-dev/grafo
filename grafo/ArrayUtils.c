@@ -82,36 +82,6 @@ float **newMatrixFloat(int rows, int columns) {
 }
 
 /*
- * Retorna uma matriz de 'int' com [rows] linhas e [colmuns] colunas.
- *
- * Todos os valores são iniciados com '0'.
- * */
-int **newIntegerMatrix(int rows, int columns) {
-	int **matrix = (int **) malloc(rows * sizeof(int *));
-	int rowCounter, columnCounter;
-
-	if (matrix == NULL) {
-		printf(ERRO_FALHA_ALOCACAO);
-		return NULL;
-	}
-
-	for (rowCounter = 0; rowCounter < rows; ++rowCounter) {
-		matrix[rowCounter] = (int *) malloc(columns * sizeof(int));
-
-		if (matrix[rowCounter] == NULL) {
-			printf(ERRO_FALHA_ALOCACAO);
-			return NULL;
-		}
-
-		for (columnCounter = 0; columnCounter < columns; ++columnCounter) {
-			matrix[rowCounter][columnCounter] = 0;
-		}
-	}
-
-	return matrix;
-}
-
-/*
  * Retorna um vetor de 'int' de tamanho [size].
  *
  * Todos os valores são iniciados com '0'.

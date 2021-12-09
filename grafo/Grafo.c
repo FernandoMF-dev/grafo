@@ -197,9 +197,9 @@ Grafo *getMinimumSpanningTreeGrafo(Grafo *origin) {
 
 Stack *getMinimumPathGrafo(Grafo *grafo, int originIndex, int destinyIndex) {
 	Stack *path = newStack("Caminho Mínimo");
-	int **dijkstra = newIntegerMatrix(3, grafo->size);
+	DijktraNode **dijkstra = prepareDijktraNodeArray(grafo->size);
 
-	destroyIntegerMatrix(dijkstra, grafo->size);
+	destroyDijktraNodeArray(dijkstra, grafo->size);
 	return path;
 }
 

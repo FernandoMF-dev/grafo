@@ -7,6 +7,7 @@
 #include "Vertice.h"
 #include "Edge.h"
 #include "Stack.h"
+#include "DijkstraNode.h"
 
 #ifndef GRAFO_GRAFO_H
 #define GRAFO_GRAFO_H
