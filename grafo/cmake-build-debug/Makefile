@@ -225,6 +225,30 @@ DestroyUtils.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/DestroyUtils.c.s
 .PHONY : DestroyUtils.c.s
 
+DijkstraNode.o: DijkstraNode.c.o
+.PHONY : DijkstraNode.o
+
+# target to build an object file
+DijkstraNode.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/DijkstraNode.c.o
+.PHONY : DijkstraNode.c.o
+
+DijkstraNode.i: DijkstraNode.c.i
+.PHONY : DijkstraNode.i
+
+# target to preprocess a source file
+DijkstraNode.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/DijkstraNode.c.i
+.PHONY : DijkstraNode.c.i
+
+DijkstraNode.s: DijkstraNode.c.s
+.PHONY : DijkstraNode.s
+
+# target to generate assembly for a file
+DijkstraNode.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/DijkstraNode.c.s
+.PHONY : DijkstraNode.c.s
+
 Edge.o: Edge.c.o
 .PHONY : Edge.o
 
@@ -438,6 +462,9 @@ help:
 	@echo "... DestroyUtils.o"
 	@echo "... DestroyUtils.i"
 	@echo "... DestroyUtils.s"
+	@echo "... DijkstraNode.o"
+	@echo "... DijkstraNode.i"
+	@echo "... DijkstraNode.s"
 	@echo "... Edge.o"
 	@echo "... Edge.i"
 	@echo "... Edge.s"

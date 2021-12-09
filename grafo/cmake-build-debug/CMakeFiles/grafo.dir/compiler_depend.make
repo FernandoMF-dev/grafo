@@ -180,12 +180,14 @@ CMakeFiles/grafo.dir/ControleArquivoGrafo.c.o: ../ControleArquivoGrafo.c \
   /usr/include/strings.h \
   ../headers/Grafo.h \
   ../headers/ArrayUtils.h \
+  ../headers/DestroyUtils.h \
   ../headers/Vertice.h \
-  ../headers/Edge.h
+  ../headers/Edge.h \
+  ../headers/Stack.h
 
 CMakeFiles/grafo.dir/DestroyUtils.c.o: ../DestroyUtils.c \
   /usr/include/stdc-predef.h \
-  ../DestroyUtils.h \
+  ../headers/DestroyUtils.h \
   /usr/include/stdio.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
   /usr/include/features.h \
@@ -421,9 +423,11 @@ CMakeFiles/grafo.dir/Grafo.c.o: ../Grafo.c \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/strings.h \
+  ../headers/DestroyUtils.h \
   ../headers/Cidade.h \
   ../headers/Vertice.h \
-  ../headers/Edge.h
+  ../headers/Edge.h \
+  ../headers/Stack.h
 
 CMakeFiles/grafo.dir/RandomUtils.c.o: ../RandomUtils.c \
   /usr/include/stdc-predef.h \
@@ -729,8 +733,10 @@ CMakeFiles/grafo.dir/main.c.o: ../main.c \
   ../headers/RandomUtils.h \
   ../headers/ControleArquivoGrafo.h \
   ../headers/Grafo.h \
+  ../headers/DestroyUtils.h \
   ../headers/Vertice.h \
   ../headers/Edge.h \
+  ../headers/Stack.h \
   ../headers/Grafo.h
 
 
@@ -746,11 +752,9 @@ CMakeFiles/grafo.dir/main.c.o: ../main.c \
 
 ../headers/StringUtils.h:
 
-../headers/Stack.h:
-
 ../Edge.c:
 
-../DestroyUtils.h:
+../headers/Stack.h:
 
 ../headers/Vertice.h:
 
@@ -787,6 +791,8 @@ CMakeFiles/grafo.dir/main.c.o: ../main.c \
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
 ../headers/GeradorArquivo.h:
+
+../headers/DestroyUtils.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
 

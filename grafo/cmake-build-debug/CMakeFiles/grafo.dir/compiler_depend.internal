@@ -183,13 +183,15 @@ CMakeFiles/grafo.dir/ControleArquivoGrafo.c.o
  /usr/include/strings.h
  /home/basis/Documentos/Grafo/grafo/headers/Grafo.h
  /home/basis/Documentos/Grafo/grafo/headers/ArrayUtils.h
+ /home/basis/Documentos/Grafo/grafo/headers/DestroyUtils.h
  /home/basis/Documentos/Grafo/grafo/headers/Vertice.h
  /home/basis/Documentos/Grafo/grafo/headers/Edge.h
+ /home/basis/Documentos/Grafo/grafo/headers/Stack.h
 
 CMakeFiles/grafo.dir/DestroyUtils.c.o
  /home/basis/Documentos/Grafo/grafo/DestroyUtils.c
  /usr/include/stdc-predef.h
- /home/basis/Documentos/Grafo/grafo/DestroyUtils.h
+ /home/basis/Documentos/Grafo/grafo/headers/DestroyUtils.h
  /usr/include/stdio.h
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h
  /usr/include/features.h
@@ -428,9 +430,11 @@ CMakeFiles/grafo.dir/Grafo.c.o
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h
  /usr/include/strings.h
+ /home/basis/Documentos/Grafo/grafo/headers/DestroyUtils.h
  /home/basis/Documentos/Grafo/grafo/headers/Cidade.h
  /home/basis/Documentos/Grafo/grafo/headers/Vertice.h
  /home/basis/Documentos/Grafo/grafo/headers/Edge.h
+ /home/basis/Documentos/Grafo/grafo/headers/Stack.h
 
 CMakeFiles/grafo.dir/RandomUtils.c.o
  /home/basis/Documentos/Grafo/grafo/RandomUtils.c
@@ -741,7 +745,9 @@ CMakeFiles/grafo.dir/main.c.o
  /home/basis/Documentos/Grafo/grafo/headers/RandomUtils.h
  /home/basis/Documentos/Grafo/grafo/headers/ControleArquivoGrafo.h
  /home/basis/Documentos/Grafo/grafo/headers/Grafo.h
+ /home/basis/Documentos/Grafo/grafo/headers/DestroyUtils.h
  /home/basis/Documentos/Grafo/grafo/headers/Vertice.h
  /home/basis/Documentos/Grafo/grafo/headers/Edge.h
+ /home/basis/Documentos/Grafo/grafo/headers/Stack.h
  /home/basis/Documentos/Grafo/grafo/headers/Grafo.h
 

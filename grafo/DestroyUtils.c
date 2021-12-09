@@ -1,5 +1,7 @@
 #include "headers/DestroyUtils.h"
 
+// =-=-=-=-= MÉTODOS PÚBLICOS =-=-=-=-=
+
 void destroyIntegerMatrix(int **matrix, int rows) {
 	if (matrix == NULL) {
 		return;

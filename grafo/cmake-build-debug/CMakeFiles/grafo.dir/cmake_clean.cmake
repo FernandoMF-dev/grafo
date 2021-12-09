@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/grafo.dir/ControleArquivoGrafo.c.o.d"
   "CMakeFiles/grafo.dir/DestroyUtils.c.o"
   "CMakeFiles/grafo.dir/DestroyUtils.c.o.d"
+  "CMakeFiles/grafo.dir/DijkstraNode.c.o"
+  "CMakeFiles/grafo.dir/DijkstraNode.c.o.d"
   "CMakeFiles/grafo.dir/Edge.c.o"
   "CMakeFiles/grafo.dir/Edge.c.o.d"
   "CMakeFiles/grafo.dir/GeradorArquivo.c.o"

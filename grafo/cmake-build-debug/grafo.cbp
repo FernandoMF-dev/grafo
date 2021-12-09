@@ -88,6 +88,9 @@
 		<Unit filename="/home/basis/Documentos/Grafo/grafo/DestroyUtils.c">
 			<Option target="grafo"/>
 		</Unit>
+		<Unit filename="/home/basis/Documentos/Grafo/grafo/DijkstraNode.c">
+			<Option target="grafo"/>
+		</Unit>
 		<Unit filename="/home/basis/Documentos/Grafo/grafo/Edge.c">
 			<Option target="grafo"/>
 		</Unit>
@@ -119,6 +122,9 @@
 			<Option target="grafo"/>
 		</Unit>
 		<Unit filename="/home/basis/Documentos/Grafo/grafo/headers/DestroyUtils.h">
+			<Option target="grafo"/>
+		</Unit>
+		<Unit filename="/home/basis/Documentos/Grafo/grafo/headers/DijkstraNode.h">
 			<Option target="grafo"/>
 		</Unit>
 		<Unit filename="/home/basis/Documentos/Grafo/grafo/headers/Edge.h">
