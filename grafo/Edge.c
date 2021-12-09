@@ -17,9 +17,11 @@ Edge *newEdge() {
 		return NULL;
 	}
 
-	edge->origin = -1;
-	edge->destiny = -1;
+	edge->originIndex = -1;
+	edge->destinyIndex = -1;
 	edge->weight = (float) 0.0;
+	edge->origin = NULL;
+	edge->destiny = NULL;
 
 	return edge;
 }
@@ -27,7 +29,24 @@ Edge *newEdge() {
 /*
  * Retorna uma nova instância de 'Edge' preenchido com os valores passados por parâmetro.
  * */
-Edge *readEdge(int origin, int destiny, float weight) {
+Edge *readEdge(int originIndex, int destinyIndex, float weight) {
+	Edge *edge = newEdge();
+
+	if (edge == NULL) {
+		return NULL;
+	}
+
+	edge->originIndex = originIndex;
+	edge->destinyIndex = destinyIndex;
+	edge->weight = weight;
+
+	return edge;
+}
+
+/*
+ * Retorna uma nova instância de 'Edge' preenchido com os valores passados por parâmetro.
+ * */
+Edge *readDetailEdge(Vertice *origin, Vertice *destiny, float weight) {
 	Edge *edge = newEdge();
 
 	if (edge == NULL) {
@@ -38,6 +57,14 @@ Edge *readEdge(int origin, int destiny, float weight) {
 	edge->destiny = destiny;
 	edge->weight = weight;
 
+	if (origin != NULL) {
+		edge->originIndex = origin->index;
+	}
+
+	if (destiny != NULL) {
+		edge->destinyIndex = destiny->index;
+	}
+
 	return edge;
 }
 
@@ -45,5 +72,14 @@ Edge *readEdge(int origin, int destiny, float weight) {
  * Imprimi uma struct 'Edge'
  * */
 void printEdge(Edge *edge) {
-	printf("%d -[%.2f]-> %d\n", edge->origin, edge->weight, edge->destiny);
+	printf("%d -[%.2f]-> %d\n", edge->originIndex, edge->weight, edge->destinyIndex);
+}
+
+/*
+ * Imprimi uma struct 'Edge' com os valores de seus vértices
+ * */
+void printDetailEdge(Edge *edge) {
+	printVertice(edge->origin);
+	printf(" -[%.2f]-> ", edge->weight);
+	printVertice(edge->destiny);
 }

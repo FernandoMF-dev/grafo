@@ -31,17 +31,17 @@ Edge *findMinimalEdgeGrafo(Grafo *grafo, const int *sourceIndexArray, int source
 	}
 
 	for (i = 0; i < sourceIndexSize; ++i) {
-		aux->origin = sourceIndexArray[i];
-		grafoEdgesArray = grafo->edges[aux->origin];
-		aux->destiny = getMinNonZeroWithBlackListArrayFloat(grafoEdgesArray, grafo->size,
-															sourceIndexArray, sourceIndexSize);
+		aux->originIndex = sourceIndexArray[i];
+		grafoEdgesArray = grafo->edges[aux->originIndex];
+		aux->destinyIndex = getMinNonZeroWithBlackListArrayFloat(grafoEdgesArray, grafo->size,
+																 sourceIndexArray, sourceIndexSize);
 
-		if (aux->destiny != 0.0) {
-			aux->weight = grafoEdgesArray[aux->destiny];
+		if (aux->destinyIndex != 0.0) {
+			aux->weight = grafoEdgesArray[aux->destinyIndex];
 
 			if (minEdge->weight == 0 || minEdge->weight > aux->weight) {
-				minEdge->origin = aux->origin;
-				minEdge->destiny = aux->destiny;
+				minEdge->originIndex = aux->originIndex;
+				minEdge->destinyIndex = aux->destinyIndex;
 				minEdge->weight = aux->weight;
 			}
 		}
@@ -52,7 +52,7 @@ Edge *findMinimalEdgeGrafo(Grafo *grafo, const int *sourceIndexArray, int source
 }
 
 /*
- * Copia os 'Vertice's do 'Grafo' [origin] e cola em [target]
+ * Copia os 'Vertice's do 'Grafo' [originIndex] e cola em [target]
  * */
 void copyVerticesGrafo(Grafo *target, Grafo *origin) {
 	int i;
@@ -103,6 +103,7 @@ void printVerticesGrafo(Grafo *grafo) {
 
 	for (i = 0; i < grafo->size; ++i) {
 		printVertice(grafo->vertices[i]);
+		printf("\n");
 	}
 }
 
@@ -126,33 +127,34 @@ void printEdgesGrafo(Grafo *grafo) {
  * Insere a aresta [edge] em [grafo].
  * */
 void insertEdgeGrafo(Grafo *grafo, Edge *edge) {
-	if (grafo->size <= edge->origin || grafo->size <= edge->destiny || edge->origin < 0 || edge->destiny < 0) {
+	if (grafo->size <= edge->originIndex || grafo->size <= edge->destinyIndex || edge->originIndex < 0 ||
+		edge->destinyIndex < 0) {
 		return;
 	}
 
-	grafo->edges[edge->origin][edge->destiny] = edge->weight;
+	grafo->edges[edge->originIndex][edge->destinyIndex] = edge->weight;
 }
 
 /*
  * Insere a aresta [edge] em [grafo] como uma via dupla.
  * */
 void insertTwoWayEdgeGrafo(Grafo *grafo, Edge *edge) {
-	int origin = edge->origin;
-	int destiny = edge->destiny;
+	int origin = edge->originIndex;
+	int destiny = edge->destinyIndex;
 
 	insertEdgeGrafo(grafo, edge);
-	edge->origin = destiny;
-	edge->destiny = origin;
+	edge->originIndex = destiny;
+	edge->destinyIndex = origin;
 
 	insertEdgeGrafo(grafo, edge);
-	edge->origin = origin;
-	edge->destiny = destiny;
+	edge->originIndex = origin;
+	edge->destinyIndex = destiny;
 }
 
 /*
- * Retorna um 'Grafo' com uma árvore geradora mínima de [origin]
+ * Retorna um 'Grafo' com uma árvore geradora mínima de [originIndex]
  *
- * Não modifica [origin]
+ * Não modifica [originIndex]
  * */
 Grafo *getMinimumSpanningTree(Grafo *origin) {
 	printf(INFO_CRIAR_ARVORE_GERADORA_MINIMA);
@@ -183,7 +185,7 @@ Grafo *getMinimumSpanningTree(Grafo *origin) {
 		}
 
 		insertTwoWayEdgeGrafo(minimumTree, edge);
-		visitedIndex[row + 1] = edge->destiny;
+		visitedIndex[row + 1] = edge->destinyIndex;
 		visitedIndexSize++;
 		free(edge);
 	}
