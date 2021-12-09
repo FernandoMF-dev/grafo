@@ -26,7 +26,7 @@ Stack *newStack(char *label) {
 }
 
 void insertStack(Stack *stack, Edge *value) {
-	NodeStack *aux = (NodeStack *) malloc(sizeof(NodeStack));
+	StackNode *aux = (StackNode *) malloc(sizeof(StackNode));
 
 	if (aux == NULL) {
 		printf("\n\tERRO: Erro de alocação de nó!\n");
@@ -40,7 +40,7 @@ void insertStack(Stack *stack, Edge *value) {
 }
 
 Edge *removeStack(Stack *stack) {
-	NodeStack *aux = stack->top;
+	StackNode *aux = stack->top;
 	Edge *backup;
 
 	if (aux == NULL) {
@@ -58,7 +58,7 @@ Edge *removeStack(Stack *stack) {
 }
 
 void printStack(Stack *stack) {
-	NodeStack *aux = stack->top;
+	StackNode *aux = stack->top;
 
 	printf("\n%s", stack->label);
 	while (aux != NULL) {

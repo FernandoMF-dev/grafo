@@ -6,15 +6,15 @@
 #ifndef GRAFO_STACK_H
 #define GRAFO_STACK_H
 
-typedef struct NodeStack {
+typedef struct StackNode {
 	Edge *value;
-	struct NodeStack *next;
-} NodeStack;
+	struct StackNode *next;
+} StackNode;
 
 typedef struct Stack {
 	char *label;
 	int size;
-	NodeStack *top;
+	StackNode *top;
 } Stack;
 
 Stack *newStack(char *label);

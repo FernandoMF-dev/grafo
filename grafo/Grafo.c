@@ -13,6 +13,8 @@ Edge *findMinimalEdgeGrafo(Grafo *grafo, const int *sourceIndexArray, int source
 
 void copyVerticesGrafo(Grafo *target, Grafo *origin);
 
+Stack *getStackEdgeFromMinimalPathDijktra(DijktraNode **dijkstra, Grafo *grafo, int destinyIndex);
+
 // =-=-=-=-= MÉTODOS PRIVADOS | IMPLEMENTAÇÃO =-=-=-=-=
 
 /*
@@ -59,6 +61,25 @@ void copyVerticesGrafo(Grafo *target, Grafo *origin) {
 	for (i = 0; i < target->size; ++i) {
 		target->vertices[i] = origin->vertices[i];
 	}
+}
+
+Stack *getStackEdgeFromMinimalPathDijktra(DijktraNode **dijkstra, Grafo *grafo, int destinyIndex) {
+	if (grafo == NULL || dijkstra == NULL) {
+		return NULL;
+	}
+
+	Stack *path = newStack("Caminho Mínimo");
+	DijktraNode *dijktraNode = dijkstra[destinyIndex];
+
+	while (dijktraNode->previousVertice >= 0) {
+		Edge *edge = readDetailEdge(grafo->vertices[dijktraNode->previousVertice],
+									grafo->vertices[dijktraNode->verticeIndex],
+									grafo->edges[dijktraNode->previousVertice][dijktraNode->verticeIndex]);
+		insertStack(path, edge);
+		dijktraNode = dijkstra[dijktraNode->previousVertice];
+	}
+
+	return path;
 }
 
 // =-=-=-=-= MÉTODOS PÚBLICOS =-=-=-=-=
@@ -196,18 +217,18 @@ Grafo *getMinimumSpanningTreeGrafo(Grafo *origin) {
 }
 
 Stack *getMinimumPathGrafo(Grafo *grafo, int originIndex, int destinyIndex) {
-	Stack *path = newStack("Caminho Mínimo");
 	DijktraNode **dijkstra = prepareDijktraNodeArray(grafo->size);
 	int index;
+	int i;
 
 	setOriginPathDijktra(dijkstra, originIndex);
 
 	do {
 		index = findNextNodeToVisitDijktra(dijkstra, grafo->size);
-		for (int i = 0; i < grafo->size; ++i) {
+		for (i = 0; i < grafo->size; ++i) {
 			updatePreviousVertice(dijkstra, index, i, grafo->edges[i][index]);
 		}
-		for (int i = 0; i < grafo->size; ++i) {
+		for (i = 0; i < grafo->size; ++i) {
 			if (grafo->edges[index][i] > 0) {
 				setNextDijktra(dijkstra, i);
 			}
@@ -215,6 +236,7 @@ Stack *getMinimumPathGrafo(Grafo *grafo, int originIndex, int destinyIndex) {
 		rotulateNodeDijktra(dijkstra, index);
 	} while (!isVisitedDijktra(dijkstra, destinyIndex));
 
+	Stack *path = getStackEdgeFromMinimalPathDijktra(dijkstra, grafo, destinyIndex);
 	destroyDijktraNodeArray(dijkstra, grafo->size);
 	return path;
 }
