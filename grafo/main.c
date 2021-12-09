@@ -16,7 +16,7 @@ int main(int argc, char *argv[]) {
 		return 0;
 	}
 
-	Grafo *min = getMinimumSpanningTree(grafo);
+	Grafo *min = getMinimumSpanningTreeGrafo(grafo);
 	if (min == NULL) {
 		return 0;
 	}

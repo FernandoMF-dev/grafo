@@ -156,7 +156,7 @@ void insertTwoWayEdgeGrafo(Grafo *grafo, Edge *edge) {
  *
  * Não modifica [originIndex]
  * */
-Grafo *getMinimumSpanningTree(Grafo *origin) {
+Grafo *getMinimumSpanningTreeGrafo(Grafo *origin) {
 	printf(INFO_CRIAR_ARVORE_GERADORA_MINIMA);
 
 	Grafo *minimumTree = newGrafo(origin->label, origin->size);
@@ -195,10 +195,14 @@ Grafo *getMinimumSpanningTree(Grafo *origin) {
 	return minimumTree;
 }
 
+Stack *getMinimumPathGrafo(Grafo *grafo, int originIndex, int destinyIndex) {
+	return NULL;
+}
+
 /*
  * Retorna o tamanho total de todas as arestas de um grafo.
  * */
-float getTotalEdgeWeight(Grafo *grafo) {
+float getTotalEdgeWeightGrafo(Grafo *grafo) {
 	float totalWeight = (float) 0.0;
 	int row, column;
 
@@ -214,6 +218,6 @@ float getTotalEdgeWeight(Grafo *grafo) {
 /*
  * Retorna o tamanho total de todas as arestas de um grafo assumindo que todas as arestas são de via dupla.
  * */
-float getTotalTwoWayEdgeWeight(Grafo *grafo) {
-	return getTotalEdgeWeight(grafo) / 2;
+float getTotalTwoWayEdgeWeightGrafo(Grafo *grafo) {
+	return getTotalEdgeWeightGrafo(grafo) / 2;
 }

@@ -5,6 +5,7 @@
 #include "Cidade.h"
 #include "Vertice.h"
 #include "Edge.h"
+#include "Stack.h"
 
 #ifndef GRAFO_GRAFO_H
 #define GRAFO_GRAFO_H
@@ -28,10 +29,12 @@ void insertEdgeGrafo(Grafo *grafo, Edge *edge);
 
 void insertTwoWayEdgeGrafo(Grafo *grafo, Edge *edge);
 
-Grafo *getMinimumSpanningTree(Grafo *origin);
+Grafo *getMinimumSpanningTreeGrafo(Grafo *origin);
 
-float getTotalEdgeWeight(Grafo *grafo);
+Stack *getMinimumPathGrafo(Grafo *grafo, int originIndex, int destinyIndex);
 
-float getTotalTwoWayEdgeWeight(Grafo *grafo);
+float getTotalEdgeWeightGrafo(Grafo *grafo);
+
+float getTotalTwoWayEdgeWeightGrafo(Grafo *grafo);
 
 #endif //GRAFO_GRAFO_H
