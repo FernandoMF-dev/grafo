@@ -56,7 +56,7 @@ float **newRegularMatrixFloat(int size) {
  *
  * Todos os valores são iniciados com '0.0'.
  * */
-float **newMatrixFloat(int rows, int colmuns) {
+float **newMatrixFloat(int rows, int columns) {
 	float **matrix = (float **) malloc(rows * sizeof(float *));
 	int rowCounter, columnCounter;
 
@@ -66,14 +66,14 @@ float **newMatrixFloat(int rows, int colmuns) {
 	}
 
 	for (rowCounter = 0; rowCounter < rows; ++rowCounter) {
-		matrix[rowCounter] = (float *) malloc(colmuns * sizeof(float));
+		matrix[rowCounter] = (float *) malloc(columns * sizeof(float));
 
 		if (matrix[rowCounter] == NULL) {
 			printf(ERRO_FALHA_ALOCACAO);
 			return NULL;
 		}
 
-		for (columnCounter = 0; columnCounter < colmuns; ++columnCounter) {
+		for (columnCounter = 0; columnCounter < columns; ++columnCounter) {
 			matrix[rowCounter][columnCounter] = (float) 0.0;
 		}
 	}
@@ -86,7 +86,7 @@ float **newMatrixFloat(int rows, int colmuns) {
  *
  * Todos os valores são iniciados com '0'.
  * */
-int **newIntegerMatrix(int rows, int colmuns) {
+int **newIntegerMatrix(int rows, int columns) {
 	int **matrix = (int **) malloc(rows * sizeof(int *));
 	int rowCounter, columnCounter;
 
@@ -96,14 +96,14 @@ int **newIntegerMatrix(int rows, int colmuns) {
 	}
 
 	for (rowCounter = 0; rowCounter < rows; ++rowCounter) {
-		matrix[rowCounter] = (int *) malloc(colmuns * sizeof(int));
+		matrix[rowCounter] = (int *) malloc(columns * sizeof(int));
 
 		if (matrix[rowCounter] == NULL) {
 			printf(ERRO_FALHA_ALOCACAO);
 			return NULL;
 		}
 
-		for (columnCounter = 0; columnCounter < colmuns; ++columnCounter) {
+		for (columnCounter = 0; columnCounter < columns; ++columnCounter) {
 			matrix[rowCounter][columnCounter] = 0;
 		}
 	}

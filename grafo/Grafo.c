@@ -196,7 +196,11 @@ Grafo *getMinimumSpanningTreeGrafo(Grafo *origin) {
 }
 
 Stack *getMinimumPathGrafo(Grafo *grafo, int originIndex, int destinyIndex) {
-	return NULL;
+	Stack *path = newStack("Caminho Mínimo");
+	int **dijkstra = newIntegerMatrix(3, grafo->size);
+
+	destroyIntegerMatrix(dijkstra, grafo->size);
+	return path;
 }
 
 /*
