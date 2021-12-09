@@ -6,6 +6,10 @@
 #define STATUS_NEXT 1
 #define STATUS_VISITED 2
 
+// =-=-=-=-= MÉTODOS PRIVADOS | DECLARAÇÃO =-=-=-=-=
+
+// =-=-=-=-= MÉTODOS PRIVADOS | IMPLEMENTAÇÃO =-=-=-=-=
+
 // =-=-=-=-= MÉTODOS PÚBLICOS =-=-=-=-=
 
 DijktraNode *newDijktraNode(int verticeIndex) {
@@ -36,4 +40,23 @@ void setOriginPathDijktra(DijktraNode **dijktra, int origin) {
 
 int wasVisitedDijktra(DijktraNode **dijktra, int index) {
 	return dijktra[index]->status == STATUS_VISITED;
+}
+
+int findNextNodeToVisitDijktra(DijktraNode **dijktra, int dijktraSize) {
+	DijktraNode *next = dijktra[0];
+	DijktraNode *aux;
+
+	for (int i = 1; i < dijktraSize; ++i) {
+		aux = dijktra[i];
+
+		if (aux->status == STATUS_NEXT && aux->routeLenght < next->routeLenght) {
+			next = aux;
+		}
+	}
+
+	return next->verticeIndex;
+}
+
+void rotulateNodeDijktra(DijktraNode **dijktra, int index) {
+	dijktra[index]->status = STATUS_VISITED;
 }

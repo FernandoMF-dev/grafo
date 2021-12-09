@@ -20,4 +20,8 @@ void setOriginPathDijktra(DijktraNode **dijktra, int origin);
 
 int wasVisitedDijktra(DijktraNode **dijktra, int index);
 
+int findNextNodeToVisitDijktra(DijktraNode **dijktra, int dijktraSize);
+
+void rotulateNodeDijktra(DijktraNode **dijktra, int index);
+
 #endif //GRAFO_DIJKSTRANODE_H
