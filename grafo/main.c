@@ -1,9 +1,16 @@
-#include <locale.h>
-
 #include "headers/GeradorArquivo.h"
 #include "headers/ControleArquivoGrafo.h"
 #include "headers/Grafo.h"
 #include "headers/Stack.h"
+#include "headers/InputUtils.h"
+
+// =-=-=-=-= CONSTANTES =-=-=-=-=
+
+#define MENSAGEM_CIDADE_ORIGEM "Código da cidade de origem"
+#define MENSAGEM_CIDADE_DESTINO "Código da cidade de destino"
+#define MENSAGEM_CONTINUAR "Deseja continuar?"
+
+// =-=-=-=-= FUNÇÃO PRINCIPAL =-=-=-=-=
 
 int main(int argc, char *argv[]) {
 	criaArquivoEntrada();
@@ -13,11 +20,24 @@ int main(int argc, char *argv[]) {
 		return 0;
 	}
 
-	Stack *shortestPath = getShortestPathGrafo(grafo, 4, 1);
-	printShortestPathGrafo(shortestPath);
+	int origem;
+	int destino;
+
+	do {
+		origem = inputIntegerInterval(MENSAGEM_CIDADE_ORIGEM, 0, grafo->size);
+		destino = inputIntegerInterval(MENSAGEM_CIDADE_DESTINO, 0, grafo->size);
+
+		Stack *shortestPath = getShortestPathGrafo(grafo, origem, destino);
+
+		if (shortestPath != NULL) {
+			printShortestPathGrafo(shortestPath);
+			free(shortestPath);
+		}
+
+		printf("\n");
+	} while (inputYesOrNo(MENSAGEM_CONTINUAR));
 
 	free(grafo);
-	free(shortestPath);
 
 	return 0;
 }

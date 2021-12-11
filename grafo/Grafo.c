@@ -6,6 +6,7 @@
 #define INFO_CRIAR_CAMINHO_MINIMO "\n\tINFO: Gerando Caminho Mínimo\n"
 #define DEBUG_CRIAR_ARVORE_GERADORA_MINIMA "\n\tDEBUG: Gerando Árvore Geradora Mínima: %.2f%%\n"
 #define SUCCESS_CRIAR_ARVORE_GERADORA_MINIMA "\n\tSUCCESS: Árvore Geradora Mínima gerada com sucesso\n"
+#define SUCCESS_CRIAR_CAMINHO_MINIMO "\n\tSUCCESS: Caminho Mínimo gerada com sucesso\n"
 #define ERRO_FALHA_ALOCACAO "\n\tERRO: Erro durante alocação de memória!\n"
 #define ERRO_CRIAR_CAMINHO_MINIMO "\n\tERRO: Erro geração de Caminho Mínimo!\n"
 
@@ -260,6 +261,13 @@ Stack *getShortestPathGrafo(Grafo *grafo, int originIndex, int destinyIndex) {
 	} while (!isVisitedDijkstra(dijkstra, destinyIndex));
 
 	Stack *path = getStackEdgeFromShortestPathDijktra(dijkstra, grafo, destinyIndex);
+
+	if (path == NULL) {
+		printf(ERRO_CRIAR_CAMINHO_MINIMO);
+		return NULL;
+	}
+	printf(SUCCESS_CRIAR_CAMINHO_MINIMO);
+
 	free(dijkstra);
 	return path;
 }

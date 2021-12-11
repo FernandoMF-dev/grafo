@@ -2,8 +2,8 @@
 
 // =-=-=-=-= CONSTANTES =-=-=-=-=
 
-#define CHAR_AFIRMATIVO "sS"
-#define CHAR_NEGATIVO "nN"
+#define CHAR_AFIRMATIVO "Ss1"
+#define CHAR_NEGATIVO "Nn0"
 
 #define ERRO_ENTRADA_INVALIDA "\n\tERRO: Entrada inválida!\n"
 
@@ -17,10 +17,10 @@ int inputIntegerInterval(char *message, int minValue, int maxValue) {
 	int input;
 
 	while (1) {
-		printf("\n%s", message);
+		printf("\n%s (%d - %d): ", message, minValue, maxValue);
 		scanf(" %d", &input);
 
-		if (minValue <= input && input >= maxValue) {
+		if (minValue <= input && input <= maxValue) {
 			return input;
 		}
 
@@ -33,6 +33,9 @@ int inputYesOrNo(char *message) {
 
 	while (1) {
 		printf("\n%s", message);
+		printf("\n%c - Sim", CHAR_AFIRMATIVO[0]);
+		printf("\n%c - Nao", CHAR_NEGATIVO[0]);
+		printf("\nRESPOSTA: ");
 		scanf(" %c", &input);
 
 		if (arrayContainsChar(input, CHAR_AFIRMATIVO)) {

@@ -750,7 +750,9 @@ CMakeFiles/grafo.dir/Vertice.c.o: ../Vertice.c \
 
 CMakeFiles/grafo.dir/main.c.o: ../main.c \
   /usr/include/stdc-predef.h \
-  /usr/include/locale.h \
+  ../headers/GeradorArquivo.h \
+  /usr/include/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
   /usr/include/features.h \
   /usr/include/x86_64-linux-gnu/sys/cdefs.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -758,12 +760,6 @@ CMakeFiles/grafo.dir/main.c.o: ../main.c \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
-  /usr/include/x86_64-linux-gnu/bits/locale.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  ../headers/GeradorArquivo.h \
-  /usr/include/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/stdarg.h \
   /usr/include/x86_64-linux-gnu/bits/types.h \
   /usr/include/x86_64-linux-gnu/bits/timesize.h \
@@ -808,6 +804,8 @@ CMakeFiles/grafo.dir/main.c.o: ../main.c \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   ../headers/Cidade.h \
   /usr/include/string.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/strings.h \
   ../headers/StringUtils.h \
   ../headers/ArrayUtils.h \
@@ -826,20 +824,17 @@ CMakeFiles/grafo.dir/main.c.o: ../main.c \
   /usr/include/linux/limits.h \
   /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
   ../headers/Grafo.h \
-  ../headers/Stack.h
+  ../headers/Stack.h \
+  ../headers/InputUtils.h
 
 
 ../RandomUtils.c:
-
-/usr/include/locale.h:
 
 ../Grafo.c:
 
 ../headers/RandomUtils.h:
 
 ../headers/StringUtils.h:
-
-/usr/include/x86_64-linux-gnu/bits/locale.h:
 
 ../DijkstraNode.c:
 
