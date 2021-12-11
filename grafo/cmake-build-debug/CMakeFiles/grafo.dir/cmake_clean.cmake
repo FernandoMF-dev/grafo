@@ -13,6 +13,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/grafo.dir/GeradorArquivo.c.o.d"
   "CMakeFiles/grafo.dir/Grafo.c.o"
   "CMakeFiles/grafo.dir/Grafo.c.o.d"
+  "CMakeFiles/grafo.dir/InputUtils.c.o"
+  "CMakeFiles/grafo.dir/InputUtils.c.o.d"
   "CMakeFiles/grafo.dir/RandomUtils.c.o"
   "CMakeFiles/grafo.dir/RandomUtils.c.o.d"
   "CMakeFiles/grafo.dir/Stack.c.o"

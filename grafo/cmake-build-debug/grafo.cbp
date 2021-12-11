@@ -97,6 +97,9 @@
 		<Unit filename="/home/fernando_mf/Documentos/Grafo/grafo/Grafo.c">
 			<Option target="grafo"/>
 		</Unit>
+		<Unit filename="/home/fernando_mf/Documentos/Grafo/grafo/InputUtils.c">
+			<Option target="grafo"/>
+		</Unit>
 		<Unit filename="/home/fernando_mf/Documentos/Grafo/grafo/RandomUtils.c">
 			<Option target="grafo"/>
 		</Unit>
@@ -128,6 +131,9 @@
 			<Option target="grafo"/>
 		</Unit>
 		<Unit filename="/home/fernando_mf/Documentos/Grafo/grafo/headers/Grafo.h">
+			<Option target="grafo"/>
+		</Unit>
+		<Unit filename="/home/fernando_mf/Documentos/Grafo/grafo/headers/InputUtils.h">
 			<Option target="grafo"/>
 		</Unit>
 		<Unit filename="/home/fernando_mf/Documentos/Grafo/grafo/headers/RandomUtils.h">

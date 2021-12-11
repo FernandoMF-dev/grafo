@@ -297,6 +297,30 @@ Grafo.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/Grafo.c.s
 .PHONY : Grafo.c.s
 
+InputUtils.o: InputUtils.c.o
+.PHONY : InputUtils.o
+
+# target to build an object file
+InputUtils.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/InputUtils.c.o
+.PHONY : InputUtils.c.o
+
+InputUtils.i: InputUtils.c.i
+.PHONY : InputUtils.i
+
+# target to preprocess a source file
+InputUtils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/InputUtils.c.i
+.PHONY : InputUtils.c.i
+
+InputUtils.s: InputUtils.c.s
+.PHONY : InputUtils.s
+
+# target to generate assembly for a file
+InputUtils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafo.dir/build.make CMakeFiles/grafo.dir/InputUtils.c.s
+.PHONY : InputUtils.c.s
+
 RandomUtils.o: RandomUtils.c.o
 .PHONY : RandomUtils.o
 
@@ -447,6 +471,9 @@ help:
 	@echo "... Grafo.o"
 	@echo "... Grafo.i"
 	@echo "... Grafo.s"
+	@echo "... InputUtils.o"
+	@echo "... InputUtils.i"
+	@echo "... InputUtils.s"
 	@echo "... RandomUtils.o"
 	@echo "... RandomUtils.i"
 	@echo "... RandomUtils.s"
