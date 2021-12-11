@@ -16,7 +16,7 @@ DijkstraNode *newDijkstraNode();
 
 DijkstraNode **prepareDijkstraNodeArray(int size);
 
-void setOriginPathDijkstra(DijkstraNode **dijkstra, int origin);
+void setOriginPathDijkstra(DijkstraNode **dijkstra, int originIndex);
 
 int isVisitedDijkstra(DijkstraNode **dijkstra, int index);
 

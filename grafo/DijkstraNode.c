@@ -8,12 +8,11 @@
 
 #define ERRO_FALHA_ALOCACAO "\n\tERRO: Erro durante alocação de memória!\n"
 
-// =-=-=-=-= MÉTODOS PRIVADOS | DECLARAÇÃO =-=-=-=-=
-
-// =-=-=-=-= MÉTODOS PRIVADOS | IMPLEMENTAÇÃO =-=-=-=-=
-
 // =-=-=-=-= MÉTODOS PÚBLICOS =-=-=-=-=
 
+/*
+ * Inicializa e retorna uma nova instância de 'DijkstraNode'.
+ * */
 DijkstraNode *newDijkstraNode() {
 	DijkstraNode *node = (DijkstraNode *) malloc(sizeof(DijkstraNode));
 
@@ -30,6 +29,11 @@ DijkstraNode *newDijkstraNode() {
 	return node;
 }
 
+/*
+ * Retorna um vetor de 'DijkstraNode' com tamanho [size] para ser usado num "Algorítimo de Dijkstra".
+ *
+ * Os vértices estarão ordenados de forma crescente no vetor.
+ * */
 DijkstraNode **prepareDijkstraNodeArray(int size) {
 	DijkstraNode **nodeArray = (DijkstraNode **) malloc(size * sizeof(DijkstraNode *));
 	DijkstraNode *node;
@@ -54,15 +58,35 @@ DijkstraNode **prepareDijkstraNodeArray(int size) {
 	return nodeArray;
 }
 
-void setOriginPathDijkstra(DijkstraNode **dijkstra, int origin) {
-	dijkstra[origin]->status = STATUS_NEXT;
-	dijkstra[origin]->routeLenght = 0;
+/*
+ * Prepara o vértice de índice [index] no vetor [dijkstra] para ser usado como ponto inicial no "Algorítimo de Dijkstra".
+ * */
+void setOriginPathDijkstra(DijkstraNode **dijkstra, int originIndex) {
+	DijkstraNode *origin = dijkstra[originIndex];
+
+	origin->status = STATUS_NEXT;
+	origin->routeLenght = 0;
+	origin->previousVertice = -1;
 }
 
+/*
+ * Verifica se o vértice de índice [index] no vetor [dijkstra] já foi rotulado.
+ *
+ * Se sim, retorna 1.
+ * Se não, retorna 0.
+ * */
 int isVisitedDijkstra(DijkstraNode **dijkstra, int index) {
 	return dijkstra[index]->status == STATUS_VISITED;
 }
 
+/*
+ * Muda o estado de um vértice de índice [index] no vetor [dijkstra] para "Pŕoximo".
+ *
+ * Vértices nesse estado poderão ser rotulados.
+ * Vértices nesse estado poderão ter suas rotas modificadas quando forem rotulados.
+ * Vértices nesse estado poderão ter suas rotas modificadas quando forem adjacentes a outros vértices sendo rotulados.
+ * Vértices nesse estado não poderão ser usados em rotas de outros vértices.
+ * */
 void setNextDijkstra(DijkstraNode **dijkstra, int target, int previous, float edgeWeight) {
 	if (edgeWeight == 0 || dijkstra[target]->status == STATUS_VISITED) {
 		return;
@@ -79,6 +103,13 @@ void setNextDijkstra(DijkstraNode **dijkstra, int target, int previous, float ed
 	node->previousVertice = previous;
 }
 
+/*
+ * Retorna o índice do próximo vértice a ser rotulado vetor [dijkstra] de tamanho [dijkstraSize].
+ *
+ * Apenas vértices no estado de "Próximo" são considerados válidos.
+ *
+ * Se não encontrar qualquer vértice valido, retorna -1.
+ * */
 int findNextNodeToVisitDijkstra(DijkstraNode **dijkstra, int dijkstraSize) {
 	DijkstraNode *next = dijkstra[0];
 	DijkstraNode *aux;
@@ -91,9 +122,21 @@ int findNextNodeToVisitDijkstra(DijkstraNode **dijkstra, int dijkstraSize) {
 		}
 	}
 
+	if (next->status == STATUS_VISITED) {
+		return -1;
+	}
 	return next->verticeIndex;
 }
 
+/*
+ * Verifica se é necessário alterar o vértice anterior na rota do vértice de índice [index] no vetor [dijkstra].
+ *
+ * O novo "vértice anterior" é o de índice [previous] e a distância entre eles é de [edgeWeight].
+ * [previous] só será valido como caso ele seja um vértice "Rotulado"
+ *
+ * Caso [edgeWeight] mais o comprimento da rota de [previous] for maior que a rota de [index], realize a alteração.
+ * Se não, manter [index] inalterado
+ * */
 void updatePreviousVerticeDijkstra(DijkstraNode **dijkstra, int target, int previous, float edgeWeight) {
 	DijkstraNode *vertice = dijkstra[target];
 	DijkstraNode *previousVertice = dijkstra[previous];
@@ -111,6 +154,12 @@ void updatePreviousVerticeDijkstra(DijkstraNode **dijkstra, int target, int prev
 	}
 }
 
+/*
+ * Muda o estado de um vértice de índice [index] no vetor [dijkstra] para "Rotulado".
+ *
+ * Vértices nesse estado não terão mais suas rotas modificadas.
+ * Vértices nesse estado poderão ser usados em rotas de outros vértices.
+ * */
 void rotulateNodeDijkstra(DijkstraNode **dijkstra, int index) {
 	dijkstra[index]->status = STATUS_VISITED;
 }

@@ -5,12 +5,11 @@
 #define ERRO_ALOCACAO "\n\tERRO: Falha de alocação de memória!\n"
 #define ERRO_PILHA_VAZIA "\n\tERRO: Stack Vazia!\n"
 
-// =-=-=-=-= MÉTODOS PRIVADOS | DECLARAÇÃO =-=-=-=-=
-
-// =-=-=-=-= MÉTODOS PRIVADOS | IMPLEMENTAÇÃO =-=-=-=-=
-
 // =-=-=-=-= MÉTODOS PÚBLICOS =-=-=-=-=
 
+/*
+ * Inicializa e retorna uma nova instância de 'Stack'.
+ * */
 Stack *newStack(char *label) {
 	Stack *stack = (Stack *) malloc(sizeof(Stack));
 
@@ -25,6 +24,9 @@ Stack *newStack(char *label) {
 	return stack;
 }
 
+/*
+ * Insere novo valor no topo de uma pilha [stack]
+ * */
 void insertStack(Stack *stack, Edge *value) {
 	StackNode *aux = (StackNode *) malloc(sizeof(StackNode));
 
@@ -39,6 +41,11 @@ void insertStack(Stack *stack, Edge *value) {
 	stack->size++;
 }
 
+/*
+ * Remove e retorna o valor topo de uma pilha [stack]
+ *
+ * Se a pilha estiver vazia, retorna NULL
+ * */
 Edge *removeStack(Stack *stack) {
 	StackNode *aux = stack->top;
 	Edge *backup;
@@ -57,6 +64,9 @@ Edge *removeStack(Stack *stack) {
 	return (backup);
 }
 
+/*
+ * Imprimi uma struct 'Stack'
+ * */
 void printStack(Stack *stack) {
 	StackNode *aux = stack->top;
 

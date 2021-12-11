@@ -3,9 +3,11 @@
 // =-=-=-=-= CONSTANTES =-=-=-=-=
 
 #define INFO_CRIAR_ARVORE_GERADORA_MINIMA "\n\tINFO: Gerando Árvore Geradora Mínima\n"
+#define INFO_CRIAR_CAMINHO_MINIMO "\n\tINFO: Gerando Caminho Mínimo\n"
 #define DEBUG_CRIAR_ARVORE_GERADORA_MINIMA "\n\tDEBUG: Gerando Árvore Geradora Mínima: %.2f%%\n"
 #define SUCCESS_CRIAR_ARVORE_GERADORA_MINIMA "\n\tSUCCESS: Árvore Geradora Mínima gerada com sucesso\n"
 #define ERRO_FALHA_ALOCACAO "\n\tERRO: Erro durante alocação de memória!\n"
+#define ERRO_CRIAR_CAMINHO_MINIMO "\n\tERRO: Erro geração de Caminho Mínimo!\n"
 
 // =-=-=-=-= MÉTODOS PRIVADOS | DECLARAÇÃO =-=-=-=-=
 
@@ -63,6 +65,11 @@ void copyVerticesGrafo(Grafo *target, Grafo *origin) {
 	}
 }
 
+/*
+ * Retorna uma pilha 'Stack' o menor caminho em [dijkstra] com base no 'Grafo' [grafo] que termina no vértice de índice [destinyIndex].
+ *
+ * A pilha retornada terá a última aresta na base e a primeira do topo.
+ * */
 Stack *getStackEdgeFromMinimalPathDijktra(DijkstraNode **dijkstra, Grafo *grafo, int destinyIndex) {
 	if (grafo == NULL || dijkstra == NULL) {
 		return NULL;
@@ -216,7 +223,14 @@ Grafo *getMinimumSpanningTreeGrafo(Grafo *origin) {
 	return minimumTree;
 }
 
+/*
+ * Retorna uma pilha 'Stack' o menor caminho em [grafo] que vai do vétice de índice [originIndex] ao vértice de índice [destinyIndex]
+ *
+ * A pilha retornada terá a última aresta na base e a primeira do topo.
+ * */
 Stack *getMinimumPathGrafo(Grafo *grafo, int originIndex, int destinyIndex) {
+	printf(INFO_CRIAR_CAMINHO_MINIMO);
+
 	DijkstraNode **dijkstra = prepareDijkstraNodeArray(grafo->size);
 	int index;
 	int i;
@@ -229,6 +243,10 @@ Stack *getMinimumPathGrafo(Grafo *grafo, int originIndex, int destinyIndex) {
 
 	do {
 		index = findNextNodeToVisitDijkstra(dijkstra, grafo->size);
+		if (index < 0) {
+			printf(ERRO_CRIAR_CAMINHO_MINIMO);
+			return NULL;
+		}
 
 		for (i = 0; i < grafo->size; ++i) {
 			updatePreviousVerticeDijkstra(dijkstra, index, i, grafo->edges[i][index]);
