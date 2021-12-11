@@ -15,7 +15,7 @@ Edge *findMinimalEdgeGrafo(Grafo *grafo, const int *sourceIndexArray, int source
 
 void copyVerticesGrafo(Grafo *target, Grafo *origin);
 
-Stack *getStackEdgeFromMinimalPathDijktra(DijkstraNode **dijkstra, Grafo *grafo, int destinyIndex);
+Stack *getStackEdgeFromShortestPathDijktra(DijkstraNode **dijkstra, Grafo *grafo, int destinyIndex);
 
 // =-=-=-=-= MÉTODOS PRIVADOS | IMPLEMENTAÇÃO =-=-=-=-=
 
@@ -70,7 +70,7 @@ void copyVerticesGrafo(Grafo *target, Grafo *origin) {
  *
  * A pilha retornada terá a última aresta na base e a primeira do topo.
  * */
-Stack *getStackEdgeFromMinimalPathDijktra(DijkstraNode **dijkstra, Grafo *grafo, int destinyIndex) {
+Stack *getStackEdgeFromShortestPathDijktra(DijkstraNode **dijkstra, Grafo *grafo, int destinyIndex) {
 	if (grafo == NULL || dijkstra == NULL) {
 		return NULL;
 	}
@@ -228,7 +228,7 @@ Grafo *getMinimumSpanningTreeGrafo(Grafo *origin) {
  *
  * A pilha retornada terá a última aresta na base e a primeira do topo.
  * */
-Stack *getMinimumPathGrafo(Grafo *grafo, int originIndex, int destinyIndex) {
+Stack *getShortestPathGrafo(Grafo *grafo, int originIndex, int destinyIndex) {
 	printf(INFO_CRIAR_CAMINHO_MINIMO);
 
 	DijkstraNode **dijkstra = prepareDijkstraNodeArray(grafo->size);
@@ -259,23 +259,26 @@ Stack *getMinimumPathGrafo(Grafo *grafo, int originIndex, int destinyIndex) {
 		rotulateNodeDijkstra(dijkstra, index);
 	} while (!isVisitedDijkstra(dijkstra, destinyIndex));
 
-	Stack *path = getStackEdgeFromMinimalPathDijktra(dijkstra, grafo, destinyIndex);
+	Stack *path = getStackEdgeFromShortestPathDijktra(dijkstra, grafo, destinyIndex);
 	free(dijkstra);
 	return path;
 }
 
+/*
+ * Imprime o menor caminho reprensentado pela pilha [shortestPath]
+ * */
 void printShortestPathGrafo(Stack *shortestPath) {
 	float totalLenght = (float) 0.0;
 	StackNode *aux = shortestPath->top;
 
 	printf("\nCaminho Mínimo:");
 	while (aux != NULL) {
-		totalLenght = aux->value->weight;
+		totalLenght += aux->value->weight;
 		printf("\n");
 		printDetailEdge(aux->value);
 		aux = aux->next;
 	}
-	printf("\nDistancia Total: %.2f", totalLenght);
+	printf("\n\nDistancia Total: %.2f", totalLenght);
 }
 
 /*

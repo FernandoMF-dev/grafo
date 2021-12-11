@@ -2,7 +2,7 @@
 
 // =-=-=-=-= CONSTANTES =-=-=-=-=
 
-#define QUANTIDADE_CIDADES 5
+#define QUANTIDADE_CIDADES 15
 #define TAMANHO_NOME_CIDADE 10
 
 #define DIRETORIO_ARQUIVO_ENTRADA "../entrada/entrada.txt"

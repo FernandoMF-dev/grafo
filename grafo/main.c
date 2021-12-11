@@ -13,11 +13,11 @@ int main(int argc, char *argv[]) {
 		return 0;
 	}
 
-	Stack *minimunPath = getMinimumPathGrafo(grafo, 4, 1);
-	printShortestPathGrafo(minimunPath);
+	Stack *shortestPath = getShortestPathGrafo(grafo, 4, 1);
+	printShortestPathGrafo(shortestPath);
 
 	free(grafo);
-	free(minimunPath);
+	free(shortestPath);
 
 	return 0;
 }

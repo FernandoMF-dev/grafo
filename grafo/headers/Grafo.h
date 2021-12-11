@@ -32,7 +32,7 @@ void insertTwoWayEdgeGrafo(Grafo *grafo, Edge *edge);
 
 Grafo *getMinimumSpanningTreeGrafo(Grafo *origin);
 
-Stack *getMinimumPathGrafo(Grafo *grafo, int originIndex, int destinyIndex);
+Stack *getShortestPathGrafo(Grafo *grafo, int originIndex, int destinyIndex);
 
 void printShortestPathGrafo(Stack *shortestPath);
 
