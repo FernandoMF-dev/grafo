@@ -56,5 +56,5 @@ void printCidade(Cidade *cidade) {
 		return;
 	}
 
-	printf("{'codigo': %d; 'nome': '%s'}", cidade->codigo, cidade->nome);
+	printf("{ 'codigo': %d, 'nome': '%s' }", cidade->codigo, cidade->nome);
 }

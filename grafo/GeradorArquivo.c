@@ -15,7 +15,6 @@
 
 // =-=-=-=-= MÉTODOS PRIVADOS | DECLARAÇÃO =-=-=-=-=
 
-
 double gerarDistancia(int linha, int coluna);
 
 double *gerarDistanciasCidade();

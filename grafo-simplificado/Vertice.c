@@ -67,11 +67,11 @@ Vertice **newVerticeArray(int size) {
  * */
 void printVertice(Vertice *vertice) {
 	if (vertice == NULL) {
-		printf("[NULL]\n");
+		printf("[NULL]");
 		return;
 	}
 
-	printf("%d - ", vertice->index);
+	printf("{ 'index': %d. 'value': ", vertice->index);
 	printCidade(vertice->value);
-	printf("\n");
+	printf(" }");
 }

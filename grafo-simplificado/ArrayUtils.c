@@ -43,29 +43,38 @@ int arrayContainsInteger(int needle, const int *haystack, int haystackSize) {
 }
 
 /*
- * Retorna uma matriz de 'float' com [size] linhas e [size] colunas.
+ * Retorna uma matriz de 'float' com [size] linhas e colunas.
  *
  * Todos os valores são iniciados com '0.0'.
  * */
-float **newMatrixFloat(int size) {
-	float **matrix = (float **) malloc(size * sizeof(float *));
-	int row, column;
+float **newRegularMatrixFloat(int size) {
+	return newMatrixFloat(size, size);
+}
+
+/*
+ * Retorna uma matriz de 'float' com [rows] linhas e [colmuns] colunas.
+ *
+ * Todos os valores são iniciados com '0.0'.
+ * */
+float **newMatrixFloat(int rows, int columns) {
+	float **matrix = (float **) malloc(rows * sizeof(float *));
+	int rowCounter, columnCounter;
 
 	if (matrix == NULL) {
 		printf(ERRO_FALHA_ALOCACAO);
 		return NULL;
 	}
 
-	for (row = 0; row < size; ++row) {
-		matrix[row] = (float *) malloc(size * sizeof(float));
+	for (rowCounter = 0; rowCounter < rows; ++rowCounter) {
+		matrix[rowCounter] = (float *) malloc(columns * sizeof(float));
 
-		if (matrix[row] == NULL) {
+		if (matrix[rowCounter] == NULL) {
 			printf(ERRO_FALHA_ALOCACAO);
 			return NULL;
 		}
 
-		for (column = 0; column < size; ++column) {
-			matrix[row][column] = (float) 0.0;
+		for (columnCounter = 0; columnCounter < columns; ++columnCounter) {
+			matrix[rowCounter][columnCounter] = (float) 0.0;
 		}
 	}
 

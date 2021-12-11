@@ -210,7 +210,7 @@ void writeGrafoEdgesOnFile(Grafo *grafo) {
 			}
 		}
 	}
-	fprintf(outputFile, "%.2f", getTotalTwoWayEdgeWeight(grafo));
+	fprintf(outputFile, "%.2f", getTotalTwoWayEdgeWeightGrafo(grafo));
 	printf(SUCCESS_IMPRIMIR_GRAFO_ARQUIVO);
 
 	fclose(outputFile);

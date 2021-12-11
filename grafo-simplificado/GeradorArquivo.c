@@ -2,10 +2,10 @@
 
 // =-=-=-=-= CONSTANTES =-=-=-=-=
 
-#define QUANTIDADE_CIDADES 100
+#define QUANTIDADE_CIDADES 15
 #define TAMANHO_NOME_CIDADE 10
 
-#define DIRETORIO_ARQUIVO_ENTRADA "../entrada/entrada.txt"
+#define DIRETORIO_ARQUIVO_ENTRADA "entrada/entrada.txt"
 #define DELIMITER ";"
 
 #define INFO_CRIAR_ARQUIVO "\n\tINFO: Criando arquivo de entrada\n"
@@ -14,7 +14,6 @@
 #define ERRO_CRIAR_ARQUIVO "\n\tERRO: Falha na criação de arquivo\n"
 
 // =-=-=-=-= MÉTODOS PRIVADOS | DECLARAÇÃO =-=-=-=-=
-
 
 double gerarDistancia(int linha, int coluna);
 
@@ -97,8 +96,8 @@ void imprimirCidades(FILE *inputFile) {
 void imprimirMatriz(FILE *inputFile, double *distancias) {
 	int row, column;
 
-	for (row = 0; row < QUANTIDADE_CIDADES; ++row) {
-		for (column = 0; column < QUANTIDADE_CIDADES - 1; ++column) {
+	for (row = 0; row < QUANTIDADE_CIDADES; row++) {
+		for (column = 0; column < QUANTIDADE_CIDADES - 1; column++) {
 			if (row == column) {
 				fprintf(inputFile, "%.2lf%s", 0.0, DELIMITER);
 			} else if (row < column) {

@@ -24,8 +24,8 @@ int main(int argc, char *argv[]) {
 	int destino;
 
 	do {
-		origem = inputIntegerInterval(MENSAGEM_CIDADE_ORIGEM, 0, grafo->size);
-		destino = inputIntegerInterval(MENSAGEM_CIDADE_DESTINO, 0, grafo->size);
+		origem = inputIntegerInterval(MENSAGEM_CIDADE_ORIGEM, 0, grafo->size - 1);
+		destino = inputIntegerInterval(MENSAGEM_CIDADE_DESTINO, 0, grafo->size - 1);
 
 		Stack *shortestPath = getShortestPathGrafo(grafo, origem, destino);
 

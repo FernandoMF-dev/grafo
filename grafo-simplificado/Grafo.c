@@ -3,15 +3,20 @@
 // =-=-=-=-= CONSTANTES =-=-=-=-=
 
 #define INFO_CRIAR_ARVORE_GERADORA_MINIMA "\n\tINFO: Gerando Árvore Geradora Mínima\n"
+#define INFO_CRIAR_CAMINHO_MINIMO "\n\tINFO: Gerando Caminho Mínimo\n"
 #define DEBUG_CRIAR_ARVORE_GERADORA_MINIMA "\n\tDEBUG: Gerando Árvore Geradora Mínima: %.2f%%\n"
 #define SUCCESS_CRIAR_ARVORE_GERADORA_MINIMA "\n\tSUCCESS: Árvore Geradora Mínima gerada com sucesso\n"
+#define SUCCESS_CRIAR_CAMINHO_MINIMO "\n\tSUCCESS: Caminho Mínimo gerada com sucesso\n"
 #define ERRO_FALHA_ALOCACAO "\n\tERRO: Erro durante alocação de memória!\n"
+#define ERRO_CRIAR_CAMINHO_MINIMO "\n\tERRO: Erro geração de Caminho Mínimo!\n"
 
 // =-=-=-=-= MÉTODOS PRIVADOS | DECLARAÇÃO =-=-=-=-=
 
 Edge *findMinimalEdgeGrafo(Grafo *grafo, const int *sourceIndexArray, int sourceIndexSize);
 
 void copyVerticesGrafo(Grafo *target, Grafo *origin);
+
+Stack *getStackEdgeFromShortestPathDijktra(DijkstraNode **dijkstra, Grafo *grafo, int destinyIndex);
 
 // =-=-=-=-= MÉTODOS PRIVADOS | IMPLEMENTAÇÃO =-=-=-=-=
 
@@ -31,17 +36,17 @@ Edge *findMinimalEdgeGrafo(Grafo *grafo, const int *sourceIndexArray, int source
 	}
 
 	for (i = 0; i < sourceIndexSize; ++i) {
-		aux->origin = sourceIndexArray[i];
-		grafoEdgesArray = grafo->edges[aux->origin];
-		aux->destiny = getMinNonZeroWithBlackListArrayFloat(grafoEdgesArray, grafo->size,
-															sourceIndexArray, sourceIndexSize);
+		aux->originIndex = sourceIndexArray[i];
+		grafoEdgesArray = grafo->edges[aux->originIndex];
+		aux->destinyIndex = getMinNonZeroWithBlackListArrayFloat(grafoEdgesArray, grafo->size,
+																 sourceIndexArray, sourceIndexSize);
 
-		if (aux->destiny != 0.0) {
-			aux->weight = grafoEdgesArray[aux->destiny];
+		if (aux->destinyIndex != 0.0) {
+			aux->weight = grafoEdgesArray[aux->destinyIndex];
 
 			if (minEdge->weight == 0 || minEdge->weight > aux->weight) {
-				minEdge->origin = aux->origin;
-				minEdge->destiny = aux->destiny;
+				minEdge->originIndex = aux->originIndex;
+				minEdge->destinyIndex = aux->destinyIndex;
 				minEdge->weight = aux->weight;
 			}
 		}
@@ -52,13 +57,37 @@ Edge *findMinimalEdgeGrafo(Grafo *grafo, const int *sourceIndexArray, int source
 }
 
 /*
- * Copia os 'Vertice's do 'Grafo' [origin] e cola em [target]
+ * Copia os 'Vertice's do 'Grafo' [originIndex] e cola em [target]
  * */
 void copyVerticesGrafo(Grafo *target, Grafo *origin) {
 	int i;
 	for (i = 0; i < target->size; ++i) {
 		target->vertices[i] = origin->vertices[i];
 	}
+}
+
+/*
+ * Retorna uma pilha 'Stack' o menor caminho em [dijkstra] com base no 'Grafo' [grafo] que termina no vértice de índice [destinyIndex].
+ *
+ * A pilha retornada terá a última aresta na base e a primeira do topo.
+ * */
+Stack *getStackEdgeFromShortestPathDijktra(DijkstraNode **dijkstra, Grafo *grafo, int destinyIndex) {
+	if (grafo == NULL || dijkstra == NULL) {
+		return NULL;
+	}
+
+	Stack *path = newStack("Caminho Mínimo");
+	DijkstraNode *dijkstraNode = dijkstra[destinyIndex];
+
+	while (dijkstraNode->previousVertice >= 0) {
+		Edge *edge = readDetailEdge(grafo->vertices[dijkstraNode->previousVertice],
+									grafo->vertices[dijkstraNode->verticeIndex],
+									grafo->edges[dijkstraNode->previousVertice][dijkstraNode->verticeIndex]);
+		insertStack(path, edge);
+		dijkstraNode = dijkstra[dijkstraNode->previousVertice];
+	}
+
+	return path;
 }
 
 // =-=-=-=-= MÉTODOS PÚBLICOS =-=-=-=-=
@@ -77,7 +106,7 @@ Grafo *newGrafo(char *label, int size) {
 	grafo->label = label;
 	grafo->size = size;
 	grafo->vertices = newVerticeArray(size);
-	grafo->edges = newMatrixFloat(size);
+	grafo->edges = newRegularMatrixFloat(size);
 
 	if (grafo->vertices == NULL || grafo->edges == NULL) {
 		return NULL;
@@ -103,6 +132,7 @@ void printVerticesGrafo(Grafo *grafo) {
 
 	for (i = 0; i < grafo->size; ++i) {
 		printVertice(grafo->vertices[i]);
+		printf("\n");
 	}
 }
 
@@ -126,35 +156,36 @@ void printEdgesGrafo(Grafo *grafo) {
  * Insere a aresta [edge] em [grafo].
  * */
 void insertEdgeGrafo(Grafo *grafo, Edge *edge) {
-	if (grafo->size <= edge->origin || grafo->size <= edge->destiny || edge->origin < 0 || edge->destiny < 0) {
+	if (grafo->size <= edge->originIndex || grafo->size <= edge->destinyIndex || edge->originIndex < 0 ||
+		edge->destinyIndex < 0) {
 		return;
 	}
 
-	grafo->edges[edge->origin][edge->destiny] = edge->weight;
+	grafo->edges[edge->originIndex][edge->destinyIndex] = edge->weight;
 }
 
 /*
  * Insere a aresta [edge] em [grafo] como uma via dupla.
  * */
 void insertTwoWayEdgeGrafo(Grafo *grafo, Edge *edge) {
-	int origin = edge->origin;
-	int destiny = edge->destiny;
+	int origin = edge->originIndex;
+	int destiny = edge->destinyIndex;
 
 	insertEdgeGrafo(grafo, edge);
-	edge->origin = destiny;
-	edge->destiny = origin;
+	edge->originIndex = destiny;
+	edge->destinyIndex = origin;
 
 	insertEdgeGrafo(grafo, edge);
-	edge->origin = origin;
-	edge->destiny = destiny;
+	edge->originIndex = origin;
+	edge->destinyIndex = destiny;
 }
 
 /*
- * Retorna um 'Grafo' com uma árvore geradora mínima de [origin]
+ * Retorna um 'Grafo' com uma árvore geradora mínima de [originIndex]
  *
- * Não modifica [origin]
+ * Não modifica [originIndex]
  * */
-Grafo *getMinimumSpanningTree(Grafo *origin) {
+Grafo *getMinimumSpanningTreeGrafo(Grafo *origin) {
 	printf(INFO_CRIAR_ARVORE_GERADORA_MINIMA);
 
 	Grafo *minimumTree = newGrafo(origin->label, origin->size);
@@ -183,7 +214,7 @@ Grafo *getMinimumSpanningTree(Grafo *origin) {
 		}
 
 		insertTwoWayEdgeGrafo(minimumTree, edge);
-		visitedIndex[row + 1] = edge->destiny;
+		visitedIndex[row + 1] = edge->destinyIndex;
 		visitedIndexSize++;
 		free(edge);
 	}
@@ -194,9 +225,74 @@ Grafo *getMinimumSpanningTree(Grafo *origin) {
 }
 
 /*
+ * Retorna uma pilha 'Stack' o menor caminho em [grafo] que vai do vétice de índice [originIndex] ao vértice de índice [destinyIndex]
+ *
+ * A pilha retornada terá a última aresta na base e a primeira do topo.
+ * */
+Stack *getShortestPathGrafo(Grafo *grafo, int originIndex, int destinyIndex) {
+	printf(INFO_CRIAR_CAMINHO_MINIMO);
+
+	DijkstraNode **dijkstra = prepareDijkstraNodeArray(grafo->size);
+	int index;
+	int i;
+
+	if (dijkstra == NULL) {
+		return NULL;
+	}
+
+	setOriginPathDijkstra(dijkstra, originIndex);
+
+	do {
+		index = findNextNodeToVisitDijkstra(dijkstra, grafo->size);
+		if (index < 0) {
+			printf(ERRO_CRIAR_CAMINHO_MINIMO);
+			return NULL;
+		}
+
+		for (i = 0; i < grafo->size; ++i) {
+			updatePreviousVerticeDijkstra(dijkstra, index, i, grafo->edges[i][index]);
+		}
+
+		for (i = 0; i < grafo->size; ++i) {
+			setNextDijkstra(dijkstra, i, index, grafo->edges[index][i]);
+		}
+
+		rotulateNodeDijkstra(dijkstra, index);
+	} while (!isVisitedDijkstra(dijkstra, destinyIndex));
+
+	Stack *path = getStackEdgeFromShortestPathDijktra(dijkstra, grafo, destinyIndex);
+
+	if (path == NULL) {
+		printf(ERRO_CRIAR_CAMINHO_MINIMO);
+		return NULL;
+	}
+	printf(SUCCESS_CRIAR_CAMINHO_MINIMO);
+
+	free(dijkstra);
+	return path;
+}
+
+/*
+ * Imprime o menor caminho reprensentado pela pilha [shortestPath]
+ * */
+void printShortestPathGrafo(Stack *shortestPath) {
+	float totalLenght = (float) 0.0;
+	StackNode *aux = shortestPath->top;
+
+	printf("\nCaminho Mínimo:");
+	while (aux != NULL) {
+		totalLenght += aux->value->weight;
+		printf("\n");
+		printDetailEdge(aux->value);
+		aux = aux->next;
+	}
+	printf("\n\nDistancia Total: %.2f", totalLenght);
+}
+
+/*
  * Retorna o tamanho total de todas as arestas de um grafo.
  * */
-float getTotalEdgeWeight(Grafo *grafo) {
+float getTotalEdgeWeightGrafo(Grafo *grafo) {
 	float totalWeight = (float) 0.0;
 	int row, column;
 
@@ -212,6 +308,6 @@ float getTotalEdgeWeight(Grafo *grafo) {
 /*
  * Retorna o tamanho total de todas as arestas de um grafo assumindo que todas as arestas são de via dupla.
  * */
-float getTotalTwoWayEdgeWeight(Grafo *grafo) {
-	return getTotalEdgeWeight(grafo) / 2;
+float getTotalTwoWayEdgeWeightGrafo(Grafo *grafo) {
+	return getTotalEdgeWeightGrafo(grafo) / 2;
 }
