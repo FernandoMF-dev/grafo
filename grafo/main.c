@@ -14,7 +14,7 @@ int main(int argc, char *argv[]) {
 	}
 
 	Stack *minimunPath = getMinimumPathGrafo(grafo, 4, 1);
-	printStack(minimunPath);
+	printShortestPathGrafo(minimunPath);
 
 	free(grafo);
 	free(minimunPath);

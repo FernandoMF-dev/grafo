@@ -264,6 +264,20 @@ Stack *getMinimumPathGrafo(Grafo *grafo, int originIndex, int destinyIndex) {
 	return path;
 }
 
+void printShortestPathGrafo(Stack *shortestPath) {
+	float totalLenght = (float) 0.0;
+	StackNode *aux = shortestPath->top;
+
+	printf("\nCaminho Mínimo:");
+	while (aux != NULL) {
+		totalLenght = aux->value->weight;
+		printf("\n");
+		printDetailEdge(aux->value);
+		aux = aux->next;
+	}
+	printf("\nDistancia Total: %.2f", totalLenght);
+}
+
 /*
  * Retorna o tamanho total de todas as arestas de um grafo.
  * */

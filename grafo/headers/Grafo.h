@@ -34,6 +34,8 @@ Grafo *getMinimumSpanningTreeGrafo(Grafo *origin);
 
 Stack *getMinimumPathGrafo(Grafo *grafo, int originIndex, int destinyIndex);
 
+void printShortestPathGrafo(Stack *shortestPath);
+
 float getTotalEdgeWeightGrafo(Grafo *grafo);
 
 float getTotalTwoWayEdgeWeightGrafo(Grafo *grafo);
