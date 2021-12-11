@@ -1,4 +1,4 @@
-# Install script for directory: /home/basis/Documentos/Grafo/grafo
+# Install script for directory: /home/fernando_mf/Documentos/Grafo/grafo
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/basis/Documentos/Grafo/grafo/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

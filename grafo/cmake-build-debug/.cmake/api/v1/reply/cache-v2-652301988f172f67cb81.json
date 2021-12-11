@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/basis/Documentos/Grafo/grafo/cmake-build-debug"
+			"value" : "/home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -127,7 +127,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "-j8"
+			"value" : "-j4"
 		},
 		{
 			"name" : "CMAKE_COLOR_MAKEFILE",
@@ -155,7 +155,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/basis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/bin/cmake/linux/bin/cmake"
+			"value" : "/home/fernando_mf/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/bin/cmake/linux/bin/cmake"
 		},
 		{
 			"name" : "CMAKE_CPACK_COMMAND",
@@ -167,7 +167,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/basis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/bin/cmake/linux/bin/cpack"
+			"value" : "/home/fernando_mf/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/bin/cmake/linux/bin/cpack"
 		},
 		{
 			"name" : "CMAKE_CTEST_COMMAND",
@@ -179,7 +179,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/basis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/bin/cmake/linux/bin/ctest"
+			"value" : "/home/fernando_mf/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/bin/cmake/linux/bin/ctest"
 		},
 		{
 			"name" : "CMAKE_C_COMPILER",
@@ -527,7 +527,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/basis/Documentos/Grafo/grafo"
+			"value" : "/home/fernando_mf/Documentos/Grafo/grafo"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -815,7 +815,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/basis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/bin/cmake/linux/share/cmake-3.21"
+			"value" : "/home/fernando_mf/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/bin/cmake/linux/share/cmake-3.21"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -1095,7 +1095,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/basis/Documentos/Grafo/grafo/cmake-build-debug"
+			"value" : "/home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug"
 		},
 		{
 			"name" : "grafo_IS_TOP_LEVEL",
@@ -1119,7 +1119,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/basis/Documentos/Grafo/grafo"
+			"value" : "/home/fernando_mf/Documentos/Grafo/grafo"
 		}
 	],
 	"kind" : "cache",
