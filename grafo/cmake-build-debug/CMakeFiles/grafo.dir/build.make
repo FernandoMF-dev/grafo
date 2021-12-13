@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/fernando_mf/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/basis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/fernando_mf/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/bin/cmake/linux/bin/cmake -E rm -f
+RM = /home/basis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fernando_mf/Documentos/Grafo/grafo
+CMAKE_SOURCE_DIR = /home/basis/Documentos/Grafo/grafo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug
+CMAKE_BINARY_DIR = /home/basis/Documentos/Grafo/grafo/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/grafo.dir/depend.make
@@ -72,184 +72,184 @@ include CMakeFiles/grafo.dir/flags.make
 CMakeFiles/grafo.dir/main.c.o: CMakeFiles/grafo.dir/flags.make
 CMakeFiles/grafo.dir/main.c.o: ../main.c
 CMakeFiles/grafo.dir/main.c.o: CMakeFiles/grafo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/grafo.dir/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/grafo.dir/main.c.o -MF CMakeFiles/grafo.dir/main.c.o.d -o CMakeFiles/grafo.dir/main.c.o -c /home/fernando_mf/Documentos/Grafo/grafo/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/basis/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/grafo.dir/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/grafo.dir/main.c.o -MF CMakeFiles/grafo.dir/main.c.o.d -o CMakeFiles/grafo.dir/main.c.o -c /home/basis/Documentos/Grafo/grafo/main.c
 
 CMakeFiles/grafo.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/grafo.dir/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fernando_mf/Documentos/Grafo/grafo/main.c > CMakeFiles/grafo.dir/main.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/basis/Documentos/Grafo/grafo/main.c > CMakeFiles/grafo.dir/main.c.i
 
 CMakeFiles/grafo.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/grafo.dir/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fernando_mf/Documentos/Grafo/grafo/main.c -o CMakeFiles/grafo.dir/main.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/basis/Documentos/Grafo/grafo/main.c -o CMakeFiles/grafo.dir/main.c.s
 
 CMakeFiles/grafo.dir/ControleArquivoGrafo.c.o: CMakeFiles/grafo.dir/flags.make
 CMakeFiles/grafo.dir/ControleArquivoGrafo.c.o: ../ControleArquivoGrafo.c
 CMakeFiles/grafo.dir/ControleArquivoGrafo.c.o: CMakeFiles/grafo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/grafo.dir/ControleArquivoGrafo.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/grafo.dir/ControleArquivoGrafo.c.o -MF CMakeFiles/grafo.dir/ControleArquivoGrafo.c.o.d -o CMakeFiles/grafo.dir/ControleArquivoGrafo.c.o -c /home/fernando_mf/Documentos/Grafo/grafo/ControleArquivoGrafo.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/basis/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/grafo.dir/ControleArquivoGrafo.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/grafo.dir/ControleArquivoGrafo.c.o -MF CMakeFiles/grafo.dir/ControleArquivoGrafo.c.o.d -o CMakeFiles/grafo.dir/ControleArquivoGrafo.c.o -c /home/basis/Documentos/Grafo/grafo/ControleArquivoGrafo.c
 
 CMakeFiles/grafo.dir/ControleArquivoGrafo.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/grafo.dir/ControleArquivoGrafo.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fernando_mf/Documentos/Grafo/grafo/ControleArquivoGrafo.c > CMakeFiles/grafo.dir/ControleArquivoGrafo.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/basis/Documentos/Grafo/grafo/ControleArquivoGrafo.c > CMakeFiles/grafo.dir/ControleArquivoGrafo.c.i
 
 CMakeFiles/grafo.dir/ControleArquivoGrafo.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/grafo.dir/ControleArquivoGrafo.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fernando_mf/Documentos/Grafo/grafo/ControleArquivoGrafo.c -o CMakeFiles/grafo.dir/ControleArquivoGrafo.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/basis/Documentos/Grafo/grafo/ControleArquivoGrafo.c -o CMakeFiles/grafo.dir/ControleArquivoGrafo.c.s
 
 CMakeFiles/grafo.dir/Cidade.c.o: CMakeFiles/grafo.dir/flags.make
 CMakeFiles/grafo.dir/Cidade.c.o: ../Cidade.c
 CMakeFiles/grafo.dir/Cidade.c.o: CMakeFiles/grafo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/grafo.dir/Cidade.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/grafo.dir/Cidade.c.o -MF CMakeFiles/grafo.dir/Cidade.c.o.d -o CMakeFiles/grafo.dir/Cidade.c.o -c /home/fernando_mf/Documentos/Grafo/grafo/Cidade.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/basis/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/grafo.dir/Cidade.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/grafo.dir/Cidade.c.o -MF CMakeFiles/grafo.dir/Cidade.c.o.d -o CMakeFiles/grafo.dir/Cidade.c.o -c /home/basis/Documentos/Grafo/grafo/Cidade.c
 
 CMakeFiles/grafo.dir/Cidade.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/grafo.dir/Cidade.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fernando_mf/Documentos/Grafo/grafo/Cidade.c > CMakeFiles/grafo.dir/Cidade.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/basis/Documentos/Grafo/grafo/Cidade.c > CMakeFiles/grafo.dir/Cidade.c.i
 
 CMakeFiles/grafo.dir/Cidade.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/grafo.dir/Cidade.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fernando_mf/Documentos/Grafo/grafo/Cidade.c -o CMakeFiles/grafo.dir/Cidade.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/basis/Documentos/Grafo/grafo/Cidade.c -o CMakeFiles/grafo.dir/Cidade.c.s
 
 CMakeFiles/grafo.dir/StringUtils.c.o: CMakeFiles/grafo.dir/flags.make
 CMakeFiles/grafo.dir/StringUtils.c.o: ../StringUtils.c
 CMakeFiles/grafo.dir/StringUtils.c.o: CMakeFiles/grafo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/grafo.dir/StringUtils.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/grafo.dir/StringUtils.c.o -MF CMakeFiles/grafo.dir/StringUtils.c.o.d -o CMakeFiles/grafo.dir/StringUtils.c.o -c /home/fernando_mf/Documentos/Grafo/grafo/StringUtils.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/basis/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/grafo.dir/StringUtils.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/grafo.dir/StringUtils.c.o -MF CMakeFiles/grafo.dir/StringUtils.c.o.d -o CMakeFiles/grafo.dir/StringUtils.c.o -c /home/basis/Documentos/Grafo/grafo/StringUtils.c
 
 CMakeFiles/grafo.dir/StringUtils.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/grafo.dir/StringUtils.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fernando_mf/Documentos/Grafo/grafo/StringUtils.c > CMakeFiles/grafo.dir/StringUtils.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/basis/Documentos/Grafo/grafo/StringUtils.c > CMakeFiles/grafo.dir/StringUtils.c.i
 
 CMakeFiles/grafo.dir/StringUtils.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/grafo.dir/StringUtils.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fernando_mf/Documentos/Grafo/grafo/StringUtils.c -o CMakeFiles/grafo.dir/StringUtils.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/basis/Documentos/Grafo/grafo/StringUtils.c -o CMakeFiles/grafo.dir/StringUtils.c.s
 
 CMakeFiles/grafo.dir/ArrayUtils.c.o: CMakeFiles/grafo.dir/flags.make
 CMakeFiles/grafo.dir/ArrayUtils.c.o: ../ArrayUtils.c
 CMakeFiles/grafo.dir/ArrayUtils.c.o: CMakeFiles/grafo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/grafo.dir/ArrayUtils.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/grafo.dir/ArrayUtils.c.o -MF CMakeFiles/grafo.dir/ArrayUtils.c.o.d -o CMakeFiles/grafo.dir/ArrayUtils.c.o -c /home/fernando_mf/Documentos/Grafo/grafo/ArrayUtils.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/basis/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/grafo.dir/ArrayUtils.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/grafo.dir/ArrayUtils.c.o -MF CMakeFiles/grafo.dir/ArrayUtils.c.o.d -o CMakeFiles/grafo.dir/ArrayUtils.c.o -c /home/basis/Documentos/Grafo/grafo/ArrayUtils.c
 
 CMakeFiles/grafo.dir/ArrayUtils.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/grafo.dir/ArrayUtils.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fernando_mf/Documentos/Grafo/grafo/ArrayUtils.c > CMakeFiles/grafo.dir/ArrayUtils.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/basis/Documentos/Grafo/grafo/ArrayUtils.c > CMakeFiles/grafo.dir/ArrayUtils.c.i
 
 CMakeFiles/grafo.dir/ArrayUtils.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/grafo.dir/ArrayUtils.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fernando_mf/Documentos/Grafo/grafo/ArrayUtils.c -o CMakeFiles/grafo.dir/ArrayUtils.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/basis/Documentos/Grafo/grafo/ArrayUtils.c -o CMakeFiles/grafo.dir/ArrayUtils.c.s
 
 CMakeFiles/grafo.dir/RandomUtils.c.o: CMakeFiles/grafo.dir/flags.make
 CMakeFiles/grafo.dir/RandomUtils.c.o: ../RandomUtils.c
 CMakeFiles/grafo.dir/RandomUtils.c.o: CMakeFiles/grafo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/grafo.dir/RandomUtils.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/grafo.dir/RandomUtils.c.o -MF CMakeFiles/grafo.dir/RandomUtils.c.o.d -o CMakeFiles/grafo.dir/RandomUtils.c.o -c /home/fernando_mf/Documentos/Grafo/grafo/RandomUtils.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/basis/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/grafo.dir/RandomUtils.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/grafo.dir/RandomUtils.c.o -MF CMakeFiles/grafo.dir/RandomUtils.c.o.d -o CMakeFiles/grafo.dir/RandomUtils.c.o -c /home/basis/Documentos/Grafo/grafo/RandomUtils.c
 
 CMakeFiles/grafo.dir/RandomUtils.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/grafo.dir/RandomUtils.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fernando_mf/Documentos/Grafo/grafo/RandomUtils.c > CMakeFiles/grafo.dir/RandomUtils.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/basis/Documentos/Grafo/grafo/RandomUtils.c > CMakeFiles/grafo.dir/RandomUtils.c.i
 
 CMakeFiles/grafo.dir/RandomUtils.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/grafo.dir/RandomUtils.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fernando_mf/Documentos/Grafo/grafo/RandomUtils.c -o CMakeFiles/grafo.dir/RandomUtils.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/basis/Documentos/Grafo/grafo/RandomUtils.c -o CMakeFiles/grafo.dir/RandomUtils.c.s
 
 CMakeFiles/grafo.dir/Grafo.c.o: CMakeFiles/grafo.dir/flags.make
 CMakeFiles/grafo.dir/Grafo.c.o: ../Grafo.c
 CMakeFiles/grafo.dir/Grafo.c.o: CMakeFiles/grafo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/grafo.dir/Grafo.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/grafo.dir/Grafo.c.o -MF CMakeFiles/grafo.dir/Grafo.c.o.d -o CMakeFiles/grafo.dir/Grafo.c.o -c /home/fernando_mf/Documentos/Grafo/grafo/Grafo.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/basis/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/grafo.dir/Grafo.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/grafo.dir/Grafo.c.o -MF CMakeFiles/grafo.dir/Grafo.c.o.d -o CMakeFiles/grafo.dir/Grafo.c.o -c /home/basis/Documentos/Grafo/grafo/Grafo.c
 
 CMakeFiles/grafo.dir/Grafo.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/grafo.dir/Grafo.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fernando_mf/Documentos/Grafo/grafo/Grafo.c > CMakeFiles/grafo.dir/Grafo.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/basis/Documentos/Grafo/grafo/Grafo.c > CMakeFiles/grafo.dir/Grafo.c.i
 
 CMakeFiles/grafo.dir/Grafo.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/grafo.dir/Grafo.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fernando_mf/Documentos/Grafo/grafo/Grafo.c -o CMakeFiles/grafo.dir/Grafo.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/basis/Documentos/Grafo/grafo/Grafo.c -o CMakeFiles/grafo.dir/Grafo.c.s
 
 CMakeFiles/grafo.dir/Vertice.c.o: CMakeFiles/grafo.dir/flags.make
 CMakeFiles/grafo.dir/Vertice.c.o: ../Vertice.c
 CMakeFiles/grafo.dir/Vertice.c.o: CMakeFiles/grafo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/grafo.dir/Vertice.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/grafo.dir/Vertice.c.o -MF CMakeFiles/grafo.dir/Vertice.c.o.d -o CMakeFiles/grafo.dir/Vertice.c.o -c /home/fernando_mf/Documentos/Grafo/grafo/Vertice.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/basis/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/grafo.dir/Vertice.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/grafo.dir/Vertice.c.o -MF CMakeFiles/grafo.dir/Vertice.c.o.d -o CMakeFiles/grafo.dir/Vertice.c.o -c /home/basis/Documentos/Grafo/grafo/Vertice.c
 
 CMakeFiles/grafo.dir/Vertice.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/grafo.dir/Vertice.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fernando_mf/Documentos/Grafo/grafo/Vertice.c > CMakeFiles/grafo.dir/Vertice.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/basis/Documentos/Grafo/grafo/Vertice.c > CMakeFiles/grafo.dir/Vertice.c.i
 
 CMakeFiles/grafo.dir/Vertice.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/grafo.dir/Vertice.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fernando_mf/Documentos/Grafo/grafo/Vertice.c -o CMakeFiles/grafo.dir/Vertice.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/basis/Documentos/Grafo/grafo/Vertice.c -o CMakeFiles/grafo.dir/Vertice.c.s
 
 CMakeFiles/grafo.dir/Edge.c.o: CMakeFiles/grafo.dir/flags.make
 CMakeFiles/grafo.dir/Edge.c.o: ../Edge.c
 CMakeFiles/grafo.dir/Edge.c.o: CMakeFiles/grafo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/grafo.dir/Edge.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/grafo.dir/Edge.c.o -MF CMakeFiles/grafo.dir/Edge.c.o.d -o CMakeFiles/grafo.dir/Edge.c.o -c /home/fernando_mf/Documentos/Grafo/grafo/Edge.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/basis/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/grafo.dir/Edge.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/grafo.dir/Edge.c.o -MF CMakeFiles/grafo.dir/Edge.c.o.d -o CMakeFiles/grafo.dir/Edge.c.o -c /home/basis/Documentos/Grafo/grafo/Edge.c
 
 CMakeFiles/grafo.dir/Edge.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/grafo.dir/Edge.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fernando_mf/Documentos/Grafo/grafo/Edge.c > CMakeFiles/grafo.dir/Edge.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/basis/Documentos/Grafo/grafo/Edge.c > CMakeFiles/grafo.dir/Edge.c.i
 
 CMakeFiles/grafo.dir/Edge.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/grafo.dir/Edge.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fernando_mf/Documentos/Grafo/grafo/Edge.c -o CMakeFiles/grafo.dir/Edge.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/basis/Documentos/Grafo/grafo/Edge.c -o CMakeFiles/grafo.dir/Edge.c.s
 
 CMakeFiles/grafo.dir/GeradorArquivo.c.o: CMakeFiles/grafo.dir/flags.make
 CMakeFiles/grafo.dir/GeradorArquivo.c.o: ../GeradorArquivo.c
 CMakeFiles/grafo.dir/GeradorArquivo.c.o: CMakeFiles/grafo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/grafo.dir/GeradorArquivo.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/grafo.dir/GeradorArquivo.c.o -MF CMakeFiles/grafo.dir/GeradorArquivo.c.o.d -o CMakeFiles/grafo.dir/GeradorArquivo.c.o -c /home/fernando_mf/Documentos/Grafo/grafo/GeradorArquivo.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/basis/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/grafo.dir/GeradorArquivo.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/grafo.dir/GeradorArquivo.c.o -MF CMakeFiles/grafo.dir/GeradorArquivo.c.o.d -o CMakeFiles/grafo.dir/GeradorArquivo.c.o -c /home/basis/Documentos/Grafo/grafo/GeradorArquivo.c
 
 CMakeFiles/grafo.dir/GeradorArquivo.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/grafo.dir/GeradorArquivo.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fernando_mf/Documentos/Grafo/grafo/GeradorArquivo.c > CMakeFiles/grafo.dir/GeradorArquivo.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/basis/Documentos/Grafo/grafo/GeradorArquivo.c > CMakeFiles/grafo.dir/GeradorArquivo.c.i
 
 CMakeFiles/grafo.dir/GeradorArquivo.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/grafo.dir/GeradorArquivo.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fernando_mf/Documentos/Grafo/grafo/GeradorArquivo.c -o CMakeFiles/grafo.dir/GeradorArquivo.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/basis/Documentos/Grafo/grafo/GeradorArquivo.c -o CMakeFiles/grafo.dir/GeradorArquivo.c.s
 
 CMakeFiles/grafo.dir/Stack.c.o: CMakeFiles/grafo.dir/flags.make
 CMakeFiles/grafo.dir/Stack.c.o: ../Stack.c
 CMakeFiles/grafo.dir/Stack.c.o: CMakeFiles/grafo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/grafo.dir/Stack.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/grafo.dir/Stack.c.o -MF CMakeFiles/grafo.dir/Stack.c.o.d -o CMakeFiles/grafo.dir/Stack.c.o -c /home/fernando_mf/Documentos/Grafo/grafo/Stack.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/basis/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/grafo.dir/Stack.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/grafo.dir/Stack.c.o -MF CMakeFiles/grafo.dir/Stack.c.o.d -o CMakeFiles/grafo.dir/Stack.c.o -c /home/basis/Documentos/Grafo/grafo/Stack.c
 
 CMakeFiles/grafo.dir/Stack.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/grafo.dir/Stack.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fernando_mf/Documentos/Grafo/grafo/Stack.c > CMakeFiles/grafo.dir/Stack.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/basis/Documentos/Grafo/grafo/Stack.c > CMakeFiles/grafo.dir/Stack.c.i
 
 CMakeFiles/grafo.dir/Stack.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/grafo.dir/Stack.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fernando_mf/Documentos/Grafo/grafo/Stack.c -o CMakeFiles/grafo.dir/Stack.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/basis/Documentos/Grafo/grafo/Stack.c -o CMakeFiles/grafo.dir/Stack.c.s
 
 CMakeFiles/grafo.dir/DijkstraNode.c.o: CMakeFiles/grafo.dir/flags.make
 CMakeFiles/grafo.dir/DijkstraNode.c.o: ../DijkstraNode.c
 CMakeFiles/grafo.dir/DijkstraNode.c.o: CMakeFiles/grafo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/grafo.dir/DijkstraNode.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/grafo.dir/DijkstraNode.c.o -MF CMakeFiles/grafo.dir/DijkstraNode.c.o.d -o CMakeFiles/grafo.dir/DijkstraNode.c.o -c /home/fernando_mf/Documentos/Grafo/grafo/DijkstraNode.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/basis/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/grafo.dir/DijkstraNode.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/grafo.dir/DijkstraNode.c.o -MF CMakeFiles/grafo.dir/DijkstraNode.c.o.d -o CMakeFiles/grafo.dir/DijkstraNode.c.o -c /home/basis/Documentos/Grafo/grafo/DijkstraNode.c
 
 CMakeFiles/grafo.dir/DijkstraNode.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/grafo.dir/DijkstraNode.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fernando_mf/Documentos/Grafo/grafo/DijkstraNode.c > CMakeFiles/grafo.dir/DijkstraNode.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/basis/Documentos/Grafo/grafo/DijkstraNode.c > CMakeFiles/grafo.dir/DijkstraNode.c.i
 
 CMakeFiles/grafo.dir/DijkstraNode.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/grafo.dir/DijkstraNode.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fernando_mf/Documentos/Grafo/grafo/DijkstraNode.c -o CMakeFiles/grafo.dir/DijkstraNode.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/basis/Documentos/Grafo/grafo/DijkstraNode.c -o CMakeFiles/grafo.dir/DijkstraNode.c.s
 
 CMakeFiles/grafo.dir/InputUtils.c.o: CMakeFiles/grafo.dir/flags.make
 CMakeFiles/grafo.dir/InputUtils.c.o: ../InputUtils.c
 CMakeFiles/grafo.dir/InputUtils.c.o: CMakeFiles/grafo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/grafo.dir/InputUtils.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/grafo.dir/InputUtils.c.o -MF CMakeFiles/grafo.dir/InputUtils.c.o.d -o CMakeFiles/grafo.dir/InputUtils.c.o -c /home/fernando_mf/Documentos/Grafo/grafo/InputUtils.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/basis/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/grafo.dir/InputUtils.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/grafo.dir/InputUtils.c.o -MF CMakeFiles/grafo.dir/InputUtils.c.o.d -o CMakeFiles/grafo.dir/InputUtils.c.o -c /home/basis/Documentos/Grafo/grafo/InputUtils.c
 
 CMakeFiles/grafo.dir/InputUtils.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/grafo.dir/InputUtils.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fernando_mf/Documentos/Grafo/grafo/InputUtils.c > CMakeFiles/grafo.dir/InputUtils.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/basis/Documentos/Grafo/grafo/InputUtils.c > CMakeFiles/grafo.dir/InputUtils.c.i
 
 CMakeFiles/grafo.dir/InputUtils.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/grafo.dir/InputUtils.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fernando_mf/Documentos/Grafo/grafo/InputUtils.c -o CMakeFiles/grafo.dir/InputUtils.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/basis/Documentos/Grafo/grafo/InputUtils.c -o CMakeFiles/grafo.dir/InputUtils.c.s
 
 # Object files for target grafo
 grafo_OBJECTS = \
@@ -285,7 +285,7 @@ grafo: CMakeFiles/grafo.dir/DijkstraNode.c.o
 grafo: CMakeFiles/grafo.dir/InputUtils.c.o
 grafo: CMakeFiles/grafo.dir/build.make
 grafo: CMakeFiles/grafo.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking C executable grafo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/basis/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking C executable grafo"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/grafo.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -297,6 +297,6 @@ CMakeFiles/grafo.dir/clean:
 .PHONY : CMakeFiles/grafo.dir/clean
 
 CMakeFiles/grafo.dir/depend:
-	cd /home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fernando_mf/Documentos/Grafo/grafo /home/fernando_mf/Documentos/Grafo/grafo /home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug /home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug /home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles/grafo.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/basis/Documentos/Grafo/grafo/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/basis/Documentos/Grafo/grafo /home/basis/Documentos/Grafo/grafo /home/basis/Documentos/Grafo/grafo/cmake-build-debug /home/basis/Documentos/Grafo/grafo/cmake-build-debug /home/basis/Documentos/Grafo/grafo/cmake-build-debug/CMakeFiles/grafo.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/grafo.dir/depend
 

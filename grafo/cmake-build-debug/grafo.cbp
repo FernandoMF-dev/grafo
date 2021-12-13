@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug"/>
+				<Option working_dir="/home/basis/Documentos/Grafo/grafo/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/basis/Documentos/Grafo/grafo/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/basis/Documentos/Grafo/grafo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/basis/Documentos/Grafo/grafo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/basis/Documentos/Grafo/grafo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug"/>
+				<Option working_dir="/home/basis/Documentos/Grafo/grafo/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/basis/Documentos/Grafo/grafo/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/basis/Documentos/Grafo/grafo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/basis/Documentos/Grafo/grafo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/basis/Documentos/Grafo/grafo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug"/>
+				<Option working_dir="/home/basis/Documentos/Grafo/grafo/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/basis/Documentos/Grafo/grafo/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/basis/Documentos/Grafo/grafo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/basis/Documentos/Grafo/grafo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/basis/Documentos/Grafo/grafo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="grafo">
-				<Option output="/home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug/grafo" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug"/>
+				<Option output="/home/basis/Documentos/Grafo/grafo/cmake-build-debug/grafo" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/basis/Documentos/Grafo/grafo/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -50,15 +50,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug/Makefile&quot;  VERBOSE=1 grafo"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/basis/Documentos/Grafo/grafo/cmake-build-debug/Makefile&quot;  VERBOSE=1 grafo"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/basis/Documentos/Grafo/grafo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/basis/Documentos/Grafo/grafo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/basis/Documentos/Grafo/grafo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="grafo/fast">
-				<Option output="/home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug/grafo" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug"/>
+				<Option output="/home/basis/Documentos/Grafo/grafo/cmake-build-debug/grafo" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/basis/Documentos/Grafo/grafo/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -69,89 +69,89 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug/Makefile&quot;  VERBOSE=1 grafo/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/basis/Documentos/Grafo/grafo/cmake-build-debug/Makefile&quot;  VERBOSE=1 grafo/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/basis/Documentos/Grafo/grafo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/basis/Documentos/Grafo/grafo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/basis/Documentos/Grafo/grafo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/fernando_mf/Documentos/Grafo/grafo/ArrayUtils.c">
+		<Unit filename="/home/basis/Documentos/Grafo/grafo/ArrayUtils.c">
 			<Option target="grafo"/>
 		</Unit>
-		<Unit filename="/home/fernando_mf/Documentos/Grafo/grafo/Cidade.c">
+		<Unit filename="/home/basis/Documentos/Grafo/grafo/Cidade.c">
 			<Option target="grafo"/>
 		</Unit>
-		<Unit filename="/home/fernando_mf/Documentos/Grafo/grafo/ControleArquivoGrafo.c">
+		<Unit filename="/home/basis/Documentos/Grafo/grafo/ControleArquivoGrafo.c">
 			<Option target="grafo"/>
 		</Unit>
-		<Unit filename="/home/fernando_mf/Documentos/Grafo/grafo/DijkstraNode.c">
+		<Unit filename="/home/basis/Documentos/Grafo/grafo/DijkstraNode.c">
 			<Option target="grafo"/>
 		</Unit>
-		<Unit filename="/home/fernando_mf/Documentos/Grafo/grafo/Edge.c">
+		<Unit filename="/home/basis/Documentos/Grafo/grafo/Edge.c">
 			<Option target="grafo"/>
 		</Unit>
-		<Unit filename="/home/fernando_mf/Documentos/Grafo/grafo/GeradorArquivo.c">
+		<Unit filename="/home/basis/Documentos/Grafo/grafo/GeradorArquivo.c">
 			<Option target="grafo"/>
 		</Unit>
-		<Unit filename="/home/fernando_mf/Documentos/Grafo/grafo/Grafo.c">
+		<Unit filename="/home/basis/Documentos/Grafo/grafo/Grafo.c">
 			<Option target="grafo"/>
 		</Unit>
-		<Unit filename="/home/fernando_mf/Documentos/Grafo/grafo/InputUtils.c">
+		<Unit filename="/home/basis/Documentos/Grafo/grafo/InputUtils.c">
 			<Option target="grafo"/>
 		</Unit>
-		<Unit filename="/home/fernando_mf/Documentos/Grafo/grafo/RandomUtils.c">
+		<Unit filename="/home/basis/Documentos/Grafo/grafo/RandomUtils.c">
 			<Option target="grafo"/>
 		</Unit>
-		<Unit filename="/home/fernando_mf/Documentos/Grafo/grafo/Stack.c">
+		<Unit filename="/home/basis/Documentos/Grafo/grafo/Stack.c">
 			<Option target="grafo"/>
 		</Unit>
-		<Unit filename="/home/fernando_mf/Documentos/Grafo/grafo/StringUtils.c">
+		<Unit filename="/home/basis/Documentos/Grafo/grafo/StringUtils.c">
 			<Option target="grafo"/>
 		</Unit>
-		<Unit filename="/home/fernando_mf/Documentos/Grafo/grafo/Vertice.c">
+		<Unit filename="/home/basis/Documentos/Grafo/grafo/Vertice.c">
 			<Option target="grafo"/>
 		</Unit>
-		<Unit filename="/home/fernando_mf/Documentos/Grafo/grafo/headers/ArrayUtils.h">
+		<Unit filename="/home/basis/Documentos/Grafo/grafo/headers/ArrayUtils.h">
 			<Option target="grafo"/>
 		</Unit>
-		<Unit filename="/home/fernando_mf/Documentos/Grafo/grafo/headers/Cidade.h">
+		<Unit filename="/home/basis/Documentos/Grafo/grafo/headers/Cidade.h">
 			<Option target="grafo"/>
 		</Unit>
-		<Unit filename="/home/fernando_mf/Documentos/Grafo/grafo/headers/ControleArquivoGrafo.h">
+		<Unit filename="/home/basis/Documentos/Grafo/grafo/headers/ControleArquivoGrafo.h">
 			<Option target="grafo"/>
 		</Unit>
-		<Unit filename="/home/fernando_mf/Documentos/Grafo/grafo/headers/DijkstraNode.h">
+		<Unit filename="/home/basis/Documentos/Grafo/grafo/headers/DijkstraNode.h">
 			<Option target="grafo"/>
 		</Unit>
-		<Unit filename="/home/fernando_mf/Documentos/Grafo/grafo/headers/Edge.h">
+		<Unit filename="/home/basis/Documentos/Grafo/grafo/headers/Edge.h">
 			<Option target="grafo"/>
 		</Unit>
-		<Unit filename="/home/fernando_mf/Documentos/Grafo/grafo/headers/GeradorArquivo.h">
+		<Unit filename="/home/basis/Documentos/Grafo/grafo/headers/GeradorArquivo.h">
 			<Option target="grafo"/>
 		</Unit>
-		<Unit filename="/home/fernando_mf/Documentos/Grafo/grafo/headers/Grafo.h">
+		<Unit filename="/home/basis/Documentos/Grafo/grafo/headers/Grafo.h">
 			<Option target="grafo"/>
 		</Unit>
-		<Unit filename="/home/fernando_mf/Documentos/Grafo/grafo/headers/InputUtils.h">
+		<Unit filename="/home/basis/Documentos/Grafo/grafo/headers/InputUtils.h">
 			<Option target="grafo"/>
 		</Unit>
-		<Unit filename="/home/fernando_mf/Documentos/Grafo/grafo/headers/RandomUtils.h">
+		<Unit filename="/home/basis/Documentos/Grafo/grafo/headers/RandomUtils.h">
 			<Option target="grafo"/>
 		</Unit>
-		<Unit filename="/home/fernando_mf/Documentos/Grafo/grafo/headers/Stack.h">
+		<Unit filename="/home/basis/Documentos/Grafo/grafo/headers/Stack.h">
 			<Option target="grafo"/>
 		</Unit>
-		<Unit filename="/home/fernando_mf/Documentos/Grafo/grafo/headers/StringUtils.h">
+		<Unit filename="/home/basis/Documentos/Grafo/grafo/headers/StringUtils.h">
 			<Option target="grafo"/>
 		</Unit>
-		<Unit filename="/home/fernando_mf/Documentos/Grafo/grafo/headers/Vertice.h">
+		<Unit filename="/home/basis/Documentos/Grafo/grafo/headers/Vertice.h">
 			<Option target="grafo"/>
 		</Unit>
-		<Unit filename="/home/fernando_mf/Documentos/Grafo/grafo/main.c">
+		<Unit filename="/home/basis/Documentos/Grafo/grafo/main.c">
 			<Option target="grafo"/>
 		</Unit>
-		<Unit filename="/home/fernando_mf/Documentos/Grafo/grafo/CMakeLists.txt">
+		<Unit filename="/home/basis/Documentos/Grafo/grafo/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

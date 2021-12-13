@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/fernando_mf/Documentos/Grafo/grafo/cmake-build-debug",
-		"source" : "/home/fernando_mf/Documentos/Grafo/grafo"
+		"build" : "/home/basis/Documentos/Grafo/grafo/cmake-build-debug",
+		"source" : "/home/basis/Documentos/Grafo/grafo"
 	},
 	"version" : 
 	{
